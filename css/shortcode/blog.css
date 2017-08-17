@@ -1,0 +1,323 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Blog style file. All Blog related style included in this file.
+
+--------------------------------------*/
+.section-title.text-center h2::before {
+  left: 0;
+  margin: auto;
+  right: 0;
+}
+.blog-area .section-title p {
+  padding: 0 100px;
+}
+.blog-info {
+  padding-top: 15px;
+}
+.blog-text {
+  padding: 5px 20px 0 0;
+}
+.blog-meta {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.blog-meta span {
+    color: #777777;
+    font-family: 'Dosis', sans-serif;
+}
+.blog-meta a {
+    color: #777777;
+}
+.blog-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-transform: capitalize;
+}
+.blog-info h3 a:hover{
+	color:#777;
+}
+a.readmore {
+  border: 2px solid #f1f1f1;
+  display: inline-block;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 9px 22px;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+a.readmore:hover{
+	background:#232323;
+	color:#fff;
+	border: 2px solid #232323;	
+}
+/*-----------------------------
+Blog-page
+-------------------------------*/
+.blog-page .single-blog {
+    margin-bottom: 50px;
+}
+
+.blog-img img {
+    width: 100%;
+}
+/*-----------------------------
+Blog-Sidebar
+-------------------------------*/
+h3.widget-title {
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.blog-search form {
+    position: relative;
+}
+
+.blog-search form input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #232323;
+    height: 45px;
+    width: 100%;
+}
+
+.blog-search form button {
+    background: #232323 none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-size: 24px;
+    height: 39px;
+    margin-bottom: 2px;
+    margin-right: 3px;
+    margin-top: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+}
+.blog-search form input::placeholder {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.single-widget > p {
+    font-size: 16px;
+}
+.widget-posts-img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.widget-posts-info {
+    overflow: hidden;
+}
+.widget-posts-info a.post_title {
+    color: #232323;
+    display: block;
+    font-size: 14px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+.widget-posts-info a.post_title:hover{
+    color: #888;
+}
+.widget-posts li {
+    margin-bottom: 30px;
+}
+.instagram-photo img {
+    float: left;
+    width: 33.3%;
+}
+ul.widget-posts li:nth-child(3) {
+    margin: 0;
+}
+.widget-posts-info p {
+    margin: 0;
+}
+.single-widget ul li a {
+    display: inline-block;
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.single-widget ul li:last-child a {
+    margin-bottom: 0;
+}
+.single-widget ul li a:hover{
+    color: #888;
+}
+
+ul.widget-tags li {
+    float: left;
+}
+ul.widget-tags li a {
+    border: 1px solid #f1f1f1;
+    display: block;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 9px 15px;
+    text-transform: capitalize;
+}
+ul.widget-tags li a:hover{
+    background: #232323;
+    color: #fff;
+}
+.blog-right-sidebar {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+/*-----------------------------
+Blog-Details
+-------------------------------*/
+.blog-text.blog-details-post {
+  padding: 0;
+}
+.blog-details-page h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.blog-details-post blockquote {
+  border-left: medium none;
+  font-size: 14px;
+  font-style: italic;
+  margin: 20px 30px 20px 30px;
+  padding: 0;
+}
+.quote-post p{
+	position:relative;
+}
+.quote-post p::after {
+  color: #232323;
+  content: "\f10e ";
+  font-family: "FontAwesome";
+  padding-left: 10px;
+  font-size:24px;
+}
+.quote-post p::before {
+  color: #232323;
+  content: "\f10d ";
+  font-family: "FontAwesome";
+  padding-right: 10px;
+  font-size:24px;
+}
+.comment-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  padding-bottom:5px;
+}
+h4.comment-title {
+    background: #232323 none repeat scroll 0 0;
+    padding: 14px 10px;
+    color: #fff;
+}
+
+.media-list li {
+  background: #ffffff none repeat scroll 0 0;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.theme-comment-section .media {
+  padding: 25px 0;
+}
+.theme-comment-section .media-body {
+  margin-top: 0;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.media-list .media {
+  border-bottom: 1px solid #cdcdcd;
+}
+.media-body > h3 {
+  margin-bottom: 0;
+}
+.media-body > span {
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.reply-link {
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  font-weight:500;
+}
+.reply-link:hover{
+	color:#999;
+}
+.media-replay {
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 20px;
+}
+.media-list .media-replay  .media {
+  border:none;
+  margin-left:100px;
+}
+.comment-form-wrapper{
+	margin-top:40px;
+}
+.comment-form-wrapper p {
+    margin-left: 15px;
+}
+.leave-comment-text, .comment-reply-title {
+  margin-bottom: 25px;
+  text-transform:capitalize;
+    margin-left: 15px;
+}
+.leave-form input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #cdcdcd;
+  height: 35px;
+  margin-bottom: 30px;
+}
+.text-leave textarea {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #cdcdcd;
+  height: 225px;
+  margin-bottom: 30px;
+}
+.form-submit .submit {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #cdcdcd;
+  display: inline-block;
+  font-size: 16px;
+  width: auto;
+  font-weight: 500;
+  padding: 7px 15px;
+  text-transform: capitalize;
+  transition:all .3s;
+}
+.form-submit .submit:hover{
+	background:#232323;
+	color:#fff;
+    border: 1px solid #232323;	
+	
+}
+
+.blog-list{
+	margin-bottom:60px;
+}
+
+
+
+
+
+
+
+
+
+
+

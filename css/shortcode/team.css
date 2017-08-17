@@ -1,0 +1,76 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Team style file. All Team related style included in this file.
+
+--------------------------------------*/
+.single-team{
+	position:relative;
+}
+.team-img {
+    position: relative;
+}
+.team-img::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all .5s;
+	transform:scale(0);
+}
+.single-team:hover .team-img:before{
+	opacity:.6;
+	transform:scale(1);	
+}
+.team-icon {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align:center;
+}
+.team-icon a {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 30px;
+  line-height: 28px;
+  margin: 0 14px;
+  font-size:18px;
+  width: 30px;
+  transition:all .4s;
+  opacity:0;
+  border:1px solid #fff;
+}
+.team-icon a:hover{
+	background:#232323;
+	color:#fff;
+	border:1px solid #fff;
+}
+.single-team:hover .team-icon a{
+	margin:0 6px;
+	opacity:1;
+}
+
+.team-info {
+    margin-top: 30px;
+}
+.team-info > h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.team-info.text-center > span {
+    color: #232323;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+.team-img img {
+  max-width: 100%;
+}
+
