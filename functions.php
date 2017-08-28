@@ -52,8 +52,16 @@ function hola_setup() {
 	 */
 	
 	add_image_size( 'blog-img', 750, 403, true );
+	add_image_size( 'slider-img', 1920, 600, true );
 	add_image_size( 'home-news-img', 370, 250, true );
 	add_image_size( 'portfolio-img', 1140, 600, true );
+	add_image_size( 'portfolio-img-sqr', 360, 350, true );
+	add_image_size( 'portfolio-single', 400, 400, true );
+	add_image_size( 'portfolio-single-h', 400, 842, true );
+	add_image_size( 'portfolio-single-w', 830, 400, true );
+	add_image_size( 'portfolio-single-wh', 830, 842, true );
+	add_image_size( 'member-img', 270, 400, true );
+	add_image_size( 'client-img', 120, 60, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -88,8 +96,8 @@ function hola_setup() {
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 250,
-		'width'       => 250,
+		'height'      => 28,
+		'width'       => 84,
 		'flex-width'  => true,
 		'flex-height' => true,
 	) );
@@ -188,8 +196,40 @@ add_action( 'wp_enqueue_scripts', 'hola_scripts' );
 
 
 
+//Contact Form 7 integration
+function hola_contact7_form_content( $template, $prop ) {
+	if ( 'form' == $prop ) {
+		return implode( '',
+			array(
+			'<div class="row">',
+				'<div class="col-md-6 col-sm-6 col-xs-12">',
+					'[text* your-name placeholder"Name"]',
+				'</div>',
+				'<div class="col-md-6 col-sm-6 col-xs-12">',
+					'[email* your-email placeholder"Email"]',
+				'</div>',
+				'<div class="col-md-12 col-sm-12 col-xs-12">',
+					'[text* your-subject placeholder"Subject"]',
+				'</div>',
+				'<div class="col-md-12 col-sm-12 col-xs-12">',
+					'[textarea* your-message placeholder"Message"]',
+				'</div>',
+				'<div class="col-md-12 col-sm-12 col-xs-12">',
+					'[submit class:cont-submit class:btn-contact "Send Message"]',
+				'</div>',
+			'</div>',
+		) );
+	} else {
+		return $template;
+	}
+}
+add_filter( 'wpcf7_default_template', 'hola_contact7_form_content', 10, 2 );
 
-
+function mod_contact7_form_title( $template ) {
+	$template->set_title( 'Contact Pages Form' );
+    return $template;
+}
+add_filter( 'wpcf7_contact_form_default_pack', 'mod_contact7_form_title' );
 
 
 /**

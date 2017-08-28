@@ -41,7 +41,7 @@ NOTE: This is Contact style file. All Contact related style included in this fil
   height: 175px;
 }
 
-.contact-from button {
+.contact-from input[type=submit] {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 1px solid #cdcdcd;
   display: inline-block;
@@ -51,8 +51,9 @@ NOTE: This is Contact style file. All Contact related style included in this fil
   padding: 7px 15px;
   text-transform: capitalize;
   transition: all 0.3s ease 0s;
+    width: auto;
 }
-.contact-from button:hover {
+.contact-from input[type=submit]:hover {
   background: #232323 none repeat scroll 0 0;
   color: #fff;
   border: 1px solid #232323;  

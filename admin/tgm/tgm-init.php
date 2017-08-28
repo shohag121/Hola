@@ -12,11 +12,20 @@ function hola_options_register_required_plugins() {
 			'name' 	   => 'Redux Framework',
 			'slug' 	   => 'redux-framework',
 			'required' => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
+		),
+		array(
+			'name' 	   => 'CMB2',
+			'slug' 	   => 'cmb2',
+			'required' => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
 		),
 	);
 
 	$config = array(
-		'domain'       		=> 'redux-framework',         	// Text domain - likely want to be the same as your theme.
+		'domain'       		=> 'hola',         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
 		//'parent_menu_slug' 	=> 'plugins.php', 				// Default parent menu slug
 		//'parent_url_slug' 	=> 'plugins.php', 				// Default parent URL slug

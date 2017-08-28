@@ -27,7 +27,7 @@ get_header(); ?>
                             <div class="portfolio-details portfolio-slider owl-carousel">
 								<?php
 								foreach ( (array) $files as $attachment_id => $attachment_url ) {
-									echo '<img src="'.wp_get_attachment_image_url( $attachment_id, 'portfolio-img' ).'" alt="" >';
+									echo wp_get_attachment_image( $attachment_id, 'portfolio-img' );
 								} ?>
                             </div>
                         </div>
