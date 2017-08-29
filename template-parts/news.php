@@ -21,7 +21,7 @@ global $hola_options;
 		<div class="row">
 			<?php
 			$cat = '';
-			if ($hola_options['news-category']){
+			if ( $hola_options['news-category'] ){
 				foreach ($hola_options['news-category'] as $single_cat){
 					$cat = $cat . $single_cat;
 					if (!(end($hola_options['news-category']) == $single_cat )){

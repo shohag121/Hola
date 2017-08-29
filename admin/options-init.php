@@ -192,6 +192,17 @@
 			        'url'  => get_template_directory_uri() . '/img/bg/slider-bg-2.jpg'
 		        ),
 	        ),
+	        array(
+		        'id'       => 'home-slider-bg5',
+		        'type'     => 'media',
+		        'url'      => true,
+		        'title'    => __('Home Style 5 Slider Background Image', 'hola'),
+		        'preview'  => true,
+		        'subtitle' => __('Upload any images for background', 'hola'),
+		        'default'  => array(
+			        'url'  => get_template_directory_uri() . '/img/bg/home-5.jpg'
+		        ),
+	        ),
 	        
 	        
         )
@@ -1733,6 +1744,30 @@
 				'id'       => 'team-description',
 				'type'     => 'textarea',
 				'title'    => __( 'Team Section Description', 'hola' ),
+				'desc'     => __( 'Please input the section description.', 'hola' ),
+				'default'  => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship. The recorded voice scratched speaker.',
+			),
+		
+		)
+	) );
+	
+	Redux::setSection( $opt_name, array(
+		'title'      => __( 'Pricing Table', 'hola' ),
+		'desc'       => __( 'Settings for pricing table section.', 'hola' ),
+		'id'         => 'pricing-table',
+		'icon'  => 'el el-list-alt',
+		'fields'     => array(
+			array(
+				'id'       => 'pricing-heading',
+				'type'     => 'text',
+				'title'    => __( 'Pricing Table Section Heading', 'hola' ),
+				'desc'     => __( 'Please input the section title.', 'hola' ),
+				'default'  => 'PRICING PLAN',
+			),
+			array(
+				'id'       => 'pricing-description',
+				'type'     => 'textarea',
+				'title'    => __( 'Pricing Table Section Description', 'hola' ),
 				'desc'     => __( 'Please input the section description.', 'hola' ),
 				'default'  => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship. The recorded voice scratched speaker.',
 			),

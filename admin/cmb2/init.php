@@ -168,9 +168,77 @@ function hola_posrfolio_metaboxes() {
 	
 	
 	
+	// metabox for pricing table
+	/**
+	 * Initiate the metabox
+	 */
+	$pricing = new_cmb2_box( array(
+		'id'            => 'pricing_meta',
+		'title'         => __( 'Table Information', 'hola' ),
+		'object_types'  => array( 'hola_pricing', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true,
+	) );
 	
+	// Member designation
+	$pricing->add_field( array(
+		'name'       => __( 'Price', 'hola' ),
+		'desc'       => __( 'Price per terms.', 'hola' ),
+		'id'         => $prefix . 'pricing_price',
+		'type'       => 'text',
+	) );
 	
+	// Featured  Box
+	$pricing->add_field( array(
+		'name'       => __( 'Featured', 'hola' ),
+		'desc'       => __( 'Featured table.', 'hola' ),
+		'id'         => $prefix . 'pricing_selected',
+		'type'       => 'checkbox',
+	) );
 	
+	// Features field group
+	$group_field_id = $pricing->add_field( array(
+		'id'          => $prefix . 'pricing_group',
+		'type'        => 'group',
+		'description' => __( 'Features for pricing table.', 'hola' ),
+	
+		'options'     => array(
+			'group_title'   => __( 'Feature {#}', 'hola' ), // since version 1.1.4, {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Feature', 'hola' ),
+			'remove_button' => __( 'Remove Feature', 'hola' ),
+			'sortable'      => true,
+		),
+	) );
+	
+	$pricing->add_group_field( $group_field_id, array(
+		'name' => 'Feature Name',
+		'id'   => $prefix . 'pricing_feature_name',
+		'type' => 'text',
+	) );
+	
+	$pricing->add_group_field( $group_field_id, array(
+		'name' => 'Description',
+		'description' => 'Write a short description for this feature.',
+		'id'   => $prefix . 'pricing_feature_description',
+		'type' => 'textarea_small',
+	) );
+	
+	// Button Text
+	$pricing->add_field( array(
+		'name'       => __( 'Button Text', 'hola' ),
+		'desc'       => __( 'Text for buy or subscribe .', 'hola' ),
+		'id'         => $prefix . 'pricing_text',
+		'type'       => 'text',
+	) );
+	
+	// Button URL
+	$pricing->add_field( array(
+		'name'       => __( 'Button URL', 'hola' ),
+		'desc'       => __( 'URL for buy or subscribe .', 'hola' ),
+		'id'         => $prefix . 'pricing_url',
+		'type'       => 'text_url',
+	) );
 	
 	
 	

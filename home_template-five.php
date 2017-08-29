@@ -1,63 +1,34 @@
 <?php
 /**
- * Template Name: Home Style 3
+ * Template Name: Home Style 5
  *
  * @package Hola
  * @since Hola 1.0
  */
 
-get_header('three');
+get_header('four');
 global $hola_options;
 ?>
     <!-- slider-section-start -->
-    <section class="slider-area slider-area-2 slider-area-3">
-		
-		<?php
-		$the_slider = new WP_Query( array( 'post_type' => 'hola_slider', 'posts_per_page' => -1 ) );
-		if ( $the_slider->have_posts() ) : ?>
-            <div class="slider-active owl-carousel">
-                <!-- the loop -->
-				<?php while ( $the_slider->have_posts() ) : $the_slider->the_post(); ?>
-                    <div class="single-slider bg-opacity-1" style="background: rgba(0, 0, 0, 0) url(<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(),'slider-img'))?>) no-repeat scroll center center / cover; height: 600px;">
-                        <div class="table">
-                            <div class="table-cell">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="slider-text">
-												<?php the_content(); ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				<?php endwhile; ?>
-                <!-- end of the loop -->
-            </div>
-			<?php wp_reset_postdata(); ?>
-		<?php else : ?>
-            <div class="single-slider bg-opacity-1" style="height: 600px;">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="slider-text">
-
-                                        <h2><?php _e( 'Sorry, no slide matched your criteria.' ); ?></h2>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <section class="slider-area slider-area-4 bg-white-opacity ptb-200" style="background: rgba(0, 0, 0, 0) url(<?php echo $hola_options['home-slider-bg5']['url']; ?>) repeat scroll center center / cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="slider-text text-center">
+                        <h1><?php echo $hola_options['home-slider-h1']; ?></h1>
+                        <h2><?php echo $hola_options['home-slider-h2']; ?></h2>
+                        <h3 class="cd-headline clip is-full-width">
+								<span class="cd-words-wrapper text-black">
+									<b class="is-visible"><?php echo $hola_options['home-slider-p1']; ?></b>
+									<?php foreach ( $hola_options['home-slider-p'] as $paragraph ):  ?>
+                                        <b><?php echo $paragraph; ?></b>
+									<?php endforeach; ?>
+								</span>
+                        </h3>
                     </div>
                 </div>
             </div>
-            <p></p>
-		<?php endif; ?>
-
+        </div>
     </section>
     <!-- slider-section-end -->
     <!-- portfolio-section-start -->
@@ -104,7 +75,7 @@ global $hola_options;
 								$class = "3";
 							}
 							?>
-                            <div class="col-md-<?php echo $class; ?> col-sm-6 col-xs-12 grid-item <?php
+                            <div class="col-md-6 col-sm-6 col-xs-12 grid-item <?php
 							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category');
 							foreach ($portfolio_names as $portfolio_name){
 								echo $portfolio_name->slug . ' ';
@@ -159,6 +130,6 @@ global $hola_options;
     </section>
     <!-- portfolio-section-end -->
 <?php
-get_template_part('template-parts/progress-counter');
-get_template_part('template-parts/news');
+get_template_part('template-parts/testimonials');
+get_template_part('template-parts/pricing-table');
 get_footer();

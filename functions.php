@@ -53,6 +53,8 @@ function hola_setup() {
 	
 	add_image_size( 'blog-img', 750, 403, true );
 	add_image_size( 'slider-img', 1920, 600, true );
+	add_image_size( 'member-img', 270, 400, true );
+	add_image_size( 'client-img', 120, 60, true );
 	add_image_size( 'home-news-img', 370, 250, true );
 	add_image_size( 'portfolio-img', 1140, 600, true );
 	add_image_size( 'portfolio-img-sqr', 360, 350, true );
@@ -60,8 +62,7 @@ function hola_setup() {
 	add_image_size( 'portfolio-single-h', 400, 842, true );
 	add_image_size( 'portfolio-single-w', 830, 400, true );
 	add_image_size( 'portfolio-single-wh', 830, 842, true );
-	add_image_size( 'member-img', 270, 400, true );
-	add_image_size( 'client-img', 120, 60, true );
+	add_image_size( 'client-img-testimonial', 80, 80, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

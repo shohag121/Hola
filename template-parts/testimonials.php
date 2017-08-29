@@ -5,48 +5,41 @@
  * @package Hola
  * @since Hola 1.0
  */
-global $hola_options;
 ?>
 <!-- testimonial-section-start -->
 <section class="testimonial-area ptb-120 gray-bg">
 	<div class="container">
 		<div class="row">
-			<h3 class="sr-only">testimonial-area</h3>
-			<div class="testimonial-active owl-carousel">
+			<h3 class="sr-only">Testimonial Area</h3>
+			<?php
+			// the query
+			$the_query = new WP_Query( array(
+				'post_type' => 'hola_testimonial',
+				'posts_per_page' => -1,
+				'order'      => 'ASC'
+			));
+            if ( $the_query->have_posts() ) : ?>
+            <div class="testimonial-active owl-carousel">
+                <!-- the loop -->
+	            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<div class="col-lg-12">
 					<div class="single-testimonial text-center">
 						<div class="testimonial-img mb-20">
-							<img src="img/testimonial/1.png" alt="" />
+							<?php the_post_thumbnail('client-img-testimonial'); ?>
 						</div>
 						<div class="testimonial-info">
-							<p>The face of the moon was in shadow.The spectacle before us was indeed sublime.All their equipment and instruments are alive.All their equipment and instruments are alive.</p>
-							<span>Robat Jonshon / Maneger Director</span>
+							<?php the_content(); ?>
+							<span><?php the_title(); ?></span>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-12">
-					<div class="single-testimonial text-center">
-						<div class="testimonial-img mb-20">
-							<img src="img/testimonial/1.png" alt="" />
-						</div>
-						<div class="testimonial-info">
-							<p>The face of the moon was in shadow.The spectacle before us was indeed sublime.All their equipment and instruments are alive.All their equipment and instruments are alive.</p>
-							<span>Robat Jonshon / Maneger Director</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="single-testimonial text-center">
-						<div class="testimonial-img mb-20">
-							<img src="img/testimonial/1.png" alt="" />
-						</div>
-						<div class="testimonial-info">
-							<p>The face of the moon was in shadow.The spectacle before us was indeed sublime.All their equipment and instruments are alive.All their equipment and instruments are alive.</p>
-							<span>Robat Jonshon / Maneger Director</span>
-						</div>
-					</div>
-				</div>
+	            <?php endwhile;
+                // end of the loop
+	             wp_reset_postdata(); ?>
 			</div>
+            <?php else : ?>
+                <p><?php _e( 'Sorry, no testimonial yet.', 'hola' ); ?></p>
+            <?php endif; ?>
 		</div>
 	</div>
 </section>
