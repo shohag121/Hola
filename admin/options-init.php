@@ -204,6 +204,30 @@
 		        ),
 	        ),
 	        
+	        array(
+		        'id'       => 'home-slider-bg6',
+		        'type'     => 'media',
+		        'url'      => true,
+		        'title'    => __('Home Style 6 Slider Background Image', 'hola'),
+		        'preview'  => true,
+		        'subtitle' => __('Upload any images for background', 'hola'),
+		        'default'  => array(
+			        'url'  => get_template_directory_uri() . '/img/bg/home-6.jpg'
+		        ),
+	        ),
+	        
+	        array(
+		        'id'       => 'home-slider-bg8',
+		        'type'     => 'media',
+		        'url'      => true,
+		        'title'    => __('Home Style 8 Slider Background Image', 'hola'),
+		        'preview'  => true,
+		        'subtitle' => __('Upload any images for background', 'hola'),
+		        'default'  => array(
+			        'url'  => get_template_directory_uri() . '/img/bg/home-8.jpg'
+		        ),
+	        ),
+	        
 	        
         )
     ) );
