@@ -8,7 +8,7 @@
  *
  * @package Hola
  */
-
+global $hola_options;
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -27,17 +27,16 @@
 <![endif]-->
 <!-- header-start -->
 <header>
-    <div class="header-area header-area-3 sticker">
+    <div class="header-area header-area-3 <?php echo $hola_options['blog-logo-style']; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="logo">
 	                    <?php
-	                    the_custom_logo();
-	                    if ( is_front_page() && is_home() ) : ?>
+	                    if ( $hola_options['blog-logo-select'] == 'text' ) : ?>
                             <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	                    <?php else : ?>
-                            <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $hola_options['blog-logo-image']['url']; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 		                    <?php
 	                    endif;
 	                    ?>
@@ -45,13 +44,13 @@
                 </div>
                 <div class="col-lg-9 col-md-9">
                     <div class="main-menu text-right">
-	                    <?php
-	                    wp_nav_menu(array(
-		                    'theme_location' => 'menu-1',
-		                    'walker' => new Hola_Nav_Walker(),
-		                    'container' => 'nav',
-	                    ));
-	                    ?>
+			            <?php
+			            wp_nav_menu(array(
+				            'theme_location' => 'menu-1',
+				            'walker' => new Hola_Nav_Walker(),
+				            'container' => 'nav',
+			            ));
+			            ?>
                     </div>
                     <div class="mobile-menu"></div>
                 </div>
@@ -59,4 +58,3 @@
         </div>
     </div>
 </header>
-<!-- header-end -->

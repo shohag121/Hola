@@ -27,7 +27,7 @@
         'display_name' => 'Hola',
         'page_slug' => 'hola_options',
         'page_title' => 'Hola',
-        'intro_text' => 'Welcome to Hola - Minimal, Multipurpose Wordpress Theme',
+        'intro_text' => 'Welcome to Hola - Minimal, Multipurpose Agency Portfolio WordPress Theme',
         'footer_text' => 'A Theme by WPGeeky',
         'admin_bar' => TRUE,
         'menu_type' => 'menu',
@@ -113,19 +113,145 @@
      *
      */
 
+	Redux::setSection( $opt_name, array(
+		'title'  => __( 'Default Settings', 'hola' ),
+		'id'     => 'default-settings',
+		'desc'   => __( 'Theme\'s default settings.', 'hola' ),
+		'icon'   => 'el el-home',
+	
+	) );
     Redux::setSection( $opt_name, array(
-        'title'  => __( 'Default Settings', 'hola' ),
-        'id'     => 'default-settings',
-        'desc'   => __( 'Theme\'s default settings.', 'hola' ),
-        'icon'   => 'el el-home',
+        'title'  => __( 'Header Settings', 'hola' ),
+        'id'     => 'header-settings',
+        'desc'   => __( 'Theme\'s header settings.', 'hola' ),
+        'subsection' => true,
         'fields' => array(
-            array(
-                'id'       => 'opt-text',
-                'type'     => 'text',
-                'title'    => __( 'Example Text', 'hola' ),
-                'desc'     => __( 'Example description.', 'hola' ),
-                'subtitle' => __( 'Example subtitle.', 'hola' ),
-            )
+	        array(
+		        'id'       => 'blog-logo-style',
+		        'type'     => 'button_set',
+		        'title'    => __('Header Type', 'hola'),
+		        'subtitle' => __('Select Header Type', 'hola'),
+		        //Must provide key => value pairs for options
+		        'options' => array(
+			        'headroom' => 'Appear on Scroll UP',
+			        'sticker' => 'Fixed to Top'
+		        ),
+		        'default' => 'sticker'
+	        ),
+	        array(
+		        'id'       => 'blog-logo-select',
+		        'type'     => 'button_set',
+		        'title'    => __('Logo Type', 'hola'),
+		        'subtitle' => __('Select Logo Type', 'hola'),
+		        'desc'     => __('Select text for text logo or image for image logo.', 'hola'),
+		        //Must provide key => value pairs for options
+		        'options' => array(
+			        'text' => 'Text',
+			        'image' => 'Image'
+		        ),
+		        'default' => 'text'
+	        ),
+	        array(
+		        'id'       => 'blog-logo-text',
+		        'type'     => 'text',
+		        'title'    => __( 'Logo Text', 'hola' ),
+		        'desc'     => __( 'Please input logo text here.', 'hola' ),
+		        'default'  => get_bloginfo('name'),
+		        'required' => array('blog-logo-select','equals','text')
+	        ),
+	        array(
+		        'id'       => 'blog-logo-image',
+		        'type'     => 'media',
+		        'url'      => true,
+		        'title'    => __('Website Logo', 'hola'),
+		        'preview'  => true,
+		        'subtitle' => __('Upload any images for logo', 'hola'),
+		        'default'  => array(
+			        'url'  => get_template_directory_uri() . '/img/logo.png'
+		        ),
+		        'required' => array('blog-logo-select','equals','image')
+	        ),
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Footer Settings', 'hola' ),
+        'id'     => 'footer-settings',
+        'desc'   => __( 'Theme\'s footer settings.', 'hola' ),
+        'subsection' => true,
+        'fields' => array(
+	        array(
+		        'id'       => 'footer-logo-image',
+		        'type'     => 'media',
+		        'url'      => true,
+		        'title'    => __('Footer Logo', 'hola'),
+		        'preview'  => true,
+		        'subtitle' => __('Upload any images for footer logo', 'hola'),
+		        'default'  => array(
+			        'url'  => get_template_directory_uri() . '/img/logo.png'
+		        ),
+	        ),
+	        array(
+		        'id'       => 'footer-address',
+		        'type'     => 'text',
+		        'title'    => __( 'Address', 'hola' ),
+		        'desc'     => __( 'Please input address here.', 'hola' ),
+		        'default'  => '25/5 South Street,New York,USA'
+	        ),
+	        array(
+		        'id'       => 'footer-email',
+		        'type'     => 'text',
+		        'title'    => __( 'E-mail Address', 'hola' ),
+		        'desc'     => __( 'Please input e-mail address here.', 'hola' ),
+		        'default'  => 'info@hola.com'
+	        ),
+	        
+	        array(
+		        'id'       => 'footer-telephone',
+		        'type'     => 'text',
+		        'title'    => __( 'Phone Number', 'hola' ),
+		        'desc'     => __( 'Please input telephone number here.', 'hola' ),
+		        'default'  => '+1-151-545-4596'
+	        ),
+	        
+	        array(
+		        'id'       => 'footer-social-fb',
+		        'type'     => 'text',
+		        'title'    => __( 'Facebook Profile', 'hola' ),
+		        'desc'     => __( 'Please input facebook profile url here.', 'hola' ),
+		        'default'  => ''
+	        ),
+	        array(
+		        'id'       => 'footer-social-tw',
+		        'type'     => 'text',
+		        'title'    => __( 'Twitter Profile', 'hola' ),
+		        'desc'     => __( 'Please input twitter profile url here.', 'hola' ),
+		        'default'  => ''
+	        ),
+	        
+	        array(
+		        'id'       => 'footer-social-gp',
+		        'type'     => 'text',
+		        'title'    => __( 'Google+ Profile', 'hola' ),
+		        'desc'     => __( 'Please input google+ profile url here.', 'hola' ),
+		        'default'  => ''
+	        ),
+	        
+	        array(
+		        'id'       => 'footer-social-in',
+		        'type'     => 'text',
+		        'title'    => __( 'LinkedIn Profile', 'hola' ),
+		        'desc'     => __( 'Please input linkedin profile url here.', 'hola' ),
+		        'default'  => ''
+	        ),
+	        array(
+		        'id'       => 'footer-social-db',
+		        'type'     => 'text',
+		        'title'    => __( 'Dribble Profile', 'hola' ),
+		        'desc'     => __( 'Please input dribble profile url here.', 'hola' ),
+		        'default'  => ''
+	        ),
+	        
         )
     ) );
 
@@ -705,6 +831,7 @@
 				'args' => array(
 					'taxonomies' => array( 'category' ),
 				),
+				'default'  => '',
 			),
 		
 		)

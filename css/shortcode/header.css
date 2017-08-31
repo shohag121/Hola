@@ -7,6 +7,12 @@ NOTE: This is Header style file. All Header related style included in this file.
 .logo {
   margin-top: 33px;
 }
+h1.site-title {
+  font-size: 36px;
+  margin-top: -7px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
 .main-menu ul {
 }
 .main-menu ul li {
@@ -200,7 +206,7 @@ Mobile-menu
   box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
 }
 .headroom {
-  background-color: #fff;
+  /*background-color: #fff;*/
   left: 0;
   position: fixed;
   width: 100%;

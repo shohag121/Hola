@@ -22,6 +22,25 @@ function hola_options_register_required_plugins() {
 			'force_activation'   => true,
 			'force_deactivation' => true,
 		),
+		array(
+			'name' 	   => 'Contact Form 7',
+			'slug' 	   => 'contact-form-7',
+			'required' => true,
+			'force_activation'   => true,
+			'force_deactivation' => false,
+		),
+		array(
+			'name' 	   => 'One Click Demo Import',
+			'slug' 	   => 'one-click-demo-import',
+			'required' => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
+		),
+		array(
+			'name'      => 'Hola Library',
+			'slug'      => 'hola-lib',
+			'source'    => 'https://github.com/bdCalling/Hola-Library/archive/master.zip',
+		),
 	);
 
 	$config = array(

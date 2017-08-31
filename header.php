@@ -8,7 +8,7 @@
  *
  * @package Hola
  */
-
+global $hola_options;
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -26,22 +26,20 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <!-- header-start -->
-<header class="headroom">
+<header class="<?php echo $hola_options['blog-logo-style']; ?>">
     <div class="header-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="logo">
 						<?php
-						the_custom_logo();
-						if ( is_front_page() && is_home() ) : ?>
+						if ( $hola_options['blog-logo-select'] == 'text' ) : ?>
                             <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php else : ?>
-                            <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $hola_options['blog-logo-image']['url']; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 							<?php
 						endif;
 						?>
-<!--                        <a href="index.html"><img src="img/logo.png" alt="" /></a>-->
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-9">
@@ -53,9 +51,6 @@
                         'container' => 'nav',
                         ));
                         ?>
-                        
-
-                    
                     </div>
                     <div class="mobile-menu"></div>
                 </div>
@@ -63,5 +58,7 @@
         </div>
     </div>
 </header>
+<?php if ( $hola_options['blog-logo-style'] == 'headroom' ) : ?>
 <div class="header-space"></div>
+<?php endif; ?>
 <!-- header-end -->

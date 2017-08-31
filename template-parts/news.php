@@ -21,10 +21,13 @@ global $hola_options;
 		<div class="row">
 			<?php
 			$cat = '';
-			if ( $hola_options['news-category'] ){
-				foreach ($hola_options['news-category'] as $single_cat){
+			$news_cat = '';
+			$news_cat = $hola_options['news-category'];
+			
+			if ( $news_cat ){
+				foreach ($news_cat as $single_cat){
 					$cat = $cat . $single_cat;
-					if (!(end($hola_options['news-category']) == $single_cat )){
+					if (!(end($news_cat) == $single_cat )){
 						$cat = $cat . ",";
 					}
 				}

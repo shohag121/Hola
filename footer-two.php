@@ -8,7 +8,7 @@
  *
  * @package Hola
  */
-
+global $hola_options;
 ?>
 
 <!-- footer-start -->
@@ -23,7 +23,7 @@
                                 <div class="footer-icon">
                                     <span class="icon-map-pin"></span>
                                 </div>
-                                <p>25/5 South Street,New York,USA</p>
+                                <p><?php echo esc_html( $hola_options['footer-address'] ); ?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -31,7 +31,7 @@
                                 <div class="footer-icon">
                                     <span class="icon-envelope"></span>
                                 </div>
-                                <p><a href="#">www.perculatheme.com</a></p>
+                                <p><a href="mailto:<?php echo sanitize_email( $hola_options['footer-email'] ); ?>"><?php echo sanitize_email( $hola_options['footer-email'] ); ?></a></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -39,7 +39,7 @@
                                 <div class="footer-icon">
                                     <span class="icon-phone"></span>
                                 </div>
-                                <p>+0-151-545-4596</p>
+                                <p><?php echo esc_html( $hola_options['footer-telephone'] ); ?></p>
                             </div>
                         </div>
                     </div>
@@ -47,14 +47,14 @@
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="footer-widget text-right">
                         <div class="footer-logo mb-30">
-                            <a href="index.html"><img src="img/logo.png" alt="" /></a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $hola_options['footer-logo-image']['url']; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
                         </div>
                         <div class="widget-social-icon">
-                            <a href="#"><span class="ti-linkedin"></span></a>
-                            <a href="#"><span class="ti-twitter"></span></a>
-                            <a href="#"><span class="ti-skype"></span></a>
-                            <a href="#"><span class="ti-google"></span></a>
-                            <a href="#"><span class="ti-dribbble"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-fb'] ); ?>"><span class="ti-facebook"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-tw'] ); ?>"><span class="ti-twitter"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-gp'] ); ?>"><span class="ti-google"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-in'] ); ?>"><span class="ti-linkedin"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-db'] ); ?>"><span class="ti-dribbble"></span></a>
                         </div>
                         <div class="copyright">
                             <p>&copy; <?php  echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>, All Rights Reserved</p>
