@@ -48,7 +48,7 @@ class Bootstrap_Comment_Walker extends Walker_Comment {
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation label label-info"><?php _e( 'Your comment is awaiting moderation.', 'hola' ); ?></p>
+				<p class="comment-awaiting-moderation label label-info"><?php esc_html_e( 'Your comment is awaiting moderation.', 'hola' ); ?></p>
 				<?php endif; ?>				
 
 				<div class="comment-content">

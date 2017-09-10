@@ -18,7 +18,7 @@ global $hola_options;
             <div class="row">
                 <div class="col-md-12">
                     <div class="about-us-inner text-center">
-                        <h2><?php echo $hola_options['about-us-heading']; ?></h2>
+                        <h2><?php echo esc_html( $hola_options['about-us-heading'] ); ?></h2>
                         <p><?php echo esc_html($hola_options['about-us-description']); ?></p>
                     </div>
                 </div>

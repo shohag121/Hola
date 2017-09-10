@@ -9,7 +9,7 @@ get_header();
 global $hola_options;
 ?>
     <!-- slider-section-start -->
-    <section class="slider-area slider-bg ptb-200" style="background-image: <?php echo $hola_options['home-slider-bg']['url']; ?>">
+    <section class="slider-area slider-bg ptb-200" style="background-image: url(<?php echo $hola_options['home-slider-bg']['url']; ?>);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -72,7 +72,7 @@ global $hola_options;
                     <div class="portfolio-menu mb-30">
                         <button class="active" data-filter="*">ALL</button>
 						<?php
-						//get all Categoryies from portfolio_category
+						//get all Categories from portfolio_category
 						$terms = get_terms( array(
 							'taxonomy' => 'portfolio_category',
 							'orderby' => 'name',
@@ -135,7 +135,7 @@ global $hola_options;
                     <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view more</a>
                 </div>
 			<?php else : ?>
-                <p><?php _e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
 			<?php endif; ?>
         </div>
     </section>

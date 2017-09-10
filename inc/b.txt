@@ -4,7 +4,7 @@
  *
 */
 function hola_breadcrumbs() {
-	
+
 	/* === OPTIONS === */
 	$text['home']     = 'Home'; // text for the 'Home' link
 	$text['category'] = 'Archive by Category "%s"'; // text for a category page
@@ -14,7 +14,7 @@ function hola_breadcrumbs() {
 	$text['404']      = 'Error 404'; // text for the 404 page
 	$text['page']     = 'Page %s'; // text 'Page N'
 	$text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
-	
+
 	$wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
 	$wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
 	$sep            = '›'; // separator between crumbs
@@ -26,7 +26,7 @@ function hola_breadcrumbs() {
 	$before         = '<span class="current">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
 	/* === END OF OPTIONS === */
-	
+
 	global $post;
 	$home_url       = home_url('/');
 	$link_before    = '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
@@ -39,16 +39,16 @@ function hola_breadcrumbs() {
 	$parent_id      = ($post) ? $post->post_parent : '';
 	$sep            = ' ' . $sep_before . $sep . $sep_after . ' ';
 	$home_link      = $link_before . '<a href="' . $home_url . '"' . $link_attr . ' class="home">' . $link_in_before . $text['home'] . $link_in_after . '</a>' . $link_after;
-	
+
 	if (is_home() || is_front_page()) {
-		
+
 		if ($show_on_home) echo $wrap_before . $home_link . $wrap_after;
-		
+
 	} else {
-		
+
 		echo $wrap_before;
 		if ($show_home_link) echo $home_link;
-		
+
 		if ( is_category() ) {
 			$cat = get_category(get_query_var('cat'), false);
 			if ($cat->parent != 0) {
@@ -64,7 +64,7 @@ function hola_breadcrumbs() {
 			} else {
 				if ($show_current) echo $sep . $before . sprintf($text['category'], single_cat_title('', false)) . $after;
 			}
-			
+
 		} elseif ( is_search() ) {
 			if (have_posts()) {
 				if ($show_home_link && $show_current) echo $sep;
@@ -73,22 +73,22 @@ function hola_breadcrumbs() {
 				if ($show_home_link) echo $sep;
 				echo $before . sprintf($text['search'], get_search_query()) . $after;
 			}
-			
+
 		} elseif ( is_day() ) {
 			if ($show_home_link) echo $sep;
 			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $sep;
 			echo sprintf($link, get_month_link(get_the_time('Y'), get_the_time('m')), get_the_time('F'));
 			if ($show_current) echo $sep . $before . get_the_time('d') . $after;
-			
+
 		} elseif ( is_month() ) {
 			if ($show_home_link) echo $sep;
 			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y'));
 			if ($show_current) echo $sep . $before . get_the_time('F') . $after;
-			
+
 		} elseif ( is_year() ) {
 			if ($show_home_link && $show_current) echo $sep;
 			if ($show_current) echo $before . get_the_time('Y') . $after;
-			
+
 		} elseif ( is_single() && !is_attachment() ) {
 			if ($show_home_link) echo $sep;
 			if ( get_post_type() != 'post' ) {
@@ -108,7 +108,7 @@ function hola_breadcrumbs() {
 					if ($show_current) echo $before . get_the_title() . $after;
 				}
 			}
-			
+
 			// custom post type
 		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
 			$post_type = get_post_type_object(get_post_type());
@@ -117,7 +117,7 @@ function hola_breadcrumbs() {
 			} else {
 				if ($show_current) echo $sep . $before . $post_type->label . $after;
 			}
-			
+
 		} elseif ( is_attachment() ) {
 			if ($show_home_link) echo $sep;
 			$parent = get_post($parent_id);
@@ -129,10 +129,10 @@ function hola_breadcrumbs() {
 			}
 			printf($link, get_permalink($parent), $parent->post_title);
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
-			
+
 		} elseif ( is_page() && !$parent_id ) {
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
-			
+
 		} elseif ( is_page() && $parent_id ) {
 			if ($show_home_link) echo $sep;
 			if ($parent_id != $frontpage_id) {
@@ -151,7 +151,7 @@ function hola_breadcrumbs() {
 				}
 			}
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
-			
+
 		} elseif ( is_tag() ) {
 			if ( get_query_var('paged') ) {
 				$tag_id = get_queried_object_id();
@@ -160,7 +160,7 @@ function hola_breadcrumbs() {
 			} else {
 				if ($show_current) echo $sep . $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
 			}
-			
+
 		} elseif ( is_author() ) {
 			global $author;
 			$author = get_userdata($author);
@@ -171,17 +171,17 @@ function hola_breadcrumbs() {
 				if ($show_home_link && $show_current) echo $sep;
 				if ($show_current) echo $before . sprintf($text['author'], $author->display_name) . $after;
 			}
-			
+
 		} elseif ( is_404() ) {
 			if ($show_home_link && $show_current) echo $sep;
 			if ($show_current) echo $before . $text['404'] . $after;
-			
+
 		} elseif ( has_post_format() && !is_singular() ) {
 			if ($show_home_link) echo $sep;
 			echo get_post_format_string( get_post_format() );
 		}
-		
+
 		echo $wrap_after;
-		
+
 	}
 } // end of hola_breadcrumbs()

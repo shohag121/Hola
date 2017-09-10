@@ -79,7 +79,6 @@ function hola_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-		'list-unstyled',
 	) );
 
 	// Set up the WordPress core custom background feature.

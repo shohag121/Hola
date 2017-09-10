@@ -38,7 +38,7 @@
 	             wp_reset_postdata(); ?>
 			</div>
             <?php else : ?>
-                <p><?php _e( 'Sorry, no testimonial yet.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no testimonial yet.', 'hola' ); ?></p>
             <?php endif; ?>
 		</div>
 	</div>

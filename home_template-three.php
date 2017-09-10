@@ -46,7 +46,7 @@ global $hola_options;
                                 <div class="col-lg-12">
                                     <div class="slider-text">
 
-                                        <h2><?php _e( 'Sorry, no slide matched your criteria.' ); ?></h2>
+                                        <h2><?php esc_html_e( 'Sorry, no slide matched your criteria.' ); ?></h2>
 
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@ global $hola_options;
                     <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view more</a>
                 </div>
 			<?php else : ?>
-                <p><?php _e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
 			<?php endif; ?>
         </div>
     </section>

@@ -42,7 +42,7 @@ global $hola_options;
             <!-- end of the loop -->
 			<?php wp_reset_postdata(); ?>
 			<?php else : ?>
-                <p><?php _e( 'Sorry, no clients found.','hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no clients found.','hola' ); ?></p>
 			<?php endif; ?>
         </div>
     </div>

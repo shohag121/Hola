@@ -37,7 +37,10 @@ get_header(); ?>
                 <div class="grid">
 					<?php
 					// get all portfolios
-					$portfolios = new WP_Query( array( 'post_type' => 'hola_portfolio', 'posts_per_page'=> -1  ) );
+					$portfolios = new WP_Query( array(
+					        'post_type' => 'hola_portfolio',
+                            'posts_per_page'=> -1
+                    ) );
 					if ( $portfolios->have_posts() ) : ?>
                         <!-- the loop -->
 						<?php while ( $portfolios->have_posts() ) : $portfolios->the_post(); ?>
@@ -70,7 +73,7 @@ get_header(); ?>
                         <!-- pagination here -->
 						<?php wp_reset_postdata(); ?>
 					<?php else : ?>
-                        <p><?php _e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
+                        <p><?php esc_html_e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
 					<?php endif; ?>
                 </div>
             </div>

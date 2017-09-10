@@ -54,7 +54,7 @@ global $hola_options;
 				//loop end
 				wp_reset_postdata();
 			else : ?>
-                <p><?php _e( 'Sorry, no pricing table found.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no pricing table found.', 'hola' ); ?></p>
 			<?php endif; ?>
 
         </div>

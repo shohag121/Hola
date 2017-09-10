@@ -110,7 +110,7 @@ global $hola_options;
                     <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view more</a>
                 </div>
 			<?php else : ?>
-                <p><?php _e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
 			<?php endif; ?>
         </div>
     </section>

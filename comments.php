@@ -48,9 +48,8 @@ if ( post_password_required() ) {
 		<?php the_comments_navigation(); ?>
         
 		
-        <ul class="list-unstyled">
+        <ul class="media-list">
 			<?php
-			// Register Custom Comment Walker
 			
 			wp_list_comments( array(
 				'style'         => 'ul',
@@ -59,7 +58,7 @@ if ( post_password_required() ) {
 				'walker'        => new Bootstrap_Comment_Walker(),
 			) );
 			?>
-        </ul><!-- .comment-list -->
+        </ul><!-- .list-unstyled -->
 		
 		<?php the_comments_navigation();
 		
