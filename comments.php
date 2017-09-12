@@ -2,8 +2,8 @@
 /**
  * The template for displaying comments
  *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
+ * This is the template that displays the area of the page that contains both
+ * the current comments and the comment form.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -46,19 +46,18 @@ if ( post_password_required() ) {
         </h4><!-- .comments-title -->
 		
 		<?php the_comments_navigation(); ?>
-        
-		
+
+
         <ul class="media-list">
 			<?php
-			
-			wp_list_comments( array(
-				'style'         => 'ul',
-				'short_ping'    => true,
-				'avatar_size'   => '106',
-				'walker'        => new Bootstrap_Comment_Walker(),
-			) );
+			wp_list_comments( [
+				'style'       => 'ul',
+				'short_ping'  => TRUE,
+				'avatar_size' => 42,
+				'walker'      => new WP_Bootstrap_Comments_Walker(),
+			] );
 			?>
-        </ul><!-- .list-unstyled -->
+        </ul><!-- .media-list -->
 		
 		<?php the_comments_navigation();
 		
@@ -74,40 +73,39 @@ if ( post_password_required() ) {
 
 <div class="comment-form-wrapper">
     <div class="row">
-	<?php
-	$commenter = wp_get_current_commenter();
-	$req = get_option( 'require_name_email' );
-	$aria_req = ( $req ? " required='required'" : '' );
-	
-	$fields =  array(
+		<?php
+		$commenter = wp_get_current_commenter();
+		$req       = get_option( 'require_name_email' );
+		$aria_req  = ( $req ? " required='required'" : '' );
 		
-	        
-		'author' => '<div class="col-md-12"><div class="leave-form">' .
-			'<input id="author" name="author" placeholder="'. __('Name','hola') .'" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-			 '" ' .$aria_req . ' ></div></div>',
+		$fields = [
+			
+			
+			'author' => '<div class="col-md-12"><div class="leave-form">' .
+			            '<input id="author" name="author" placeholder="' . __( 'Name', 'hola' ) . '" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+			            '" ' . $aria_req . ' ></div></div>',
+			
+			'email' => '<div class="col-md-6"><div class="leave-form">' .
+			           '<input id="email" name="email" placeholder="' . __( 'Email', 'hola' ) . '" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+			           '" ' . $aria_req . ' ></div></div>',
+			
+			'url' => '<div class="col-md-6"><div class="leave-form">' .
+			         '<input id="url" placeholder="' . __( 'Website', 'hola' ) . '" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			         '" ></div></div>',
+		];
 		
-		'email' => '<div class="col-md-6"><div class="leave-form">' .
-			'<input id="email" name="email" placeholder="' . __( 'Email', 'hola' ) . '" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-			'" ' .$aria_req . ' ></div></div>',
 		
-		'url' => '<div class="col-md-6"><div class="leave-form">' .
-			'<input id="url" placeholder="' . __( 'Website', 'hola' ) . '" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-			'" ></div></div>',
-	);
-	
-	
-	$args = array(
-		'comment_field' =>  '<div class="col-md-12"><div class="text-leave">' .
-		                    '<textarea id="comment" name="comment" aria-required="true">' .
-		                    '</textarea></div></div>',
-		'fields' => apply_filters( 'comment_form_default_fields', $fields ),
-	);
- 
- 
-	
-	comment_form($args);
-	
-	?>
+		$args = [
+			'comment_field' => '<div class="col-md-12"><div class="text-leave">' .
+			                   '<textarea id="comment" name="comment" aria-required="true">' .
+			                   '</textarea></div></div>',
+			'fields'        => apply_filters( 'comment_form_default_fields', $fields ),
+		];
+		
+		
+		comment_form( $args );
+		
+		?>
 
     </div>
 </div>

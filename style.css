@@ -21,278 +21,347 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	4.Not-found-area
 
 -----------------------------------------------------------------------------------*/
-
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Roboto:100,300,400,500,700,900');
+
 html, body {
-	height: 100%;
-	font-family: 'Roboto', sans-serif;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-}
-.floatleft {float:left}
-.floatright {float:right}
-.alignleft {float:left;margin-right:15px;margin-bottom: 15px}
-.alignright {float:right;margin-left:15px;margin-bottom: 15px}
-.aligncenter {display:block;margin:0 auto 15px}
-.wp-caption {
-	background: #fff;
-	border: 1px solid #f0f0f0;
-	max-width: 96%; /* Image does not overflow the content area */
-	padding: 5px 3px 10px;
-	text-align: center;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
 }
 
-.wp-caption.alignnone {
-	margin: 5px 20px 20px 0;
+a:focus {
+    outline: 0 solid
 }
 
-.wp-caption.alignleft {
-	margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-	margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-	border: 0 none;
-	height: auto;
-	margin: 0;
-	max-width: 98.5%;
-	padding: 0;
-	width: auto;
-}
-
-.wp-caption p.wp-caption-text {
-	font-size: 11px;
-	line-height: 17px;
-	margin: 0;
-	padding: 0 4px 5px;
-}
-.gallery-caption{}
-.bypostauthor{}
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	white-space: nowrap;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
-
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
-}
-
-a:focus {outline:0 solid}
 img {
-    height:auto;
+    height: auto;
 }
-.fix {overflow:hidden}
-p {  margin:0 0 15px;
-	font-size:14px;
-	line-height:26px;
-	color:#232323;
+
+.fix {
+    overflow: hidden
+}
+
+p {
+    margin: 0 0 15px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #232323;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Dosis', sans-serif;
-	margin: 0 0 10px;
-	color:#232323;
-	font-weight:700;
+    font-family: 'Dosis', sans-serif;
+    margin: 0 0 10px;
+    color: #232323;
+    font-weight: 700;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
-a {transition: all 0.3s ease;text-decoration:none;}
+
+a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
 a:hover {
-	color: #232323;
-	text-decoration: none;
+    color: #232323;
+    text-decoration: none;
 }
+
 a:active, a:hover {
-	outline: 0 none;
+    outline: 0 none;
 }
-ul{
-	list-style: outside none none;
-	margin: 0;
-	padding: 0
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0
 }
-.clear{clear:both}
-body {}
+
+.clear {
+    clear: both
+}
+
 ::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
+
 ::selection {
-	background: #b3d4fc;
-	text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
+
 .browserupgrade {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
+
 .table,
 .table-cell {
-	display: table;
-	height: 100%;
+    display: table;
+    height: 100%;
 }
+
 .table-cell {
-	display: table-cell;
-	vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.floatleft {
+    float: left
+}
+
+.floatright {
+    float: right
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+.gallery-caption {
+}
+
+.bypostauthor {
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    white-space: nowrap;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
 }
 
 /*-----------------------------
  2.About-Page
  ---------------------------- */
 .about-me-info > span {
-	font-family: 'Dosis', sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
 }
+
 .about-me-info {
-	margin-top: 35px;
+    margin-top: 35px;
 }
+
 .about-me-info > p {
-	margin-top: 20px;
+    margin-top: 20px;
 }
-.aboutme-btn{
-	margin-top:20px;
+
+.aboutme-btn {
+    margin-top: 20px;
 }
+
 a.aboutme-btn {
-	border: 1px solid #f1f1f1;
-	display: inline-block;
-	font-weight: 500;
-	padding: 10px 15px;
+    border: 1px solid #f1f1f1;
+    display: inline-block;
+    font-weight: 500;
+    padding: 10px 15px;
 }
-a.aboutme-btn:hover{
-	background: #232323;
-	color: #fff;
-	border: 1px solid #fff;
+
+a.aboutme-btn:hover {
+    background: #232323;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .about-us-inner > h2 {
-	font-weight: 400;
-	margin-bottom: 15px;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
+
 .about-us-inner > p {
-	font-size: 17px;
-	font-weight: 300;
-	margin-bottom:0;
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 0;
 }
+
 .about-bg {
-	background: rgba(0, 0, 0, 0) url("img/bg/about-1.jpg") no-repeat scroll center center / cover ;
+    background: rgba(0, 0, 0, 0) url("img/bg/about-1.jpg") no-repeat scroll center center / cover;
 }
 
 .about-block-info > h3 {
-	color: #fff;
-	margin-bottom:20px;
+    color: #fff;
+    margin-bottom: 20px;
 }
+
 .about-block-info > p {
-	color: #fff;
-	font-size: 17px;
-	margin-bottom: 0;
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 0;
 }
+
 .about-us-block-area.bg-opacity-1::before {
-	background: #000 none repeat scroll 0 0;
-	content: "";
-	height: 100%;
-	left: 0;
-	opacity: 0.75;
-	position: absolute;
-	top: 0;
-	width: 100%;
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
+
 .about-me-info > h2 {
-	font-size: 36px;
-	text-transform: uppercase;
+    font-size: 36px;
+    text-transform: uppercase;
 }
+
 /*-----------------------------
  3.Client-area
  ---------------------------- */
 .client-item {
-	border-right: 1px solid #232323;
-	border-top: 1px solid #232323;
-	position: relative;
-	text-align: center;
-	transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1) 0s;
+    border-right: 1px solid #232323;
+    border-top: 1px solid #232323;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1) 0s;
 }
+
 .client-item::before {
-	border-left: 1px solid #232323;
-	content: "";
-	height: 100%;
-	left: -1px;
-	position: absolute;
-	top: 0;
+    border-left: 1px solid #232323;
+    content: "";
+    height: 100%;
+    left: -1px;
+    position: absolute;
+    top: 0;
 }
+
 .client-item::after {
-	border-bottom: 1px solid #232323;
-	bottom: -1px;
-	content: "";
-	left: 0;
-	position: absolute;
-	width: 100%;
+    border-bottom: 1px solid #232323;
+    bottom: -1px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
+
 .client-item a {
-	display: block;
-	opacity: 0.9;
-	padding: 60px 15px;
-	width: 100%;
+    display: block;
+    opacity: 0.9;
+    padding: 60px 15px;
+    width: 100%;
 }
+
 .clients-section-area .row {
-	margin: 0;
+    margin: 0;
 }
-.client-item img{
-	transition:all .3s;
+
+.client-item img {
+    transition: all .3s;
 }
+
 .client-item a:hover img {
-	filter:contrast(200%) brightness(0%);
+    filter: contrast(200%) brightness(0%);
 }
+
 /*-----------------------------
  4.Not-found-area
  ---------------------------- */
 .not-found-content h2 {
-	font-size: 36px;
-	margin: 60px 0;
+    font-size: 36px;
+    margin: 60px 0;
 }
+
 .not-found-img img {
-	max-width: 100%;
+    max-width: 100%;
 }
+
 a.not-found-btn {
-	border: 2px solid #cdcdcd;
-	display: inline-block;
-	font-family: 'Dosis', sans-serif;
-	font-size: 36px;
-	padding: 8px 30px;
-	text-transform: uppercase;
+    border: 2px solid #cdcdcd;
+    display: inline-block;
+    font-family: 'Dosis', sans-serif;
+    font-size: 36px;
+    padding: 8px 30px;
+    text-transform: uppercase;
 }
-a.not-found-btn:hover{
-	background:#232323;
-	color:#fff;
-	border: 2px solid #232323;
+
+a.not-found-btn:hover {
+    background: #232323;
+    color: #fff;
+    border: 2px solid #232323;
 }
 
 

@@ -20,38 +20,40 @@ global $hola_options;
         </div>
         <div class="row">
 			<?php
-			$cat = '';
+			$cat      = '';
 			$news_cat = '';
 			$news_cat = $hola_options['news-category'];
 			
-			if ( $news_cat ){
-				foreach ($news_cat as $single_cat){
+			if ( $news_cat ) {
+				foreach ( $news_cat as $single_cat ) {
 					$cat = $cat . $single_cat;
-					if (!(end($news_cat) == $single_cat )){
+					if ( ! ( end( $news_cat ) == $single_cat ) ) {
 						$cat = $cat . ",";
 					}
 				}
 				
 			}
 			// the query
-			$the_news = new WP_Query( array(
-				'cat' => $cat ,
-				'ignore_sticky_posts'=> true,
-				'posts_per_page' => 3
-			) );
+			$the_news = new WP_Query( [
+				'cat'                 => $cat,
+				'ignore_sticky_posts' => TRUE,
+				'posts_per_page'      => 3,
+			] );
 			if ( $the_news->have_posts() ) : ?>
                 <!-- pagination here -->
                 <!-- the loop -->
 				<?php while ( $the_news->have_posts() ) : $the_news->the_post(); ?>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 <?php echo ($the_news->current_post === 2) ? 'hidden-sm': '' ?>">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 <?php echo ( $the_news->current_post === 2 ) ? 'hidden-sm' : '' ?>">
                         <div class="single-blog">
 							<?php if ( has_post_thumbnail() ): ?>
                                 <div class="blog-img">
-                                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('news-img' ); ?></a>
+                                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'news-img' ); ?></a>
                                 </div>
 							<?php else: ?>
                                 <div class="blog-img">
-                                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-mini.png" alt="Blog Thumbnail"></a>
+                                    <a href="<?php the_permalink(); ?>"><img
+                                                src="<?php echo get_template_directory_uri(); ?>/img/placeholder-mini.png"
+                                                alt="Blog Thumbnail"></a>
                                 </div>
 							<?php endif; ?>
                             <div class="blog-info">
@@ -59,9 +61,12 @@ global $hola_options;
                                     <span>By <?php the_author_posts_link(); ?>, On <?php echo get_the_date(); ?></span>
                                 </div>
                                 <div class="blog-text">
-                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                    <h3>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </h3>
                                     <p><?php the_excerpt(); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="readmore">Read more</a>
+                                    <a href="<?php the_permalink(); ?>"
+                                       class="readmore">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +76,7 @@ global $hola_options;
                 <!-- pagination here -->
 				<?php wp_reset_postdata(); ?>
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.','hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'hola' ); ?></p>
 			<?php endif; ?>
 
         </div>

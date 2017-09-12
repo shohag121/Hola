@@ -11,17 +11,17 @@
  *
  * @package Hola
  */
-
+global $hola_options;
 get_header(); ?>
 
-<?php get_template_part('template-parts/breadcrumbs'); ?>
+<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 
     <!-- blog-section-start -->
     <section class="blog-area blog-page ptb-120">
         <div class="container">
 
             <div class="row">
-                <div class="col-md-8 col-sm-8">
+                <div class="<?php echo ( $hola_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $hola_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8' ); ?>">
                     <div class="row">
 						<?php
 						
@@ -36,7 +36,10 @@ get_header(); ?>
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
 								get_template_part( 'template-parts/content', 'page' );
-								the_post_navigation();
+								//if single post navigation is on
+								if ( $hola_options['blog-settings-post-nav'] ) {
+									the_post_navigation();
+								}
 								// If comments are open or we have at least one comment, load up the comment template.
 								if ( comments_open() || get_comments_number() ) :
 									comments_template();

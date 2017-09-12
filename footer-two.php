@@ -31,7 +31,9 @@ global $hola_options;
                                 <div class="footer-icon">
                                     <span class="icon-envelope"></span>
                                 </div>
-                                <p><a href="mailto:<?php echo sanitize_email( $hola_options['footer-email'] ); ?>"><?php echo sanitize_email( $hola_options['footer-email'] ); ?></a></p>
+                                <p>
+                                    <a href="mailto:<?php echo sanitize_email( $hola_options['footer-email'] ); ?>"><?php echo sanitize_email( $hola_options['footer-email'] ); ?></a>
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -47,17 +49,27 @@ global $hola_options;
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="footer-widget text-right">
                         <div class="footer-logo mb-30">
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $hola_options['footer-logo-image']['url']; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                               rel="home"><img
+                                        src="<?php echo $hola_options['footer-logo-image']['url']; ?>"
+                                        alt="<?php bloginfo( 'name' ); ?>"/></a>
                         </div>
                         <div class="widget-social-icon">
-                            <a href="<?php echo esc_url( $hola_options['footer-social-fb'] ); ?>"><span class="ti-facebook"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-tw'] ); ?>"><span class="ti-twitter"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-gp'] ); ?>"><span class="ti-google"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-in'] ); ?>"><span class="ti-linkedin"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-db'] ); ?>"><span class="ti-dribbble"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-fb'] ); ?>"><span
+                                        class="ti-facebook"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-tw'] ); ?>"><span
+                                        class="ti-twitter"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-gp'] ); ?>"><span
+                                        class="ti-google"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-in'] ); ?>"><span
+                                        class="ti-linkedin"></span></a>
+                            <a href="<?php echo esc_url( $hola_options['footer-social-db'] ); ?>"><span
+                                        class="ti-dribbble"></span></a>
                         </div>
                         <div class="copyright">
-                            <p>&copy; <?php  echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>, All Rights Reserved</p>
+                            <p>&copy; <?php echo date( 'Y' ); ?> <a
+                                        href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>,
+                                All Rights Reserved</p>
                         </div>
                     </div>
                 </div>

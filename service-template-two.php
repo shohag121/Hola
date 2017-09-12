@@ -10,7 +10,7 @@ get_header();
 global $hola_options;
 ?>
     <!-- breadcrumbs-section-start -->
-    <?php get_template_part('template-parts/breadcrumbs'); ?>
+<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
     <!-- breadcrumbs-section-end -->
 
     <!-- about-section-start -->
@@ -18,10 +18,10 @@ global $hola_options;
         <div class="container">
             <div class="row">
                 <!-- features-section-start -->
-				<?php get_template_part('template-parts/features'); ?>
+				<?php get_template_part( 'template-parts/features' ); ?>
                 <!-- features-section-end -->
                 <!-- skills-section-start -->
-				<?php get_template_part('template-parts/skills'); ?>
+				<?php get_template_part( 'template-parts/skills' ); ?>
                 <!-- skills-section-end -->
             </div>
         </div>
@@ -40,15 +40,15 @@ global $hola_options;
             </div>
 
             <!-- single-services-start -->
-			<?php get_template_part('template-parts/services'); ?>
+			<?php get_template_part( 'template-parts/services' ); ?>
             <!-- single-services-end -->
 
         </div>
     </section>
     <!-- service-section-end -->
-    
+
     <!-- padding top fixed -->
     <div class="pt-120"></div>
 <?php
-    get_template_part('template-parts/clients');
-    get_footer();
+get_template_part( 'template-parts/clients' );
+get_footer();

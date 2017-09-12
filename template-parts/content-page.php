@@ -8,17 +8,17 @@
  */
 
 ?>
-<div <?php post_class('single-blog mb-60'); ?> id="post-<?php the_ID(); ?>">
+<div <?php post_class( 'single-blog mb-60' ); ?> id="post-<?php the_ID(); ?>">
 	<?php if ( has_post_thumbnail() ): ?>
         <div class="blog-img">
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog-img' ); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-img' ); ?></a>
         </div>
 	<?php endif; ?>
     <div class="blog-info">
-        
+
         <div class="blog-text blog-details-post">
             <h1><?php the_title(); ?></h1>
-            <?php the_content(); ?>
+			<?php the_content(); ?>
         </div>
     </div>
 </div>

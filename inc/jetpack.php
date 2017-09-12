@@ -16,27 +16,28 @@
  */
 function hola_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
-	add_theme_support( 'infinite-scroll', array(
+	add_theme_support( 'infinite-scroll', [
 		'container' => 'main',
 		'render'    => 'hola_infinite_scroll_render',
 		'footer'    => 'page',
-	) );
-
+	] );
+	
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
-
+	
 	// Add theme support for Content Options.
-	add_theme_support( 'jetpack-content-options', array(
-		'post-details' => array(
+	add_theme_support( 'jetpack-content-options', [
+		'post-details' => [
 			'stylesheet' => 'hola-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
 			'author'     => '.byline',
 			'comment'    => '.comments-link',
-		),
-	) );
+		],
+	] );
 }
+
 add_action( 'after_setup_theme', 'hola_jetpack_setup' );
 
 /**

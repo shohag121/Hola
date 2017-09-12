@@ -4,79 +4,91 @@ Template:  Theme Name
 NOTE: This is Service style file. All Service related style included in this file.
 
 --------------------------------------*/
-.single-service{
-	overflow:hidden;
-	padding:20px;
-	transition:all .3s;
+.single-service {
+    overflow: hidden;
+    padding: 20px;
+    transition: all .3s;
 }
+
 .service-icon i {
     font-size: 24px;
 }
+
 .section-title.padd-l p {
-  padding-right: 215px;
+    padding-right: 215px;
 }
+
 .section-title.padd-l p {
     padding-left: 0;
     padding-right: 215px;
 }
+
 .section-title > p {
     font-size: 16px;
     margin-bottom: 60px;
 }
+
 .service-text > h3 {
-  font-weight: 400;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
+
 .service-text > p {
-  margin: 0;
+    margin: 0;
 }
 
 .service-icon {
-  background: #ffffff none repeat scroll 0 0;
-  border-radius: 50%;
-  box-sizing: border-box;
-  height: 65px;
-  line-height: 72px;
-  margin: auto auto 20px;
-  position: relative;
-  transition: all 0.3s ease 0s;
-  width: 65px;
-  border: 4px solid #fff;
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 65px;
+    line-height: 72px;
+    margin: auto auto 20px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    width: 65px;
+    border: 4px solid #fff;
 }
 
-.single-service:hover .service-icon{
-	border: 4px solid #eee;
-	box-shadow: 0px 0px 0px 1px #b8b5b5;
+.single-service:hover .service-icon {
+    border: 4px solid #eee;
+    box-shadow: 0px 0px 0px 1px #b8b5b5;
 }
-.single-service:hover{
-	background:#fff;	
+
+.single-service:hover {
+    background: #fff;
 }
 
 .single-service {
-  border-right: 1px solid #d1cfcf;
-  border-bottom: 1px solid #d1cfcf;
+    border-right: 1px solid #d1cfcf;
+    border-bottom: 1px solid #d1cfcf;
 }
 
-.margin-fix{
-	
-}
-.margin-fix:nth-child(1), .margin-fix:nth-child(4){
-	padding-right:0;
-}
-.margin-fix:nth-child(3), .margin-fix:nth-child(6){
-	padding-left:0;
-}
-.margin-fix:nth-child(2), .margin-fix:nth-child(5){
-	padding:0;
+.margin-fix {
+
 }
 
-.margin-fix:nth-child(3) .single-service, .margin-fix:nth-child(6) .single-service{
-border-right: none;	
+.margin-fix:nth-child(1), .margin-fix:nth-child(4) {
+    padding-right: 0;
 }
-.margin-fix:nth-child(4) .single-service, .margin-fix:nth-child(5) .single-service, .margin-fix:nth-child(6) .single-service{
-border-bottom:none;	
+
+.margin-fix:nth-child(3), .margin-fix:nth-child(6) {
+    padding-left: 0;
 }
+
+.margin-fix:nth-child(2), .margin-fix:nth-child(5) {
+    padding: 0;
+}
+
+.margin-fix:nth-child(3) .single-service, .margin-fix:nth-child(6) .single-service {
+    border-right: none;
+}
+
+.margin-fix:nth-child(4) .single-service, .margin-fix:nth-child(5) .single-service, .margin-fix:nth-child(6) .single-service {
+    border-bottom: none;
+}
+
 /*--------------------
 Home-2
 ----------------------*/
@@ -96,28 +108,34 @@ Home-2
 Service-page-1
 ----------------------*/
 .service-section {
-    background: rgba(0, 0, 0, 0) url("../../img/service/service-breadcrumb.jpg") no-repeat scroll center center / cover ;
+    background: rgba(0, 0, 0, 0) url("../../img/service/service-breadcrumb.jpg") no-repeat scroll center center / cover;
 }
+
 .service-section .breadcrumbs h2 {
     color: #fff;
     letter-spacing: 4px;
 }
+
 .service-section .breadcrumbs ul li {
     display: inline-block;
     margin: 0 10px;
     position: relative;
     text-transform: capitalize;
-    color:#fff;
+    color: #fff;
 }
-.service-section .breadcrumbs ul li a{
-    color:#fff;
+
+.service-section .breadcrumbs ul li a {
+    color: #fff;
 }
+
 .service-section .breadcrumbs ul li a::after {
     background-color: #fff;
 }
-.service-section .breadcrumbs ul li a:hover{
-    color:#ddd;
+
+.service-section .breadcrumbs ul li a:hover {
+    color: #ddd;
 }
+
 .service-page .single-service:hover {
     background: #FAFAFA none repeat scroll 0 0;
 }

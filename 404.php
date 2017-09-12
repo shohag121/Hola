@@ -16,10 +16,12 @@ get_header(); ?>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="not-found-content text-center">
                         <div class="not-found-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/404.png" alt="404 Error" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/404.png"
+                                 alt="404 Error"/>
                         </div>
                         <h2><?php esc_html_e( 'Ooopps.! The Page You Were Looking For, Couldn\'t Be Found.', 'hola' ); ?></h2>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="not-found-btn">back to home</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                           rel="home" class="not-found-btn">back to home</a>
                     </div>
                 </div>
             </div>

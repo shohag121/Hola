@@ -5,32 +5,36 @@ NOTE: This is Breadcrumb style file. All Breadcrumb related style included in th
 
 --------------------------------------*/
 .breadcrumbs > h2 {
-  display: inline-block;
-  font-size: 36px;
-  text-transform: uppercase;
+    display: inline-block;
+    font-size: 36px;
+    text-transform: uppercase;
 }
+
 .breadcrumbs ul li {
-  display: inline-block;
-  text-transform: uppercase;
+    display: inline-block;
+    text-transform: uppercase;
 }
+
 .breadcrumbs ul li {
-  display: inline-block;
-  margin: 0 10px;
-  position: relative;
-  text-transform: capitalize;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    text-transform: capitalize;
 }
+
 .breadcrumbs ul li a::after {
-  background-color: #464646;
-  content: "";
-  font-size: 8px;
-  height: 15px;
-  margin-left: 11px;
-  position: absolute;
-  right: -12px;
-  top: 3px;
-  transform: rotate(33deg);
-  width: 1.5px;
+    background-color: #464646;
+    content: "";
+    font-size: 8px;
+    height: 15px;
+    margin-left: 11px;
+    position: absolute;
+    right: -12px;
+    top: 3px;
+    transform: rotate(33deg);
+    width: 1.5px;
 }
-.breadcrumbs ul li a:hover{
-	color:#888;
+
+.breadcrumbs ul li a:hover {
+    color: #888;
 }

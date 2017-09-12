@@ -21,11 +21,11 @@ global $hola_options;
         <div class="row">
 			<?php
 			// the query
-			$the_query = new WP_Query( array(
-				'post_type' => 'hola_pricing',
+			$the_query = new WP_Query( [
+				'post_type'      => 'hola_pricing',
 				'posts_per_page' => 3,
-				'order'      => 'ASC'
-			));
+				'order'          => 'ASC',
+			] );
 			if ( $the_query->have_posts() ) :
 				//the loop
 				while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -36,7 +36,7 @@ global $hola_options;
                                 <span><?php echo esc_html( get_post_meta( get_the_ID(), '_hola_pricing_price', 1 ) ); ?></span>
                             </div>
                             <div class="pricing-bottom">
-                                <?php
+								<?php
 								$items = get_post_meta( get_the_ID(), '_hola_pricing_group', 1 );
 								foreach ( $items as $item ) : ?>
                                     <div class="price-list">

@@ -11,11 +11,11 @@
  *
  * @package Hola
  */
-
+global $hola_options;
 get_header(); ?>
 
 
-<?php get_template_part('template-parts/breadcrumbs'); ?>
+<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
     <!-- blog-section-start -->
     <section class="blog-area blog-page ptb-120">
         <div class="container">
@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) : ?>
                 <div class="row">
-                    <div class="col-md-8 col-sm-8">
+                    <div class="<?php echo ( $hola_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $hola_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8' ); ?>">
                         <div class="row">
 							<?php
 							/* Start the Loop */
@@ -51,6 +51,7 @@ get_header(); ?>
 				
 				<?php
 				
+                // Page navigation
 				hola_numeric_posts_nav();
 			
 			else :

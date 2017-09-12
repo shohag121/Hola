@@ -30,9 +30,9 @@ function hola_posrfolio_metaboxes() {
 		'type'             => 'select',
 		'show_option_none' => true,
 		'options'          => array(
-			'w' => __( 'Double Width', 'hola' ),
-			'h'   => __( 'Double Height', 'hola' ),
-			'wh'     => __( 'Double Height Width', 'hola' ),
+			'w'       => __( 'Double Width', 'hola' ),
+			'h'       => __( 'Double Height', 'hola' ),
+			'wh'      => __( 'Double Height Width', 'hola' ),
 		),
 	) );
 	

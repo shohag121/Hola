@@ -12,7 +12,7 @@ global $hola_options;
 ?>
 
     <!-- breadcrumbs-section-start -->
-<?php get_template_part('template-parts/breadcrumbs'); ?>
+<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
     <!-- breadcrumbs-section-end -->
 
     <!-- service-section-start -->
@@ -28,13 +28,13 @@ global $hola_options;
             </div>
 
             <!-- single-services-start -->
-			<?php get_template_part('template-parts/services'); ?>
+			<?php get_template_part( 'template-parts/services' ); ?>
             <!-- single-services-end -->
 
         </div>
     </section>
     <!-- service-section-end -->
 <?php
-get_template_part('template-parts/work-process');
-get_template_part('template-parts/news');
+get_template_part( 'template-parts/work-process' );
+get_template_part( 'template-parts/news' );
 get_footer();

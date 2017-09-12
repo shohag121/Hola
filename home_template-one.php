@@ -9,7 +9,8 @@ get_header();
 global $hola_options;
 ?>
     <!-- slider-section-start -->
-    <section class="slider-area slider-bg ptb-200" style="background-image: url(<?php echo $hola_options['home-slider-bg']['url']; ?>);">
+    <section class="slider-area slider-bg ptb-200"
+             style="background-image: url(<?php echo $hola_options['home-slider-bg']['url']; ?>);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -19,7 +20,7 @@ global $hola_options;
                         <h3 class="cd-headline clip is-full-width">
 								<span class="cd-words-wrapper text-black">
 									<b class="is-visible"><?php echo $hola_options['home-slider-p1']; ?></b>
-									<?php foreach ( $hola_options['home-slider-p'] as $paragraph ):  ?>
+									<?php foreach ( $hola_options['home-slider-p'] as $paragraph ): ?>
                                         <b><?php echo $paragraph; ?></b>
 									<?php endforeach; ?>
 								</span>
@@ -35,10 +36,10 @@ global $hola_options;
         <div class="container">
             <div class="row">
                 <!-- features-section-start -->
-                <?php get_template_part('template-parts/features'); ?>
+				<?php get_template_part( 'template-parts/features' ); ?>
                 <!-- features-section-end -->
                 <!-- skills-section-start -->
-                <?php get_template_part('template-parts/skills'); ?>
+				<?php get_template_part( 'template-parts/skills' ); ?>
                 <!-- skills-section-end -->
             </div>
         </div>
@@ -57,7 +58,7 @@ global $hola_options;
             </div>
 
             <!-- single-services-start -->
-	        <?php get_template_part('template-parts/services'); ?>
+			<?php get_template_part( 'template-parts/services' ); ?>
             <!-- single-services-end -->
 
         </div>
@@ -73,14 +74,14 @@ global $hola_options;
                         <button class="active" data-filter="*">ALL</button>
 						<?php
 						//get all Categories from portfolio_category
-						$terms = get_terms( array(
-							'taxonomy' => 'portfolio_category',
-							'orderby' => 'name',
-							'order' => 'ASC',
-							'hide_empty' => false,
-						) );
-						foreach($terms as $term){
-							echo '<button data-filter=".'. $term->slug .'">'. $term->name .'</button> ';
+						$terms = get_terms( [
+							'taxonomy'   => 'portfolio_category',
+							'orderby'    => 'name',
+							'order'      => 'ASC',
+							'hide_empty' => FALSE,
+						] );
+						foreach ( $terms as $term ) {
+							echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button> ';
 						}
 						?>
                     </div>
@@ -89,7 +90,9 @@ global $hola_options;
             </div>
 			<?php
 			// get all portfolios
-			$portfolios = new WP_Query( array( 'post_type' => 'hola_portfolio', 'posts_per_page'=> 10  ) );
+			$portfolios = new WP_Query( [ 'post_type'      => 'hola_portfolio',
+			                              'posts_per_page' => 10,
+			] );
 			if ( $portfolios->have_posts() ) : ?>
                 <!-- pagination here -->
                 <div class="row">
@@ -99,8 +102,8 @@ global $hola_options;
                         <!-- the loop -->
 						<?php while ( $portfolios->have_posts() ) : $portfolios->the_post(); ?>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 grid-item <?php
-							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category');
-							foreach ($portfolio_names as $portfolio_name){
+							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
+							foreach ( $portfolio_names as $portfolio_name ) {
 								echo $portfolio_name->slug . ' ';
 							}
 							?>">
@@ -111,11 +114,17 @@ global $hola_options;
                                     <div class="portfolio-text">
                                         <div class="text-container">
                                             <div class="text-wrapper">
-                                                <a class="img-poppu" href="<?php echo  esc_url( get_the_post_thumbnail_url(get_the_ID(),'full') ); ?>"><p class="icon-animation"><span class="icon-focus"></span></p></a>
-                                                <h3 class="text-animation"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                                <a class="img-poppu"
+                                                   href="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>">
+                                                    <p class="icon-animation">
+                                                        <span class="icon-focus"></span>
+                                                    </p></a>
+                                                <h3 class="text-animation"><a
+                                                            href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                </h3>
                                                 <span><?php
-													$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category');
-													foreach ($portfolio_names as $portfolio_name){
+													$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
+													foreach ( $portfolio_names as $portfolio_name ) {
 														echo $portfolio_name->name . ', ';
 													}
 													?></span>
@@ -132,10 +141,11 @@ global $hola_options;
                     </div>
                 </div>
                 <div class="view-more text-center">
-                    <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view more</a>
+                    <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view
+                        more</a>
                 </div>
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
 			<?php endif; ?>
         </div>
     </section>
@@ -143,6 +153,6 @@ global $hola_options;
 
 
 <?php
-get_template_part('template-parts/work-process');
-get_template_part('template-parts/news');
+get_template_part( 'template-parts/work-process' );
+get_template_part( 'template-parts/news' );
 get_footer();

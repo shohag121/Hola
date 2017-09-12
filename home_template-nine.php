@@ -6,7 +6,7 @@
  * @since Hola 1.0
  */
 
-get_header('two');
+get_header( 'two' );
 global $hola_options;
 ?>
     <!-- slider-section-start -->
@@ -34,14 +34,14 @@ global $hola_options;
                         <button class="active" data-filter="*">ALL</button>
 						<?php
 						//get all Categoryies from portfolio_category
-						$terms = get_terms( array(
-							'taxonomy' => 'portfolio_category',
-							'orderby' => 'name',
-							'order' => 'ASC',
-							'hide_empty' => false,
-						) );
-						foreach($terms as $term){
-							echo '<button data-filter=".'. $term->slug .'">'. $term->name .'</button> ';
+						$terms = get_terms( [
+							'taxonomy'   => 'portfolio_category',
+							'orderby'    => 'name',
+							'order'      => 'ASC',
+							'hide_empty' => FALSE,
+						] );
+						foreach ( $terms as $term ) {
+							echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button> ';
 						}
 						?>
                     </div>
@@ -50,7 +50,9 @@ global $hola_options;
             </div>
 			<?php
 			// get all portfolios
-			$portfolios = new WP_Query( array( 'post_type' => 'hola_portfolio', 'posts_per_page'=> 10  ) );
+			$portfolios = new WP_Query( [ 'post_type'      => 'hola_portfolio',
+			                              'posts_per_page' => 10,
+			] );
 			if ( $portfolios->have_posts() ) : ?>
                 <!-- pagination here -->
                 <div class="row">
@@ -62,8 +64,8 @@ global $hola_options;
 							
 							?>
                             <div class="col-md-4 col-sm-6 col-xs-12 grid-item <?php
-							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category');
-							foreach ($portfolio_names as $portfolio_name){
+							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
+							foreach ( $portfolio_names as $portfolio_name ) {
 								echo $portfolio_name->slug . ' ';
 							}
 							?>">
@@ -71,11 +73,11 @@ global $hola_options;
                                     <div class="portfolio-img">
 										<?php
 										//Defining Image size
-										if ($img_size == 'w'){
+										if ( $img_size == 'w' ) {
 											the_post_thumbnail( 'portfolio-single-w' );
-										} else if ($img_size == 'h'){
+										} else if ( $img_size == 'h' ) {
 											the_post_thumbnail( 'portfolio-single-h' );
-										} else if ($img_size == 'wh'){
+										} else if ( $img_size == 'wh' ) {
 											the_post_thumbnail( 'portfolio-single-hw' );
 										} else {
 											the_post_thumbnail( 'portfolio-single' );
@@ -85,13 +87,19 @@ global $hola_options;
                                     <div class="portfolio-text">
                                         <div class="text-container">
                                             <div class="text-wrapper">
-                                                <a class="img-poppu" href="<?php echo  esc_url( get_the_post_thumbnail_url(get_the_ID(),'full') ); ?>"><p class="icon-animation"><span class="icon-focus"></span></p></a>
-                                                <h3 class="text-animation"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                                <a class="img-poppu"
+                                                   href="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>">
+                                                    <p class="icon-animation">
+                                                        <span class="icon-focus"></span>
+                                                    </p></a>
+                                                <h3 class="text-animation"><a
+                                                            href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                </h3>
                                                 <span><?php
-													$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category');
-													foreach ($portfolio_names as $portfolio_name){
+													$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
+													foreach ( $portfolio_names as $portfolio_name ) {
 														echo $portfolio_name->name;
-														if ( ! (end($portfolio_names) === $portfolio_name ) ){
+														if ( ! ( end( $portfolio_names ) === $portfolio_name ) ) {
 															echo ", ";
 														}
 													}
@@ -107,15 +115,16 @@ global $hola_options;
                     </div>
                 </div>
                 <div class="view-more text-center">
-                    <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view more</a>
+                    <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view
+                        more</a>
                 </div>
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no portfolio yet.' ,'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
 			<?php endif; ?>
         </div>
     </section>
     <!-- portfolio-section-end -->
 <?php
-get_template_part('template-parts/progress-counter');
-get_template_part('template-parts/team');
+get_template_part( 'template-parts/progress-counter' );
+get_template_part( 'template-parts/team' );
 get_footer();
