@@ -174,6 +174,16 @@ function hola_scripts() {
 add_action( 'wp_enqueue_scripts', 'hola_scripts' );
 
 
+/*
+ * Tag cloud set default font size
+ */
+function hola_set_tag_cloud_font_size($args) {
+	$args['smallest'] = 10; /* Set the smallest size to 10pt */
+	$args['largest'] = 18;  /* set the largest size to 18pt */
+	return $args;
+}
+add_filter('widget_tag_cloud_args','hola_set_tag_cloud_font_size');
+
 
 //Contact Form 7 integration
 function hola_contact7_form_content( $template, $prop ) {
@@ -203,7 +213,7 @@ function hola_contact7_form_content( $template, $prop ) {
 	}
 }
 add_filter( 'wpcf7_default_template', 'hola_contact7_form_content', 10, 2 );
-
+// Default title override for contact form 7
 function mod_contact7_form_title( $template ) {
 	$template->set_title( 'Contact Pages Form' );
     return $template;

@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
     <!-- not-found-section-start -->
     <section class="not-found-area ptb-120">
         <div class="container">
@@ -18,16 +17,15 @@ get_header(); ?>
                         <div class="not-found-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/404.png"
                                  alt="404 Error"/>
-                        </div>
+                        </div><!-- .not-found-img -->
                         <h2><?php esc_html_e( 'Ooopps.! The Page You Were Looking For, Couldn\'t Be Found.', 'hola' ); ?></h2>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                            rel="home" class="not-found-btn">back to home</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div><!-- .not-found-content .text-center -->
+                </div><!-- .col-md-12 .col-sm-12 .col-xs-12 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- .not-found-area .ptb-120 -->
     <!-- not-found-section-end -->
-
 <?php
 get_footer();

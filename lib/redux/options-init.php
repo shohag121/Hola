@@ -938,11 +938,8 @@ Redux::setSection( $opt_name, array(
 			'placeholder' => __( 'All', 'hola' ),
 			'sortable'    => true,
 			//Must provide key => value pairs for radio options
-			'data'        => 'terms',
-			'args'        => array(
-				'taxonomies' => array( 'category' ),
-			),
-			'default'     => '',
+			'data'        => 'categories',
+			'default'     => '1',
 		),
 	
 	),

@@ -9,7 +9,6 @@ NOTE: This is Footer style file. All footer related style included in this file.
     font-size: 36px;
     margin-top: 15px;
 }
-
 .footer-widget > p {
     color: #232323;
     font-family: 'Dosis', sans-serif;
@@ -30,9 +29,8 @@ NOTE: This is Footer style file. All footer related style included in this file.
     transition: all 0.3s ease 0s;
     width: 30px;
 }
-
-.widget-social-icon a:hover {
-    background: #232323;
+.widget-social-icon a:hover{
+    background:#232323;
     color: #fff;
 }
 
@@ -43,9 +41,8 @@ NOTE: This is Footer style file. All footer related style included in this file.
     font-weight: 400;
     font-size: 16px;
 }
-
 .footer-widget.text-center {
-    margin-top: 9px;
+  margin-top: 9px;
 }
 
 /*-----------------------------
@@ -56,11 +53,11 @@ Home-2
     font-size: 36px;
 }
 
-.footer-area-2 .footer-widget > p, .footer-area-2 .footer-widget > p a {
+
+.footer-area-2 .footer-widget > p, .footer-area-2 .footer-widget > p a{
     color: #fff;
 }
-
-.footer-area-2 .footer-widget .widget-social-icon a {
+.footer-area-2 .footer-widget .widget-social-icon a{
     color: #fff;
     border: 1px solid #fff;
 }
@@ -69,7 +66,6 @@ Home-2
     background: #fff none repeat scroll 0 0;
     color: #232323;
 }
-
 .footer-area-2 .footer-widget .copyright > p, .footer-area-2 .footer-widget .copyright a {
     color: #fff;
 }

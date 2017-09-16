@@ -23,49 +23,45 @@ global $hola_options;
 </head>
 
 <body <?php body_class(); ?>>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser.
-    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-    your experience.</p>
-<![endif]-->
+
 <!-- header-start -->
 <header>
-    <div class="header-area gray-bg <?php echo $hola_options['blog-logo-style']; ?>">
+    <div class="header-area gray-bg <?php echo esc_attr( $hola_options['blog-logo-style'] ); ?>">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="logo">
-						<?php
-						if ( $hola_options['blog-logo-select'] == 'text' ) : ?>
+					    <?php
+					    if ( $hola_options['blog-logo-select'] == 'text' ) : ?>
                             <h1 class="site-title"><a
                                         href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                         rel="home"><?php bloginfo( 'name' ); ?></a>
-                            </h1>
-						<?php else : ?>
+                            </h1><!-- .site-title -->
+					    <?php else : ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                rel="home"><img
-                                        src="<?php echo $hola_options['blog-logo-image']['url']; ?>"
+                                        src="<?php echo esc_url( $hola_options['blog-logo-image']['url'] ); ?>"
                                         alt="<?php bloginfo( 'name' ); ?>"/></a>
-							<?php
-						endif;
-						?>
-                    </div>
-                </div>
+						    <?php
+					    endif;
+					    ?>
+                    </div><!-- .logo -->
+                </div><!-- .col-lg-3 .col-md-3 -->
                 <div class="col-lg-9 col-md-9">
                     <div class="main-menu text-right">
-						<?php
-						wp_nav_menu( [
-							'theme_location' => 'menu-1',
-							'walker'         => new Hola_Nav_Walker(),
-							'container'      => 'nav',
-						] );
-						?>
-                    </div>
+					    <?php
+					    wp_nav_menu( array(
+						    'theme_location' => 'menu-1',
+						    'walker'         => new Hola_Nav_Walker(),
+						    'container'      => 'nav',
+					    ) );
+					    ?>
+                    </div><!-- .main-menu .text-right -->
                     <div class="mobile-menu"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div><!-- .col-lg-9 .col-md-9 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .header-area -->
 </header>
 <?php if ( $hola_options['blog-logo-style'] == 'headroom' ) : ?>
     <div class="header-space"></div>

@@ -15,74 +15,66 @@ NOTE: This is Portfolio style file. All Portfolio related style included in this
     text-transform: uppercase;
     transition: all 0.2s ease 0s;
 }
-
 .portfolio-menu button:hover, .portfolio-menu button.active {
-    box-shadow: 0 0 0 2px #232323;
-    transition: all .2s;
+  box-shadow: 0 0 0 2px #232323;
+    transition:all .2s;
 }
 
-.single-portfolio {
-    position: relative;
-    margin-bottom: 30px;
+.single-portfolio{
+	position:relative;
+	margin-bottom:30px;
     overflow: hidden;
     transition: all .3s;
 }
-
-.portfolio-img {
-    display: block;
-    position: relative;
+.portfolio-img{
+  display: block;
+  position: relative;
 }
-
 .portfolio-img img {
     width: 100%;
-    height: auto;
+    height:auto;
 
 }
-
 .single-portfolio > .portfolio-img::before {
-    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
-    content: "";
-    opacity: 0;
-    position: absolute;
-    transition: all 0.4s ease-in-out 0s;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  transition: all 0.4s ease-in-out 0s;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
 }
-
 .single-portfolio:hover .portfolio-img::before {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .img-poppu {
-    display: block;
+  display:block;
+}
+.portfolio-text{ 
+	display:block;
+	position:absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	height:100%;
 }
 
-.portfolio-text {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+.text-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:100%;
+	flex-wrap: wrap;
 }
-
-.text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex-wrap: wrap;
-}
-
 .text-wrapper {
-    flex: 1 1 100%;
-    opacity: 0;
-    text-align: center;
+  flex: 1 1 100%;
+  opacity: 0;
+  text-align: center;
     transition: all .3s;
 }
-
 .text-wrapper h3 {
     color: #fff;
     font-weight: 500;
@@ -90,52 +82,44 @@ NOTE: This is Portfolio style file. All Portfolio related style included in this
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
 }
-
-.text-wrapper h3 a {
+.text-wrapper h3 a{
     color: #FFFFFF;
 }
-
-.text-wrapper h3 a:hover {
-    color: #d5d5d5;
+.text-wrapper h3 a:hover{
+    color:#d5d5d5;
 }
-
-.text-wrapper > span {
-    color: #fff;
-    text-transform: uppercase;
+.text-wrapper > span{
+	color:#fff;
+	text-transform:uppercase;
     font-size: 18px;
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
 }
 
-.icon-animation {
-    margin-bottom: 50px;
-    transition: all .3s ease;
+.icon-animation{
+	margin-bottom:50px;
+	transition:all .3s ease;
+	font-size:36px;
+}	
+
+.text-animation{
+	margin-top:50px;
+}
+.icon-animation > span{
     font-size: 36px;
+    color:#fff;
 }
-
-.text-animation {
-    margin-top: 50px;
-}
-
-.icon-animation > span {
-    font-size: 36px;
-    color: #fff;
-}
-
 .single-portfolio:hover .icon-animation {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
     transition: all .3s;
 }
-
-.single-portfolio:hover .text-animation {
-    margin-top: 15px;
+.single-portfolio:hover .text-animation{
+	margin-top:15px;
     transition: all .3s;
 }
-
-.single-portfolio:hover .text-wrapper {
-    opacity: 1;
+.single-portfolio:hover .text-wrapper{
+	opacity:1;
 }
-
 .view-more a {
     background: #232323 none repeat scroll 0 0;
     border: 1px solid #dddddd;
@@ -147,12 +131,10 @@ NOTE: This is Portfolio style file. All Portfolio related style included in this
     padding: 10px 30px;
     text-transform: capitalize;
 }
-
-.view-more a:hover {
-    color: #232323;
-    background: #fff;
+.view-more a:hover{
+	color:#232323;
+	background:#fff;
 }
-
 /*---------------------
 Home-3
 ----------------------*/
@@ -177,28 +159,23 @@ Portfolio-Details
     transition: all 0.3s ease 0s;
     width: 40px;
     z-index: 111;
-    background: #FFFFFF;
+    background:#FFFFFF;
 }
-
 .portfolio-slider .owl-nav div.owl-next {
     left: auto;
     right: 0;
 }
-
 .portfolio-slider:hover .owl-nav div.owl-next {
     left: auto;
     right: 40px;
 }
-
 .portfolio-slider:hover .owl-nav div {
     left: 40px;
     opacity: 1;
 }
-
 .pagination ul li {
     display: inline-block;
 }
-
 .pagination ul li a {
     display: block;
     font-size: 18px;
@@ -208,37 +185,30 @@ Portfolio-Details
     line-height: 35px;
     width: 35px;
 }
-
 .pagination {
     display: inline-block;
     margin: 10px 0 0;
     padding-left: 0;
 }
-
 .portfolio-meta {
     padding: 15px 25px;
 }
-
 .pagination ul li.active a, .pagination ul li:hover a {
     background: #232323 none repeat scroll 0 0;
     color: #fff;
 }
-
 .portfolio-meta ul li {
-    padding: 15px 0;
+     padding: 15px 0;
     border-bottom: 1px solid #d5d5d5;
-}
-
+ }
 .portfolio-meta span {
     font-weight: 700;
-    margin: 0 10px;
+    margin:0 10px;
     font-family: 'Dosis', sans-serif;
 }
-
 .portfolio-meta ul li:last-child {
     border: medium none;
 }
-
 .portfolio-video {
     height: 600px;
     position: relative;
@@ -249,11 +219,9 @@ Portfolio-Details
     margin: 0;
     padding: 0;
 }
-
-.view-more.no-gutte {
+.view-more.no-gutte{
     margin-top: 30px;
 }
-
 /*---------------------
 Portfolio-Style-2
 ----------------------*/
@@ -265,35 +233,29 @@ Portfolio-Style-2
     transform: translateY(-50%);
     width: 100%;
 }
-
-.portfolio-text-2 {
+.portfolio-text-2{
     position: relative;
     margin-top: 30px;
-    opacity: 0;
+    opacity:0;
     transition: all .3s;
 }
-
-.hover-style-2:hover .portfolio-text-2 {
+.hover-style-2:hover .portfolio-text-2{
     opacity: 1;
     margin-top: 0px;
 }
-
-.portfolio-text-2 h3 {
+.portfolio-text-2 h3{
     color: #fff;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom:5px;
 }
-
 .portfolio-text-2 h3 a {
     color: #fff;
 }
-
-.portfolio-text-2 h3 a:hover {
+.portfolio-text-2 h3 a:hover{
     color: #999;
 }
-
 .portfolio-text-2 > span {
     color: #fff;
     text-transform: uppercase;
@@ -305,9 +267,8 @@ Portfolio-Style-3
 .portfolio-style-3 {
     position: relative;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom:30px;
 }
-
 .icon-animation-2 {
     left: 0;
     margin-left: auto;
@@ -318,20 +279,17 @@ Portfolio-Style-3
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 0;
+    opacity:0;
     transition: all .5s;
 }
-
-.portfolio-style-3:hover .icon-animation-2 {
+.portfolio-style-3:hover .icon-animation-2{
     margin-top: 0px;
     opacity: 1;
 }
-
 p.icon-animation-2 {
     color: #fff;
     font-size: 35px;
 }
-
 .portfolio-img.img-hover::before {
     background: #000 none repeat scroll 0 0;
     content: "";
@@ -340,37 +298,31 @@ p.icon-animation-2 {
     position: absolute;
     top: 0;
     width: 100%;
-    opacity: 0;
+    opacity:0;
     transition: all .3s;
 }
-
-.portfolio-style-3:hover .portfolio-img.img-hover::before {
+.portfolio-style-3:hover .portfolio-img.img-hover::before{
     opacity: 0.6;
 }
-
 .text-container-2 h3 {
     font-weight: 500;
     margin-bottom: 5px;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
 }
-
-.text-container-2 h3 a:hover {
+.text-container-2 h3 a:hover{
     color: #888;
 }
-
 .text-container-2 > span {
     color: #232323;
-    font-family: "Dosis", sans-serif;
+    font-family: "Dosis",sans-serif;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
 }
-
 .portfolio-text-4 {
     padding: 25px 20px;
 }
-
 .no-gutte .portfolio-style-3, .no-gutte .grid-item {
     margin: 0;
     padding: 0;

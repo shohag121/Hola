@@ -15,22 +15,23 @@ global $hola_options;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="slider-text text-center">
-                        <h1><?php echo $hola_options['home-slider-h1']; ?></h1>
-                        <h2><?php echo $hola_options['home-slider-h2']; ?></h2>
+                        <h1><?php echo esc_html( $hola_options['home-slider-h1'] ); ?></h1>
+                        <h2><?php echo esc_html( $hola_options['home-slider-h2'] ); ?></h2>
                         <h3 class="cd-headline clip is-full-width">
 								<span class="cd-words-wrapper text-black">
-									<b class="is-visible"><?php echo $hola_options['home-slider-p1']; ?></b>
+									<b class="is-visible"><?php echo esc_html( $hola_options['home-slider-p1'] ); ?></b>
 									<?php foreach ( $hola_options['home-slider-p'] as $paragraph ): ?>
-                                        <b><?php echo $paragraph; ?></b>
+                                        <b><?php echo esc_html( $paragraph ); ?></b>
 									<?php endforeach; ?>
-								</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+								</span><!-- .cd-words-wrapper .text-black -->
+                        </h3><!-- .cd-headline clip is-full-width -->
+                    </div><!-- .slider-text text-center -->
+                </div><!-- .col-lg-12 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section> <!-- .slider-area .slider-area-4 .gray-bg  .ptb-200 -->
     <!-- slider-section-end -->
+
     <!-- portfolio-section-start -->
     <section class="portfolio-area portfolio-area-2 ptb-120">
         <div class="container">
@@ -40,25 +41,25 @@ global $hola_options;
                         <button class="active" data-filter="*">ALL</button>
 						<?php
 						//get all Categoryies from portfolio_category
-						$terms = get_terms( [
+						$terms = get_terms( array(
 							'taxonomy'   => 'portfolio_category',
 							'orderby'    => 'name',
 							'order'      => 'ASC',
-							'hide_empty' => FALSE,
-						] );
+							'hide_empty' => false,
+						) );
 						foreach ( $terms as $term ) {
-							echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button> ';
+							echo '<button data-filter=".' . esc_attr( $term->slug ) . '">' . esc_html( $term->name ) . '</button>';
 						}
 						?>
-                    </div>
-
-                </div>
-            </div>
+                    </div><!-- .row -->
+                </div><!-- .col-lg-12 -->
+            </div><!-- .row -->
 			<?php
 			// get all portfolios
-			$portfolios = new WP_Query( [ 'post_type'      => 'hola_portfolio',
-			                              'posts_per_page' => 10,
-			] );
+			$portfolios = new WP_Query( array(
+			        'post_type'      => 'hola_portfolio',
+                    'posts_per_page' => 10,
+            ) );
 			if ( $portfolios->have_posts() ) : ?>
                 <!-- pagination here -->
                 <div class="row">
@@ -77,10 +78,10 @@ global $hola_options;
 								$class = "3";
 							}
 							?>
-                            <div class="col-md-<?php echo $class; ?> col-sm-6 col-xs-12 grid-item <?php
+                            <div class="col-md-<?php echo esc_attr( $class ); ?> col-sm-6 col-xs-12 grid-item <?php
 							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
 							foreach ( $portfolio_names as $portfolio_name ) {
-								echo $portfolio_name->slug . ' ';
+								echo esc_attr( $portfolio_name->slug ) . ' ';
 							}
 							?>">
                                 <div class="single-portfolio">
@@ -97,7 +98,7 @@ global $hola_options;
 											the_post_thumbnail( 'portfolio-single' );
 										}
 										?>
-                                    </div>
+                                    </div><!-- .portfolio-img -->
                                     <div class="portfolio-text">
                                         <div class="text-container">
                                             <div class="text-wrapper">

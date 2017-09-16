@@ -17,37 +17,37 @@ get_template_part( 'template-parts/breadcrumbs' );
             <div class="row">
                 <div class="col-lg-12">
                     <div id="googleMap"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </div><!-- .col-lg-12 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- .google-map pt-120 -->
     <!-- map-section-end -->
+
     <!-- contact-page-start -->
     <section class="contact-area ptb-120">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact-title text-center">
-                        <h2>GET IN TOUCH!</h2>
-                    </div>
-                </div>
-            </div>
+                        <h2><?php echo esc_html_e('GET IN TOUCH!'); ?></h2>
+                    </div><!-- .contact-title .text-center -->
+                </div><!-- .col-lg-12 -->
+            </div><!-- .row -->
             <div class="contact-from">
 				<?php echo do_shortcode( $hola_options['contact-form'] ); ?>
-            </div>
-        </div>
-    </section>
+            </div><!-- .contact-from -->
+        </div><!-- .container -->
+    </section><!-- .contact-area .ptb-120 -->
     <!-- contact-page-end -->
 
     <!-- google map api -->
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $hola_options['contact-key']; ?>"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo esc_attr( $hola_options['contact-key'] ); ?>"></script>
     <script>
         function initialize() {
             var mapOptions = {
                 zoom: 15,
                 scrollwheel: false,
-                center: new google.maps.LatLng(<?php echo $hola_options['contact-latitude']; ?>, <?php echo $hola_options['contact-longitude']; ?>),
+                center: new google.maps.LatLng(<?php echo esc_html( $hola_options['contact-latitude'] ); ?>, <?php echo esc_html( $hola_options['contact-longitude'] ); ?>),
                 styles: [{
                     "featureType": "all",
                     "elementType": "labels.text.fill",

@@ -5,20 +5,17 @@ NOTE: This is Slider style file. All Slider related style included in this file.
 
 --------------------------------------*/
 .slider-bg {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/slider-bg.jpg") repeat scroll right center / cover;
+  background: rgba(0, 0, 0, 0) url("../../img/bg/slider-bg.jpg") repeat scroll right center / cover ;
 }
-
 .slider-bg-2 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/slider-bg-2.jpg") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/slider-bg-2.jpg") repeat scroll center center / cover ;
 }
-
 .slider-text h1 {
     font-size: 40px;
     text-transform: uppercase;
-    font-weight: 400;
+	font-weight:400;
     letter-spacing: 4.6px;
 }
-
 .slider-text h2 {
     font-size: 50px;
     font-weight: 800;
@@ -26,7 +23,6 @@ NOTE: This is Slider style file. All Slider related style included in this file.
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-
 .slider-text h3 {
     color: #fff;
     font-size: 24px;
@@ -34,52 +30,44 @@ NOTE: This is Slider style file. All Slider related style included in this file.
     letter-spacing: 4.3px;
     text-transform: uppercase;
 }
-
 .slider-text h3 {
-    font-weight: 400;
+  font-weight: 400;
 }
-
 /*---------------------------
   Home-2
 ----------------------------*/
-.bg-opacity-1 {
+.bg-opacity-1{
     position: relative;
 }
-
-.bg-opacity-1:before {
+.bg-opacity-1:before{
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
     content: "";
     background: #000;
-    opacity: .6;
+    opacity:.6;
 }
-
-.bg-opacity-2 {
+.bg-opacity-2{
     position: relative;
 }
-
-.bg-opacity-2:before {
+.bg-opacity-2:before{
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
     content: "";
     background: #000;
-    opacity: .8;
+    opacity:.8;
 }
-
 .slider-area.slider-area-2 .slider-text {
     text-align: center;
 }
-
-.slider-area.slider-area-2 .slider-text h1, .slider-area.slider-area-2 .slider-text h2 {
+.slider-area.slider-area-2 .slider-text h1, .slider-area.slider-area-2 .slider-text h2{
     color: #ffffff;
 }
-
 /*---------------------------
  Home-3
 ----------------------------*/
@@ -87,13 +75,12 @@ NOTE: This is Slider style file. All Slider related style included in this file.
     position: relative;
 }
 
-.slide-1 {
-    background: rgba(0, 0, 0, 0) url("../../img/slider/1.jpg") no-repeat scroll center center / cover;
+.slide-1{
+    background: rgba(0, 0, 0, 0) url("../../img/slider/1.jpg") no-repeat scroll center center / cover ;
     height: 600px;
 }
-
-.slide-2 {
-    background: rgba(0, 0, 0, 0) url("../../img/slider/1.jpg") no-repeat scroll center center / cover;
+.slide-2{
+    background: rgba(0, 0, 0, 0) url("../../img/slider/1.jpg") no-repeat scroll center center / cover ;
     height: 600px;
 }
 
@@ -112,17 +99,14 @@ NOTE: This is Slider style file. All Slider related style included in this file.
     width: 40px;
     z-index: 111;
 }
-
 .slider-active .owl-nav div.owl-next {
     left: auto;
     right: 0;
 }
-
 .slider-active:hover .owl-nav div.owl-next {
     left: auto;
     right: 60px;
 }
-
 .slider-active:hover .owl-nav div {
     left: 60px;
     opacity: 1;
@@ -134,7 +118,6 @@ NOTE: This is Slider style file. All Slider related style included in this file.
 .slider-area-4 {
     position: relative;
 }
-
 .header-area-4 {
     left: 0;
     position: absolute;
@@ -142,65 +125,56 @@ NOTE: This is Slider style file. All Slider related style included in this file.
     width: 100%;
     z-index: 11;
 }
-
 /*---------------------------
  Home-5
 ----------------------------*/
 .slider-bg-5 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/home-5.jpg") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/home-5.jpg") repeat scroll center center / cover ;
     position: relative;
 }
-
-.bg-white-opacity {
+.bg-white-opacity{
     position: relative;
 }
-
-.bg-white-opacity:before {
+.bg-white-opacity:before{
     position: absolute;
-    left: 0;
-    top: 0;
+    left:0;
+    top:0;
     width: 100%;
     height: 100%;
     content: "";
     background: #fff;
-    opacity: .6;
+    opacity:.6;
 }
 
 /*---------------------------
  Home-6
 ----------------------------*/
 .slider-bg-6 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/home-6.jpg") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/home-6.jpg") repeat scroll center center / cover ;
     position: relative;
 }
-
 .slider-text.slider-text-6 h3 {
     color: #232323;
 }
-
 .slider-text-6 {
     margin-top: 50px;
 }
-
 /*---------------------------
  Home-7
 ----------------------------*/
 .slider-text.slider-text-7 h3 {
     color: #232323;
 }
-
 .slider-text-7 {
     margin: 60px 0;
 }
-
 /*---------------------------
  Home-8
 ----------------------------*/
 .slider-bg-8 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/home-8.jpg") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/home-8.jpg") repeat scroll center center / cover ;
     position: relative;
 }
-
 .header-area-8::before {
     background: #000 none repeat scroll 0 0;
     content: "";
@@ -211,7 +185,6 @@ NOTE: This is Slider style file. All Slider related style included in this file.
     top: 0;
     width: 100%;
 }
-
-.header-area-8.sticky::before {
-    opacity: 0;
+.header-area-8.sticky::before{
+    opacity:0;
 }

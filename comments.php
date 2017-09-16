@@ -23,7 +23,6 @@ if ( post_password_required() ) {
 <div class="theme-comment-section" id="comments">
 	
 	<?php
-	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
         <h4 class="comment-title">
 			<?php
@@ -50,26 +49,24 @@ if ( post_password_required() ) {
 
         <ul class="media-list">
 			<?php
-			wp_list_comments( [
+			wp_list_comments( array(
 				'style'       => 'ul',
-				'short_ping'  => TRUE,
-				'avatar_size' => 42,
+				'short_ping'  => true,
+				'avatar_size' => 106,
 				'walker'      => new WP_Bootstrap_Comments_Walker(),
-			] );
+            ) );
 			?>
         </ul><!-- .media-list -->
 		
 		<?php the_comments_navigation();
-		
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
             <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hola' ); ?></p>
 			<?php
 		endif;
-	
 	endif; // Check for have_comments().
 	?>
-</div>
+</div><!-- .theme-comment-section #comments -->
 
 <div class="comment-form-wrapper">
     <div class="row">
@@ -78,34 +75,29 @@ if ( post_password_required() ) {
 		$req       = get_option( 'require_name_email' );
 		$aria_req  = ( $req ? " required='required'" : '' );
 		
-		$fields = [
-			
-			
+		// comment form field override
+		$fields = array(
+			// Author field override
 			'author' => '<div class="col-md-12"><div class="leave-form">' .
-			            '<input id="author" name="author" placeholder="' . __( 'Name', 'hola' ) . '" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-			            '" ' . $aria_req . ' ></div></div>',
-			
-			'email' => '<div class="col-md-6"><div class="leave-form">' .
-			           '<input id="email" name="email" placeholder="' . __( 'Email', 'hola' ) . '" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
-			           '" ' . $aria_req . ' ></div></div>',
-			
+			            '<input id="author" name="author" placeholder="' . esc_html__( 'Name', 'hola' ) . '" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+			            '" ' . esc_attr( $aria_req ) . ' ></div></div>',
+			// Email field override
+            'email' => '<div class="col-md-6"><div class="leave-form">' .
+			           '<input id="email" name="email" placeholder="' . esc_html__( 'Email', 'hola' ) . '" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+			           '" ' . esc_attr( $aria_req ) . ' ></div></div>',
+			// Url field override
 			'url' => '<div class="col-md-6"><div class="leave-form">' .
-			         '<input id="url" placeholder="' . __( 'Website', 'hola' ) . '" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			         '<input id="url" placeholder="' . esc_html__( 'Website', 'hola' ) . '" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			         '" ></div></div>',
-		];
-		
-		
-		$args = [
+        );
+        // Override comment form
+		$args = array(
 			'comment_field' => '<div class="col-md-12"><div class="text-leave">' .
 			                   '<textarea id="comment" name="comment" aria-required="true">' .
 			                   '</textarea></div></div>',
 			'fields'        => apply_filters( 'comment_form_default_fields', $fields ),
-		];
-		
-		
+        );
 		comment_form( $args );
-		
 		?>
-
-    </div>
-</div>
+    </div><!-- .row -->
+</div><!-- .comment-form-wrapper -->
