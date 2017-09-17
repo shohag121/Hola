@@ -21,7 +21,6 @@ get_header(); ?>
 					
 					<?php if ( $files = get_post_meta( get_the_ID(), '_hola_project_images', 1 ) ) : ?>
                         <div class="col-md-12">
-
                             <div class="portfolio-details portfolio-slider owl-carousel">
 								<?php
 								foreach ( (array) $files as $attachment_id => $attachment_url ) {
@@ -33,8 +32,11 @@ get_header(); ?>
 					<?php if ( get_post_meta( get_the_ID(), '_hola_project_video', 1 ) ): ?>
                         <div class="col-md-12">
                             <div class="portfolio-details mt-30">
-                                <iframe src="<?php echo esc_url( get_post_meta( get_the_ID(), '_hola_project_video', 1 ) ); ?>"
-                                        class="portfolio-video"></iframe>
+	                            <?php
+                                //get the oEmbed codes
+                                $embed_code = wp_oembed_get( esc_url( get_post_meta( get_the_ID(), '_hola_project_video', 1 ) ), array('class'=>'portfolio-video'));
+	                            echo $embed_code;
+	                            ?>
                             </div>
                         </div>
 					<?php endif; ?>

@@ -81,7 +81,7 @@ global $hola_options;
                             <div class="col-md-<?php echo esc_attr( $class ); ?> col-sm-6 col-xs-12 grid-item <?php
 							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
 							foreach ( $portfolio_names as $portfolio_name ) {
-								echo esc_attr( $portfolio_name->slug ) . ' ';
+								echo esc_attr( $portfolio_name->slug ) . esc_attr(' ');
 							}
 							?>">
                                 <div class="single-portfolio">
@@ -90,9 +90,9 @@ global $hola_options;
 										//Defining Image size
 										if ( $img_size == 'w' ) {
 											the_post_thumbnail( 'portfolio-single-w' );
-										} else if ( $img_size == 'h' ) {
+										} elseif ( $img_size == 'h' ) {
 											the_post_thumbnail( 'portfolio-single-h' );
-										} else if ( $img_size == 'wh' ) {
+										} elseif ( $img_size == 'wh' ) {
 											the_post_thumbnail( 'portfolio-single-hw' );
 										} else {
 											the_post_thumbnail( 'portfolio-single' );
@@ -106,38 +106,37 @@ global $hola_options;
                                                    href="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>">
                                                     <p class="icon-animation">
                                                         <span class="icon-focus"></span>
-                                                    </p></a>
+                                                    </p></a><!-- .img-poppu -->
                                                 <h3 class="text-animation"><a
                                                             href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                </h3>
+                                                </h3><!-- .text-animation -->
                                                 <span><?php
 													$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
 													foreach ( $portfolio_names as $portfolio_name ) {
-														echo $portfolio_name->name;
+														echo esc_html( $portfolio_name->name );
 														if ( ! ( end( $portfolio_names ) === $portfolio_name ) ) {
-															echo ", ";
+															echo esc_html(", ");
 														}
 													}
 													?></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                            </div><!-- .text-wrapper -->
+                                        </div><!-- .text-container -->
+                                    </div><!-- .portfolio-text -->
+                                </div><!-- .single-portfolio -->
+                            </div><!-- .grid-item -->
 						<?php endwhile; ?>
                         <!-- end of the loop -->
 						<?php wp_reset_postdata(); ?>
-                    </div>
-                </div>
+                    </div><!-- .grid -->
+                </div><!-- .row -->
                 <div class="view-more text-center">
-                    <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view
-                        more</a>
-                </div>
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'hola_portfolio' ) ); ?>">view more</a>
+                </div><!-- .view-more text-center -->
 			<?php else : ?>
                 <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
 			<?php endif; ?>
-        </div>
-    </section>
+        </div><!-- .container -->
+    </section><!-- .portfolio-area .portfolio-area-2 .ptb-120 -->
     <!-- portfolio-section-end -->
 <?php
 get_template_part( 'template-parts/testimonials' );

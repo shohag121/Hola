@@ -193,6 +193,9 @@ Portfolio-Details
 .portfolio-meta {
     padding: 15px 25px;
 }
+.portfolio-meta ul {
+    list-style: none;
+}
 .pagination ul li.active a, .pagination ul li:hover a {
     background: #232323 none repeat scroll 0 0;
     color: #fff;

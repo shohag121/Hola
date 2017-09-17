@@ -90,9 +90,9 @@ global $hola_options;
 										//Defining Image size
 										if ( $img_size == 'w' ) {
 											the_post_thumbnail( 'portfolio-single-w' );
-										} else if ( $img_size == 'h' ) {
+										} elseif ( $img_size == 'h' ) {
 											the_post_thumbnail( 'portfolio-single-h' );
-										} else if ( $img_size == 'wh' ) {
+										} elseif ( $img_size == 'wh' ) {
 											the_post_thumbnail( 'portfolio-single-hw' );
 										} else {
 											the_post_thumbnail( 'portfolio-single' );
