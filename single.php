@@ -14,9 +14,8 @@ get_header(); ?>
     <!-- blog-section-start -->
     <section class="blog-area blog-page ptb-120">
         <div class="container">
-
             <div class="row">
-                <div class="<?php echo ( $hola_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $hola_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8' ); ?>">
+                <div class="<?php echo esc_attr( ( $hola_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $hola_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8') ); ?>">
                     <div class="row">
 						<?php
 						
@@ -41,19 +40,16 @@ get_header(); ?>
 								endif;
 								
 								?>
-                            </div>
+                            </div><!-- .col-md-12 .col-sm-12 -->
 							<?php
 						endwhile;
 						?>
-                    </div>
-                </div>
+                    </div><!-- .row -->
+                </div><!-- .col-md-8 .col-sm-8 -->
 				<?php get_sidebar(); ?>
-            </div>
-
-        </div>
-    </section>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- .blog-area .blog-page .ptb-120 -->
     <!-- blog-section-end -->
-
-
 <?php
 get_footer();

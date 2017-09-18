@@ -3,47 +3,50 @@
 /**
  * TGM Init Class
  */
-include_once( 'class-tgm-plugin-activation.php' );
+require_once get_template_directory() . '/lib/tgm/class-tgm-plugin-activation.php';
 
 function hola_options_register_required_plugins() {
 	
-	$plugins = [
-		[
+	$plugins = array(
+		array(
 			'name'               => 'Redux Framework',
 			'slug'               => 'redux-framework',
-			'required'           => TRUE,
-			'force_activation'   => TRUE,
-			'force_deactivation' => TRUE,
-		],
-		[
+			'required'           => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
+		),
+		array(
 			'name'               => 'CMB2',
 			'slug'               => 'cmb2',
-			'required'           => TRUE,
-			'force_activation'   => TRUE,
-			'force_deactivation' => TRUE,
-		],
-		[
+			'required'           => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
+		),
+		array(
 			'name'               => 'Contact Form 7',
 			'slug'               => 'contact-form-7',
-			'required'           => TRUE,
-			'force_activation'   => TRUE,
-			'force_deactivation' => FALSE,
-		],
-		[
+			'required'           => true,
+			'force_activation'   => true,
+			'force_deactivation' => false,
+		),
+		array(
 			'name'               => 'One Click Demo Import',
 			'slug'               => 'one-click-demo-import',
-			'required'           => TRUE,
-			'force_activation'   => TRUE,
-			'force_deactivation' => TRUE,
-		],
-		[
+			'required'           => true,
+			'force_activation'   => true,
+			'force_deactivation' => true,
+		),
+		array(
 			'name'   => 'Hola Library',
 			'slug'   => 'hola-lib',
+			'required'           => true,
+			'force_activation'   => true,
+			'force_deactivation' => false,
 			'source' => 'https://github.com/bdCalling/Hola-Library/archive/master.zip',
-		],
-	];
+		),
+	);
 	
-	$config = [
+	$config = array(
 		'domain'       => 'hola',
 		// Text domain - likely want to be the same as your theme.
 		'default_path' => '',
@@ -54,11 +57,11 @@ function hola_options_register_required_plugins() {
 		'capability'   => 'manage_options',
 		'menu'         => 'install-required-plugins',
 		// Menu slug
-		'has_notices'  => TRUE,
+		'has_notices'  => true,
 		// Show admin notices or not
-		'is_automatic' => TRUE,
+		'is_automatic' => true,
 		// Automatically activate plugins after installation or not
-	];
+	);
 	
 	tgmpa( $plugins, $config );
 	

@@ -114,6 +114,8 @@ Redux::setHelpSidebar( $opt_name, $content );
      *
      */
 
+$el_icon = 'http://rhythm.nikadevs.com/content/icons-et-line';
+$el_icon_url = '<a href="'. esc_url( $el_icon ) .'">Full list</a>.';
 Redux::setSection( $opt_name, array(
 	'title' => __( 'Default Settings', 'hola' ),
 	'id'    => 'default-settings',
@@ -563,7 +565,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'work-process-1-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Process Icon', 'hola' ),
-			'desc'    => __( 'Please select process icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please select process icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -680,7 +682,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'work-process-2-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Process Icon', 'hola' ),
-			'desc'    => __( 'Please select process icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please select process icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -797,7 +799,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'work-process-3-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Process Icon', 'hola' ),
-			'desc'    => __( 'Please select process icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please select process icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1090,7 +1092,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'service-one-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1214,7 +1216,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'service-two-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1338,7 +1340,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'service-three-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1462,7 +1464,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'service-four-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1586,7 +1588,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'service-five-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1710,7 +1712,7 @@ Redux::setSection( $opt_name, array(
 			'id'      => 'service-six-icon',
 			'type'    => 'select',
 			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list.', 'hola' ) . ' <a href="http://rhythm.nikadevs.com/content/icons-et-line">Full list</a>.',
+			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -2101,12 +2103,12 @@ Redux::setSection( $opt_name, array(
  */
 
 // remove demo link url from redux plugin
-function hola_removeDemoModeLink() { // Be sure to rename this function to something more unique
+function hola_remove_demo_mode_link() {
 	if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
 		remove_filter( 'plugin_row_meta', array(
 			ReduxFrameworkPlugin::get_instance(),
 			'plugin_metalinks',
-		), null, 2 );
+		),  2 );
 	}
 	if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
 		remove_action( 'admin_notices', array(
@@ -2116,4 +2118,4 @@ function hola_removeDemoModeLink() { // Be sure to rename this function to somet
 	}
 }
 
-add_action( 'init', 'hola_removeDemoModeLink' );
+add_action( 'init', 'hola_remove_demo_mode_link' );

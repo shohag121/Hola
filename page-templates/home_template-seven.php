@@ -38,15 +38,15 @@ global $hola_options;
 							'taxonomy'   => 'portfolio_category',
 							'orderby'    => 'name',
 							'order'      => 'ASC',
-							'hide_empty' => FALSE,
+							'hide_empty' => false,
                         ) );
 						foreach ( $terms as $term ) {
 							echo '<button data-filter=".' . esc_attr( $term->slug ) . '">' . esc_html( $term->name ) . '</button>';
 						}
 						?>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- .portfolio-menu .mb-30 -->
+                </div><!-- .col-lg-12  -->
+            </div><!-- .row -->
 			<?php
 			// get 10 portfolios
 			$portfolios = new WP_Query( array(
@@ -91,7 +91,7 @@ global $hola_options;
 											the_post_thumbnail( 'portfolio-single' );
 										}
 										?>
-                                    </div>
+                                    </div><!-- .portfolio-img -->
                                     <div class="portfolio-text">
                                         <div class="text-container">
                                             <div class="text-wrapper">
@@ -99,10 +99,11 @@ global $hola_options;
                                                    href="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>">
                                                     <p class="icon-animation">
                                                         <span class="icon-focus"></span>
-                                                    </p></a>
+                                                    </p>
+                                                </a><!-- .img-poppu -->
                                                 <h3 class="text-animation"><a
                                                             href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                </h3>
+                                                </h3><!-- .text-animation -->
                                                 <span><?php
 													$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
 													foreach ( $portfolio_names as $portfolio_name ) {
@@ -112,25 +113,24 @@ global $hola_options;
 														}
 													}
 													?></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                            </div><!-- .text-wrapper -->
+                                        </div><!-- .text-container -->
+                                    </div><!-- .portfolio-text -->
+                                </div><!-- .single-portfolio -->
+                            </div><!-- .grid-item -->
 						<?php endwhile; ?>
                         <!-- end of the loop -->
 						<?php wp_reset_postdata(); ?>
-                    </div>
-                </div>
+                    </div><!-- .grid -->
+                </div><!-- .row -->
                 <div class="view-more text-center">
-                    <a href="<?php echo get_post_type_archive_link( 'hola_portfolio' ); ?>">view
-                        more</a>
-                </div>
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'hola_portfolio' ) ); ?>">view more</a>
+                </div><!-- .view-more .text-center -->
 			<?php else : ?>
                 <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
 			<?php endif; ?>
-        </div>
-    </section>
+        </div><!-- .container -->
+    </section><!-- .portfolio-area .ptb-120 -->
     <!-- portfolio-section-end -->
 <?php
 get_template_part( 'template-parts/testimonials' );

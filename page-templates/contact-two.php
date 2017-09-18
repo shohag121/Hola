@@ -2,8 +2,7 @@
 /**
  * Template Name: Contact Two
  *
- * @package WordPress
- * @subpackage Hola
+ * @package Hola
  * @since Hola 1.0
  */
 global $hola_options;
@@ -17,7 +16,7 @@ get_template_part( 'template-parts/breadcrumbs' );
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact-title text-center">
-                        <h2><?php echo esc_html_e('GET IN TOUCH!'); ?></h2>
+                        <h2><?php echo esc_html__('GET IN TOUCH!', 'hola'); ?></h2>
                     </div><!-- .contact-title .text-center -->
                 </div><!-- .col-lg-12 -->
             </div><!-- .row -->

@@ -22,9 +22,9 @@
 					}
 					?>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                </div><!-- .breadcrumbs .text-center -->
+            </div><!-- .col-md-12 -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+</section><!-- .section .breadcrumbs-area .gray-bg .ptb-120 -->
 <!-- breadcrumbs-section-end -->

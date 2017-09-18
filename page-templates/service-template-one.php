@@ -2,8 +2,7 @@
 /**
  * Template Name: Service One
  *
- * @package WordPress
- * @subpackage Hola
+ * @package Hola
  * @since Hola 1.0
  */
 
@@ -21,18 +20,18 @@ global $hola_options;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center">
-                        <h2><?php echo $hola_options['service-heading']; ?></h2>
-                        <p><?php echo $hola_options['service-description']; ?></p>
-                    </div>
-                </div>
-            </div>
+                        <h2><?php echo esc_html( $hola_options['service-heading'] ); ?></h2>
+                        <p><?php echo esc_html( $hola_options['service-description'] ); ?></p>
+                    </div><!-- .section-title .text-center -->
+                </div><!-- .col-lg-12 -->
+            </div><!-- .row -->
 
             <!-- single-services-start -->
 			<?php get_template_part( 'template-parts/services' ); ?>
             <!-- single-services-end -->
 
-        </div>
-    </section>
+        </div><!-- .container -->
+    </section><!-- .service-area .service-page .ptb-120 -->
     <!-- service-section-end -->
 <?php
 get_template_part( 'template-parts/work-process' );
