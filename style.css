@@ -81,6 +81,8 @@ h6 {
 }
 
 a {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -97,22 +99,22 @@ a:hover {
 
 .img {
     max-width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
 }
 
 a,
 .btn {
     -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
 }
 
 .btn {
-    border-radius: 0px;
+    border-radius: 0;
     font-size: 14px;
-    padding: 0px 15px;
+    padding: 0 15px;
     height: 30px;
     line-height: 30px;
 }
@@ -173,15 +175,15 @@ span.tooltip-content {
 }
 
 .f-left {
-    float: left
+    float: left;
 }
 
 .f-ight {
-    float: right
+    float: right;
 }
 
 .fix {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .browserupgrade {
@@ -197,8 +199,6 @@ span.tooltip-content {
 a.button::after,
 a.button-small::after {
     -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
 }
@@ -218,8 +218,6 @@ input,
 select,
 textarea {
     -webkit-transition: all 0.5s ease-out 0s;
-    -moz-transition: all 0.5s ease-out 0s;
-    -ms-transition: all 0.5s ease-out 0s;
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
 }
@@ -318,6 +316,7 @@ textarea {
 input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #cdcdcd;
+    -webkit-box-shadow: none;
     box-shadow: none;
     padding-left: 10px;
     font-size: 14px;
@@ -331,6 +330,7 @@ select {
     border: 2px solid #eceff8;
     height: 45px;
     padding-left: 10px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 14px;
     color: #626262;
@@ -1156,8 +1156,10 @@ a#scrollUp:hover {
 }
 
 .header-area.sticker.sticky {
+    -webkit-animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
     animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
     background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+    -webkit-box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
     box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
     left: 0;
     position: fixed;
@@ -1285,6 +1287,7 @@ a#scrollUp:hover {
 .screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
@@ -1353,6 +1356,7 @@ a#scrollUp:hover {
 
 .main-menu ul li>ul {
     background: #ffffff none repeat scroll 0 0;
+    -webkit-box-shadow: 0 1px 2px rgba(86, 86, 90, 0.4);
     box-shadow: 0 1px 2px rgba(86, 86, 90, 0.4);
     float: none;
     left: 0;
@@ -1360,7 +1364,11 @@ a#scrollUp:hover {
     position: absolute;
     text-align: left;
     top: 100%;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
     transform: scale(0.9);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     visibility: hidden;
     width: 190px;
@@ -1369,6 +1377,8 @@ a#scrollUp:hover {
 
 .main-menu ul li:hover>ul {
     opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
     visibility: visible;
 }
@@ -1378,6 +1388,8 @@ a#scrollUp:hover {
     padding: 0;
     margin-left: 0;
     text-align: left;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
     transition: all .4s;
 }
 
@@ -1399,6 +1411,8 @@ a#scrollUp:hover {
 
 .main-menu li ul li:hover>ul {
     opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
     visibility: visible;
 }
@@ -1408,6 +1422,8 @@ a#scrollUp:hover {
     opacity: 0;
     position: absolute;
     top: -1px;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
     transform: scale(0.9);
     visibility: hidden;
     z-index: 999;
@@ -1528,10 +1544,12 @@ a#scrollUp:hover {
 }
 
 .header-area-3 .logo {
+    -webkit-filter: invert(1);
     filter: invert(1);
 }
 
 .header-area-3.sticky .logo {
+    -webkit-filter: none;
     filter: none;
 }
 
@@ -1544,6 +1562,7 @@ a#scrollUp:hover {
 /* headroom */
 
 .headroom.headroom--not-top {
+    -webkit-box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
     box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
 }
 
@@ -1556,19 +1575,29 @@ a#scrollUp:hover {
 }
 
 .headroom--unpinned {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
     transform: translateY(-100%);
 }
 
 .headroom--pinned {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
     transform: translateY(0%);
 }
 
 .headroom {
+    -webkit-transition: -webkit-transform 200ms linear 0s;
+    transition: -webkit-transform 200ms linear 0s;
+    -o-transition: transform 200ms linear 0s;
     transition: transform 200ms linear 0s;
+    transition: transform 200ms linear 0s, -webkit-transform 200ms linear 0s;
     will-change: transform;
 }
 
 .headroom.headroom--pinned {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -1685,7 +1714,11 @@ a#scrollUp:hover {
     position: absolute;
     text-align: center;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     width: 40px;
     z-index: 111;
@@ -1882,6 +1915,7 @@ a#scrollUp:hover {
     background: #ffffff none repeat scroll 0 0;
     border: 2px solid #232323;
     border-radius: 2px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     height: 12px;
     margin-bottom: 68px;
@@ -1907,6 +1941,8 @@ a#scrollUp:hover {
     font-size: 12px;
     height: 100%;
     line-height: 20px;
+    -webkit-transition: width 0.6s ease 0s;
+    -o-transition: width 0.6s ease 0s;
     transition: width 0.6s ease 0s;
     width: 0;
 }
@@ -2000,6 +2036,8 @@ a.aboutme-btn:hover {
 .single-service {
     overflow: hidden;
     padding: 20px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2034,11 +2072,14 @@ a.aboutme-btn:hover {
 .service-icon {
     background: #ffffff none repeat scroll 0 0;
     border-radius: 50%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 65px;
     line-height: 72px;
     margin: auto auto 20px;
     position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     width: 65px;
     border: 4px solid #fff;
@@ -2046,6 +2087,7 @@ a.aboutme-btn:hover {
 
 .single-service:hover .service-icon {
     border: 4px solid #eee;
+    -webkit-box-shadow: 0px 0px 0px 1px #b8b5b5;
     box-shadow: 0px 0px 0px 1px #b8b5b5;
 }
 
@@ -2151,12 +2193,17 @@ a.aboutme-btn:hover {
     padding: 5px 20px;
     position: relative;
     text-transform: uppercase;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
 }
 
 .portfolio-menu button:hover,
 .portfolio-menu button.active {
+    -webkit-box-shadow: 0 0 0 2px #232323;
     box-shadow: 0 0 0 2px #232323;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
 }
 
@@ -2164,6 +2211,8 @@ a.aboutme-btn:hover {
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2182,6 +2231,8 @@ a.aboutme-btn:hover {
     content: "";
     opacity: 0;
     position: absolute;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
     left: 0;
     top: 0;
@@ -2207,17 +2258,28 @@ a.aboutme-btn:hover {
 }
 
 .text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 100%;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .text-wrapper {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     opacity: 0;
     text-align: center;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2226,6 +2288,8 @@ a.aboutme-btn:hover {
     font-weight: 500;
     margin-bottom: 5px;
     text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -2247,6 +2311,8 @@ a.aboutme-btn:hover {
 
 .icon-animation {
     margin-bottom: 50px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
     transition: all .3s ease;
     font-size: 36px;
 }
@@ -2262,11 +2328,15 @@ a.aboutme-btn:hover {
 
 .single-portfolio:hover .icon-animation {
     margin-bottom: 20px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
 .single-portfolio:hover .text-animation {
     margin-top: 15px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2311,7 +2381,11 @@ a.aboutme-btn:hover {
     position: absolute;
     text-align: center;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     width: 40px;
     z-index: 111;
@@ -2406,6 +2480,8 @@ a.aboutme-btn:hover {
     position: absolute;
     text-align: center;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
 }
@@ -2414,6 +2490,8 @@ a.aboutme-btn:hover {
     position: relative;
     margin-top: 30px;
     opacity: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2448,6 +2526,7 @@ a.aboutme-btn:hover {
 
 .portfolio-style-3 {
     position: relative;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
@@ -2461,8 +2540,12 @@ a.aboutme-btn:hover {
     right: 0;
     text-align: center;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     opacity: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -2485,6 +2568,8 @@ p.icon-animation-2 {
     top: 0;
     width: 100%;
     opacity: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2496,6 +2581,8 @@ p.icon-animation-2 {
     font-weight: 500;
     margin-bottom: 5px;
     text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -2606,6 +2693,8 @@ a.readmore {
     margin-top: 10px;
     padding: 9px 22px;
     text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -2660,6 +2749,22 @@ a.readmore:hover {
     right: 0;
     top: 0;
     width: 70px;
+}
+
+.blog-search form input::-webkit-input-placeholder {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.blog-search form input:-ms-input-placeholder {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .blog-search form input::placeholder {
@@ -2897,6 +3002,8 @@ a.readmore:hover {
     font-weight: 500;
     padding: 7px 15px;
     text-transform: capitalize;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2930,6 +3037,8 @@ a.readmore:hover {
     padding: 5px 12px;
     position: relative;
     text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -2953,6 +3062,8 @@ a.readmore:hover {
     padding: 9px 23px;
     position: relative;
     text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -2976,6 +3087,8 @@ a.readmore:hover {
     padding: 9px 46px 9px 23px;
     position: relative;
     text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -3001,6 +3114,8 @@ a.readmore:hover {
     padding: 9px 22px 9px 45px;
     position: relative;
     text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -3136,12 +3251,16 @@ a.readmore:hover {
 
 .single-pricing {
     border: 1px solid #eaeaea;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
 .pricing-top {
     padding: 50px 0;
     border-bottom: 1px solid #eaeaea;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -3184,6 +3303,8 @@ a.readmore:hover {
     position: absolute;
     right: 0;
     width: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -3251,6 +3372,7 @@ a.readmore:hover {
 }
 
 .single-pricing:hover {
+    -webkit-box-shadow: 0 4px 7px #aaaaaa;
     box-shadow: 0 4px 7px #aaaaaa;
 }
 
@@ -3273,6 +3395,7 @@ a.readmore:hover {
 }
 
 .single-pricing.active {
+    -webkit-box-shadow: 0 4px 7px #aaaaaa;
     box-shadow: 0 4px 7px #aaaaaa;
 }
 
@@ -3298,12 +3421,18 @@ a.readmore:hover {
     position: absolute;
     top: 0;
     width: 100%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0);
 }
 
 .single-team:hover .team-img:before {
     opacity: .6;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
 }
 
@@ -3312,6 +3441,8 @@ a.readmore:hover {
     position: absolute;
     right: 0;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
 }
@@ -3325,6 +3456,8 @@ a.readmore:hover {
     margin: 0 14px;
     font-size: 18px;
     width: 30px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
     transition: all .4s;
     opacity: 0;
     border: 1px solid #fff;
@@ -3393,6 +3526,8 @@ a.readmore:hover {
     position: absolute;
     right: -12px;
     top: 3px;
+    -webkit-transform: rotate(33deg);
+    -ms-transform: rotate(33deg);
     transform: rotate(33deg);
     width: 1.5px;
 }
@@ -3411,6 +3546,8 @@ a.readmore:hover {
     border-top: 1px solid #232323;
     position: relative;
     text-align: center;
+    -webkit-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1) 0s;
     transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1) 0s;
 }
 
@@ -3444,10 +3581,13 @@ a.readmore:hover {
 }
 
 .client-item img {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
 .client-item a:hover img {
+    -webkit-filter: contrast(200%) brightness(0%);
     filter: contrast(200%) brightness(0%);
 }
 
@@ -3503,6 +3643,8 @@ a.readmore:hover {
     margin-top: 30px;
     padding: 7px 15px;
     text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     width: auto;
 }
@@ -3546,6 +3688,8 @@ a.readmore:hover {
     line-height: 30px;
     margin-left: 12px;
     text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     width: 30px;
 }
@@ -4045,5 +4189,3 @@ a.readmore:hover {
         height: 235px;
     }
 }
-
-
