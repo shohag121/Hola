@@ -16,7 +16,7 @@
         </div><!-- .blog-img -->
 	<?php else: ?>
         <div class="blog-img">
-            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.png" alt="Blog Thumbnail"></a>
+            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.png" alt="Blog Thumbnail"></a>
         </div><!-- .blog-img -->
 	<?php endif; ?>
     <div class="blog-info">

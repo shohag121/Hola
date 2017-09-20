@@ -52,7 +52,7 @@ global $hola_options;
 							<?php else: ?>
                                 <div class="blog-img">
                                     <a href="<?php the_permalink(); ?>">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder-mini.png" alt="Blog Thumbnail">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-mini.png" alt="Blog Thumbnail">
                                     </a>
                                 </div><!-- .blog-img -->
 							<?php endif; ?>

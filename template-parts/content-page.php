@@ -17,7 +17,22 @@
     <div class="blog-info">
         <div class="blog-text blog-details-post">
             <h1><?php the_title(); ?></h1>
-			<?php the_content(); ?>
+			<?php
+            the_content();
+			$args = array(
+				'before'           => '<div class="nav-pagination">',
+				'after'            => '</div>',
+				'link_before'      => '',
+				'link_after'       => '',
+				'next_or_number'   => 'next',
+				'separator'        => ' ',
+				'nextpagelink'     => esc_html__( 'Continue Reading', 'hola' ),
+				'previouspagelink' => esc_html__( 'Previous Content', 'hola' ),
+				'pagelink'         => '%',
+				'echo'             => 1
+			);
+			wp_link_pages( $args );
+			?>
         </div><!-- .blog-text .blog-details-post -->
     </div><!-- .blog-info -->
 </div><!-- .single-blog mb-60 -->

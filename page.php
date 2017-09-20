@@ -36,20 +36,6 @@ get_header(); ?>
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
 								get_template_part( 'template-parts/content', 'page' );
-								$args = array(
-									'before'           => '<p>' . esc_html__( 'Pages:', 'hola' ),
-									'after'            => '</p>',
-									'link_before'      => '',
-									'link_after'       => '',
-									'next_or_number'   => 'number',
-									'separator'        => ' ',
-									'nextpagelink'     => esc_html__( 'Next page','hola' ),
-									'previouspagelink' => esc_html__( 'Previous page', 'hola' ),
-									'pagelink'         => '%',
-									'echo'             => 1
-								);
-								
-								wp_link_pages( $args );
 								
 								//if single post navigation is on
 								if ( $hola_options['blog-settings-post-nav'] ) {

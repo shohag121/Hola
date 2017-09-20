@@ -139,36 +139,46 @@ add_action( 'widgets_init', 'hola_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hola_scripts() {
+	global $hola_options;
 	
 	//all styles
-	wp_enqueue_style( 'hola-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array()  );
-	wp_enqueue_style( 'hola-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array()  );
-	wp_enqueue_style( 'hola-et-line-fonts', get_template_directory_uri() . '/css/et-line-fonts.css', array()  );
-	wp_enqueue_style( 'hola-themify-icons', get_template_directory_uri() . '/css/themify-icons.css', array()  );
-	wp_enqueue_style( 'hola-animate', get_template_directory_uri() . '/css/animate.css', array()  );
-	wp_enqueue_style( 'hola-animated-text', get_template_directory_uri() . '/css/animated-text.css', array()  );
-	wp_enqueue_style( 'hola-meanmenu', get_template_directory_uri() . '/css/meanmenu.css', array()  );
-	wp_enqueue_style( 'hola-owl.carousel', get_template_directory_uri() . '/css/owl.carousel.css', array()  );
-	wp_enqueue_style( 'hola-magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css', array()  );
-	wp_enqueue_style( 'hola-shortcodes', get_template_directory_uri() . '/css/shortcode/shortcodes.css', array()  );
+	wp_enqueue_style( 'hola-fonts', '//fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Roboto:100,300,400,500,700,900', array()  );
+	wp_enqueue_style( 'hola-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array()  );
+	wp_enqueue_style( 'hola-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array()  );
+	wp_enqueue_style( 'hola-et-line-fonts', get_template_directory_uri() . '/assets/css/et-line-fonts.css', array()  );
+	wp_enqueue_style( 'hola-themify-icons', get_template_directory_uri() . '/assets/css/themify-icons.css', array()  );
+	wp_enqueue_style( 'hola-animate', get_template_directory_uri() . '/assets/css/animate.css', array()  );
+	wp_enqueue_style( 'hola-animated-text', get_template_directory_uri() . '/assets/css/animated-text.css', array()  );
+	wp_enqueue_style( 'hola-meanmenu', get_template_directory_uri() . '/assets/css/meanmenu.css', array()  );
+	wp_enqueue_style( 'hola-owl.carousel', get_template_directory_uri() . '/assets/css/owl.carousel.css', array()  );
+	wp_enqueue_style( 'hola-magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css', array()  );
 	wp_enqueue_style( 'hola-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'hola-responsive', get_template_directory_uri() . '/css/responsive.css', array('hola-style')  );
+	// User's custom css
+	if ( isset( $hola_options['css_editor'] ) ) {
+		$custom_css = $hola_options['css_editor']."\r\n";
+		wp_add_inline_style('hola-style', $custom_css );
+	}
 	
 	//All scripts
 	wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'hola-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-isotope-pkgd-js', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-imagesloaded-pkgd-js', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-waypoints-js', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-wow-js', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), '20151215', true );
-	wp_enqueue_script( 'hola-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-jquery-meanmenu-js', get_template_directory_uri() . '/js/jquery.meanmenu.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-plugins-js', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '', true );
-	wp_enqueue_script( 'hola-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
-	wp_enqueue_script( 'hola-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
-	wp_enqueue_script( 'hola-main-js', get_template_directory_uri() . '/js/main.js', array('hola-plugins-js'), '', true );
+	wp_enqueue_script( 'hola-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-isotope-pkgd-js', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-imagesloaded-pkgd-js', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-waypoints-js', get_template_directory_uri() . '/assets/js/waypoints.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-wow-js', get_template_directory_uri() . '/assets/js/wow.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'hola-owl-carousel-js', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-jquery-meanmenu-js', get_template_directory_uri() . '/assets/js/jquery.meanmenu.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-plugins-js', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), '', true );
+	wp_enqueue_script( 'hola-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '', true );
+	wp_enqueue_script( 'hola-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '', true );
+	wp_enqueue_script( 'hola-main-js', get_template_directory_uri() . '/assets/js/main.js', array('hola-plugins-js'), '', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+	// User's custom js
+	if ( isset( $hola_options['js_editor'] ) ) {
+		$custom_js = $hola_options['js_editor'];
+		wp_add_inline_script('hola-main-js', $custom_js );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hola_scripts' );
@@ -179,7 +189,7 @@ add_action( 'wp_enqueue_scripts', 'hola_scripts' );
  */
 function hola_set_tag_cloud_font_size($args) {
 	$args['smallest'] = 10; /* Set the smallest size to 10pt */
-	$args['largest'] = 18;  /* set the largest size to 18pt */
+	$args['largest'] = 20;  /* set the largest size to 20pt */
 	return $args;
 }
 add_filter('widget_tag_cloud_args','hola_set_tag_cloud_font_size');
@@ -230,6 +240,15 @@ function hola_theme_add_editor_styles() {
 }
 add_action( 'after_setup_theme', 'hola_theme_add_editor_styles' );
 
+
+
+
+// Replaces the excerpt "[...]" text
+function hola_excerpt_dot_fix($more) {
+	global $post;
+	return '';
+}
+add_filter('excerpt_more', 'hola_excerpt_dot_fix');
 
 
 /**

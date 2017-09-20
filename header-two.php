@@ -39,7 +39,7 @@ global $hola_options;
 					    <?php else : ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                rel="home"><img
-                                        src="<?php echo esc_url( $hola_options['blog-logo-image']['url'] ); ?>"
+                                        src="<?php echo esc_url( $hola_options['blog-logo-image-dark']['url'] ); ?>"
                                         alt="<?php bloginfo( 'name' ); ?>"/></a>
 						    <?php
 					    endif;

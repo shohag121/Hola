@@ -109,7 +109,7 @@ get_template_part( 'template-parts/breadcrumbs' );
             var marker = new google.maps.Marker({
                 position: map.getCenter(),
                 animation: google.maps.Animation.BOUNCE,
-                icon: '<?php echo get_template_directory_uri(); ?>/img/map.png',
+                icon: '<?php echo get_template_directory_uri(); ?>/assets/img/map.png',
                 map: map
             });
 

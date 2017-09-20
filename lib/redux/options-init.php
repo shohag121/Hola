@@ -25,7 +25,7 @@ $theme = wp_get_theme(); // For use with some settings. Not necessary.
 $args = array(
 	'opt_name'              => 'hola_options',
 	'use_cdn'               => true,
-	'display_name'          => 'Hola',
+	'display_name'          => $theme->name,
 	'page_slug'             => 'hola_options',
 	'page_title'            => 'Hola',
 	'intro_text'            => 'Welcome to Hola - Minimal, Multipurpose Agency Portfolio WordPress Theme',
@@ -72,6 +72,7 @@ $args = array(
 	'database'              => 'options',
 	'transient_time'        => '3600',
 	'network_sites'         => true,
+	'dev_mode'              => false,
 );
 
 Redux::setArgs( $opt_name, $args );
@@ -80,32 +81,6 @@ Redux::setArgs( $opt_name, $args );
      * ---> END ARGUMENTS
      */
 
-/*
-     * ---> START HELP TABS
-     */
-
-$tabs = array(
-	array(
-		'id'      => 'redux-help-tab-1',
-		'title'   => __( 'Theme Information 1', 'hola' ),
-		'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'hola' ),
-	),
-	array(
-		'id'      => 'redux-help-tab-2',
-		'title'   => __( 'Theme Information 2', 'hola' ),
-		'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'hola' ),
-	),
-);
-Redux::setHelpTab( $opt_name, $tabs );
-
-// Set the help sidebar
-$content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'hola' );
-Redux::setHelpSidebar( $opt_name, $content );
-
-
-/*
-     * <--- END HELP TABS
-     */
 
 
 /*
@@ -169,7 +144,19 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for logo', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/logo.png',
+				'url' => get_template_directory_uri() . '/assets/img/logo.png',
+			),
+			'required' => array( 'blog-logo-select', 'equals', 'image' ),
+		),
+		array(
+			'id'       => 'blog-logo-image-dark',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => __( 'Website Logo on Dark Background', 'hola' ),
+			'preview'  => true,
+			'subtitle' => __( 'Upload any images for logo on dark Background', 'hola' ),
+			'default'  => array(
+				'url' => get_template_directory_uri() . '/assets/img/logo-2.png',
 			),
 			'required' => array( 'blog-logo-select', 'equals', 'image' ),
 		),
@@ -190,7 +177,18 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for footer logo', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/logo.png',
+				'url' => get_template_directory_uri() . '/assets/img/logo.png',
+			),
+		),
+		array(
+			'id'       => 'footer-logo-image-dark',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => __( 'Footer Logo on Dark Background', 'hola' ),
+			'preview'  => true,
+			'subtitle' => __( 'Upload any images for footer logo on dark background', 'hola' ),
+			'default'  => array(
+				'url' => get_template_directory_uri() . '/assets/img/logo-2.png',
 			),
 		),
 		array(
@@ -368,7 +366,28 @@ Redux::setSection( $opt_name, array(
 	'id'         => 'custom-settings',
 	'desc'       => __( 'Theme\'s custom scripts and styles settings.', 'hola' ),
 	'subsection' => true,
-	'fields'     => array(),
+	'fields'     => array(
+		array(
+			'id'       => 'css_editor',
+			'type'     => 'ace_editor',
+			'title'    => __('CSS Code', 'hola'),
+			'subtitle' => __('Paste your CSS code here.', 'hola'),
+			'mode'     => 'css',
+			'theme'    => 'monokai',
+			'desc'     => 'Your custom css here.',
+			'default'  => ""
+		),
+		array(
+			'id'       => 'js_editor',
+			'type'     => 'ace_editor',
+			'title'    => __('JS Code', 'hola'),
+			'subtitle' => __('Paste your JS code here.', 'hola'),
+			'mode'     => 'javascript',
+			'theme'    => 'chrome',
+			'desc'     => 'Your custom js here.',
+			'default'  => ""
+		)
+	),
 ) );
 
 
@@ -419,7 +438,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for background', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/bg/slider-bg.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/bg/slider-bg.jpg',
 			),
 		),
 		array(
@@ -430,7 +449,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for background', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/bg/slider-bg-2.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/bg/slider-bg-2.jpg',
 			),
 		),
 		array(
@@ -441,7 +460,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for background', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/bg/home-5.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/bg/home-5.jpg',
 			),
 		),
 		
@@ -453,7 +472,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for background', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/bg/home-6.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/bg/home-6.jpg',
 			),
 		),
 		
@@ -465,7 +484,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for background', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/bg/home-8.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/bg/home-8.jpg',
 			),
 		),
 	
@@ -968,7 +987,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for your portrait.', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/about/1.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/about/1.jpg',
 			),
 		),
 		array(
@@ -1052,7 +1071,7 @@ Redux::setSection( $opt_name, array(
 			'preview'  => true,
 			'subtitle' => __( 'Upload any images for history area background.', 'hola' ),
 			'default'  => array(
-				'url' => get_template_directory_uri() . '/img/bg/about-1.jpg',
+				'url' => get_template_directory_uri() . '/assets/img/bg/about-1.jpg',
 			),
 		),
 	

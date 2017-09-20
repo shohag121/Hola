@@ -10,7 +10,7 @@
 <section class="testimonial-area ptb-120 gray-bg">
     <div class="container">
         <div class="row">
-            <h3 class="sr-only">Testimonial Area</h3>
+            <h3 class="sr-only"><?php echo esc_html__('Testimonial Area', 'hola')?></h3>
 			<?php
 			// the query
 			$the_query = new WP_Query( [
@@ -26,21 +26,21 @@
                             <div class="single-testimonial text-center">
                                 <div class="testimonial-img mb-20">
 									<?php the_post_thumbnail( 'client-img-testimonial' ); ?>
-                                </div>
+                                </div><!-- .testimonial-img .mb-20 -->
                                 <div class="testimonial-info">
 									<?php the_content(); ?>
                                     <span><?php the_title(); ?></span>
-                                </div>
-                            </div>
-                        </div>
+                                </div><!-- .testimonial-info -->
+                            </div><!-- .single-testimonial text-center -->
+                        </div><!-- .col-lg-12 -->
 					<?php endwhile;
 					// end of the loop
 					wp_reset_postdata(); ?>
-                </div>
+                </div><!-- .testimonial-active owl-carousel -->
 			<?php else : ?>
                 <p><?php esc_html_e( 'Sorry, no testimonial yet.', 'hola' ); ?></p>
 			<?php endif; ?>
-        </div>
-    </div>
-</section>
+        </div><!-- .row -->
+    </div><!-- .container -->
+</section><!-- .testimonial-area .ptb-120 .gray-bg -->
 <!-- testimonial-section-end -->

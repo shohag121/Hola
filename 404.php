@@ -15,7 +15,7 @@ get_header(); ?>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="not-found-content text-center">
                         <div class="not-found-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/404.png"
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/404.png"
                                  alt="404 Error"/>
                         </div><!-- .not-found-img -->
                         <h2><?php esc_html_e( 'Ooopps.! The Page You Were Looking For, Couldn\'t Be Found.', 'hola' ); ?></h2>

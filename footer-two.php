@@ -56,7 +56,7 @@ global $hola_options;
                         <div class="footer-logo mb-30">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                rel="home"><img
-                                        src="<?php echo esc_url( $hola_options['footer-logo-image']['url'] ); ?>"
+                                        src="<?php echo esc_url( $hola_options['footer-logo-image-dark']['url'] ); ?>"
                                         alt="<?php bloginfo( 'name' ); ?>"/></a>
                         </div><!-- .footer-logo .mb-30 -->
                         <div class="widget-social-icon">

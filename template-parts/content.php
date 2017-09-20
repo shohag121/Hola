@@ -18,7 +18,7 @@ global $hola_options;
 		<?php else: ?>
             <div class="blog-img">
                 <a href="<?php the_permalink(); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.png" alt="Blog Thumbnail">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.png" alt="Blog Thumbnail">
                 </a>
             </div><!-- .blog-img -->
 		<?php endif;
@@ -60,13 +60,27 @@ global $hola_options;
 			<?php if ( is_single() ) :
 				the_title( '<h1>', '</h1>' );
 				the_content();
-			else: ?>
+				$args = array(
+					'before'           => '<div class="nav-pagination">',
+					'after'            => '</div>',
+					'link_before'      => '',
+					'link_after'       => '',
+					'next_or_number'   => 'next',
+					'separator'        => ' ',
+					'nextpagelink'     => esc_html__( 'Continue Reading', 'hola' ),
+					'previouspagelink' => esc_html__( 'Previous Content', 'hola' ),
+					'pagelink'         => '%',
+					'echo'             => 1
+				);
+				wp_link_pages( $args );
+				// post tags
+				the_tags( '<div class="meta-tag">', '', '</div>' );
+                else: ?>
                 <h3>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h3>
 				<?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>"
-                   class="readmore"><?php echo esc_html( $hola_options['blog-settings-readmore'] ); ?></a>
+                <a href="<?php the_permalink(); ?>" class="readmore"><?php echo esc_html( $hola_options['blog-settings-readmore'] ); ?></a>
 			<?php endif; ?>
         </div><!-- .blog-text -->
     </div><!-- .blog-info -->
