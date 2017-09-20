@@ -44,6 +44,7 @@ function hola_options_register_required_plugins() {
 			'force_deactivation' => false,
 			'source' => 'https://github.com/bdCalling/Hola-Library/archive/master.zip',
 		),
+		
 	);
 	
 	$config = array(

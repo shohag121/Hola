@@ -1303,7 +1303,7 @@ a#scrollUp:hover {
 
 .main-menu ul li {
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 0;
     padding: 35px 0;
     position: relative;
 }
@@ -2057,8 +2057,8 @@ a.aboutme-btn:hover {
 
 .single-service:hover .service-icon {
     border: 4px solid #eee;
-    -webkit-box-shadow: 0px 0px 0px 1px #b8b5b5;
-    box-shadow: 0px 0px 0px 1px #b8b5b5;
+    -webkit-box-shadow: 0 0 0 1px #b8b5b5;
+    box-shadow: 0 0 0 1px #b8b5b5;
 }
 
 .single-service:hover {
@@ -2066,7 +2066,7 @@ a.aboutme-btn:hover {
 }
 
 .single-service {
-    border-left: 1px solid #d1cfcf;
+
     border-bottom: 1px solid #d1cfcf;
 }
 
@@ -2704,6 +2704,7 @@ a.readmore:hover {
     border: 1px solid #232323;
     height: 45px;
     width: 100%;
+    text-align: left;
 }
 
 .blog-search form button {
@@ -3656,7 +3657,6 @@ a.readmore:hover {
     font-size: 14px;
     height: 30px;
     line-height: 30px;
-    margin-right: 12px;
     text-align: center;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
