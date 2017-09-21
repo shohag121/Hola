@@ -171,7 +171,7 @@ function hola_ocdi_after_import( $selected_import ) {
 	$main_menu = get_term_by( 'name', 'Menu 1', 'nav_menu' );
 	
 	set_theme_mod( 'nav_menu_locations', array(
-			'main-menu' => $main_menu->term_id,
+			'menu-1' => $main_menu->term_id,
 		)
 	);
 	
