@@ -34,6 +34,7 @@ $args = array(
 	'menu_type'             => 'menu',
 	'menu_title'            => 'Hola',
 	'menu_icon'             => 'dashicons-layout',
+	'admin_bar_icon'        => 'dashicons-layout',
 	'allow_sub_menu'        => true,
 	'page_parent_post_type' => 'your_post_type',
 	'page_priority'         => '4',

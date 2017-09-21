@@ -54,7 +54,7 @@ function hola_options_register_required_plugins() {
 		// Default absolute path to pre-packaged plugins
 		//'parent_menu_slug' 	=> 'plugins.php', 				// Default parent menu slug
 		//'parent_url_slug' 	=> 'plugins.php', 				// Default parent URL slug
-		'parent_slug'  => 'plugins.php',
+		'parent_slug'  => 'themes.php',
 		'capability'   => 'manage_options',
 		'menu'         => 'install-required-plugins',
 		// Menu slug

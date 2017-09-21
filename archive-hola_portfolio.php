@@ -70,7 +70,7 @@ get_template_part( 'template-parts/breadcrumbs' ); ?>
 												    echo esc_html( $portfolio_name->name );
 												    //seperator
 												    if ( ! ( end( $portfolio_names ) == $portfolio_name ) ){
-													    esc_html( ', ' );
+													    echo esc_html( ', ' );
                                                     }
 												}
 												?></span>

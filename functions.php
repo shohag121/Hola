@@ -252,6 +252,11 @@ add_filter('excerpt_more', 'hola_excerpt_dot_fix');
 
 
 /**
+ * Implement One Click Demo Import feature.
+ */
+require get_template_directory() . '/lib/ocdi/init.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

@@ -128,7 +128,7 @@ global $hola_options;
 													foreach ( $portfolio_names as $portfolio_name ) {
 														echo esc_html( $portfolio_name->name );
 														if ( ! ( end( $portfolio_names ) === $portfolio_name ) ){
-														    esc_html(', ');
+														   echo esc_html(', ');
                                                         }
 													}
 													?></span>

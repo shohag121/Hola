@@ -59,21 +59,24 @@ global $hola_options;
                                         alt="<?php bloginfo( 'name' ); ?>"/></a>
                         </div><!-- .footer-logo .mb-30 -->
                         <div class="widget-social-icon">
-                            <a href="<?php echo esc_url( $hola_options['footer-social-fb'] ); ?>"><span
-                                        class="ti-facebook"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-tw'] ); ?>"><span
-                                        class="ti-twitter"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-gp'] ); ?>"><span
-                                        class="ti-google"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-in'] ); ?>"><span
-                                        class="ti-linkedin"></span></a>
-                            <a href="<?php echo esc_url( $hola_options['footer-social-db'] ); ?>"><span
-                                        class="ti-dribbble"></span></a>
+	                        <?php if ( $hola_options['footer-social-fb'] ) : ?>
+                                <a href="<?php echo esc_url( $hola_options['footer-social-fb'] ); ?>"><span class="ti-facebook"></span></a>
+	                        <?php endif;
+	                        if ( $hola_options['footer-social-tw'] ) : ?>
+                                <a href="<?php echo esc_url( $hola_options['footer-social-tw'] ); ?>"><span class="ti-twitter"></span></a>
+	                        <?php endif;
+	                        if ( $hola_options['footer-social-gp'] ) : ?>
+                                <a href="<?php echo esc_url( $hola_options['footer-social-gp'] ); ?>"><span class="ti-google"></span></a>
+	                        <?php endif;
+	                        if ( $hola_options['footer-social-in'] ) : ?>
+                                <a href="<?php echo esc_url( $hola_options['footer-social-in'] ); ?>"><span class="ti-linkedin"></span></a>
+	                        <?php endif;
+	                        if ( $hola_options['footer-social-db'] ) : ?>
+                                <a href="<?php echo esc_url( $hola_options['footer-social-db'] ); ?>"><span class="ti-dribbble"></span></a>
+	                        <?php endif; ?>
                         </div><!-- .widget-social-icon -->
                         <div class="copyright">
-                            <p>&copy; <?php echo date( 'Y' ); ?> <a
-                                        href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>,
-                                All Rights Reserved</p>
+                            <p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>, All Rights Reserved</p>
                         </div><!-- .copyright -->
                     </div><!-- .footer-widget text-right -->
                 </div><!-- .col-lg-4 .col-md-4 .col-sm-12 -->
