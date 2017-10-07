@@ -17,7 +17,7 @@ global $hola_options;
             <div class="row">
                 <div class="col-md-12">
                     <div class="about-us-inner text-center">
-                        <h2><?php echo esc_html( $hola_options['about-us-heading'] ); ?></h2>
+                        <h2><?php echo wp_kses( $hola_options['about-us-heading'], array( 'strong' => array() ) ); ?></h2>
                         <p><?php echo esc_html( $hola_options['about-us-description'] ); ?></p>
                     </div><!-- .about-us-inner .text-center -->
                 </div><!-- .col-md-12 -->

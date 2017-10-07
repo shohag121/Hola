@@ -1604,7 +1604,10 @@ a#scrollUp:hover {
 .header-space {
     height: 90px;
 }
-
+/* admin header overlay fix */
+body.admin-bar .header-area.sticker.sticky{
+    top: 32px;
+}
 
 /*-----------------------------
  3. Slider
@@ -4054,6 +4057,10 @@ a.readmore:hover {
     .header-area-3.sticky .mean-container a.meanmenu-reveal span {
         background: #232323 none repeat scroll 0 0;
     }
+    /* stickey heaser fix */
+    body.admin-bar .header-area.sticker.sticky{
+        top: 42px;
+    }
 
     /* Home Style 4 */
     .single-testimonial {
@@ -4136,7 +4143,8 @@ a.readmore:hover {
         margin-bottom: 30px;
     }
 
-    .blog-area, blog-area-2 {
+    .blog-area,
+    .blog-area-2 {
         padding-bottom: 40px;
     }
 
