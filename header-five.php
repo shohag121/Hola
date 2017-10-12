@@ -35,7 +35,7 @@ global $hola_options;
 					    if ( $hola_options['blog-logo-select'] == 'text' ) : ?>
                             <h1 class="site-title"><a
                                         href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                                        rel="home"><?php bloginfo( 'name' ); ?></a>
+                                        rel="home"><?php echo esc_html( $hola_options['blog-logo-text'] ); ?></a>
                             </h1><!-- .site-title -->
 					    <?php else : ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
