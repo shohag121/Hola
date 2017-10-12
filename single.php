@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Hola
+ * @package HolaWP
  */
 global $hola_options;
 get_header(); ?>

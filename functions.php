@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Hola
+ * @package HolaWP
  */
 
 if ( ! function_exists( 'hola_setup' ) ) :

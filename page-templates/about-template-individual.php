@@ -2,8 +2,8 @@
 /**
  * Template Name: About Individual
  *
- * @package Hola
- * @since Hola 1.0
+ * @package HolaWP
+ * @since HolaWP 1.0
  */
 get_header();
 global $hola_options;

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Hola
+ * @package HolaWP
  */
 global $hola_options;
 get_header();

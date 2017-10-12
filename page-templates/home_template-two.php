@@ -2,8 +2,8 @@
 /**
  * Template Name: Home Style 2
  *
- * @package Hola
- * @since Hola 1.0
+ * @package HolaWP
+ * @since HolaWP 1.0
  */
 get_header( 'two' );
 global $hola_options;

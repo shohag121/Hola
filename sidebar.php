@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Hola
+ * @package HolaWP
  */
 global $hola_options;
 if ( ( ! is_active_sidebar( 'sidebar' ) ) || ( $hola_options['blog-settings-sidebar'] == 'none' ) ) {

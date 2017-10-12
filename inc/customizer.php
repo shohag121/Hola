@@ -2,7 +2,7 @@
 /**
  * Hola Theme Customizer
  *
- * @package Hola
+ * @package HolaWP
  */
 
 /**
