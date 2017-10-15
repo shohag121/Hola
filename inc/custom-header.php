@@ -8,34 +8,34 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses hola_header_style()
+ * @uses wpgeeky_header_style()
  */
-function hola_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'hola_custom_header_args', [
+function wpgeeky_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'wpgeeky_custom_header_args', [
 		'default-image'      => '',
 		'default-text-color' => '000000',
 		'width'              => 1000,
 		'height'             => 250,
 		'flex-height'        => TRUE,
-		'wp-head-callback'   => 'hola_header_style',
+		'wp-head-callback'   => 'wpgeeky_header_style',
 	] ) );
 }
 
-add_action( 'after_setup_theme', 'hola_custom_header_setup' );
+add_action( 'after_setup_theme', 'wpgeeky_custom_header_setup' );
 
-if ( ! function_exists( 'hola_header_style' ) ) :
+if ( ! function_exists( 'wpgeeky_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see hola_custom_header_setup().
+	 * @see wpgeeky_custom_header_setup().
 	 */
-	function hola_header_style() {
+	function wpgeeky_header_style() {
 		$header_text_color = get_header_textcolor();
 		
 		/*

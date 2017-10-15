@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 get_header();
@@ -39,7 +39,7 @@ get_template_part( 'template-parts/breadcrumbs' ); ?>
 					<?php
 					// get all portfolios
 					$portfolios = new WP_Query( array(
-						'post_type'      => 'hola_portfolio',
+						'post_type'      => 'wpgeeky_portfolio',
 						'posts_per_page' => - 1,
                     ) );
 					if ( $portfolios->have_posts() ) : ?>
@@ -82,7 +82,7 @@ get_template_part( 'template-parts/breadcrumbs' ); ?>
                         <!-- end of the loop -->
 						<?php wp_reset_postdata(); ?>
 					<?php else : ?>
-                        <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
+                        <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'wpgeeky' ); ?></p>
 					<?php endif; ?>
                 </div><!-- .grid -->
             </div><!-- .row -->

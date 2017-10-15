@@ -6,9 +6,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package HolaWP
+ * @package WPGeeky
  */
-global $hola_options;
+global $wpgeeky_options;
 ?>
 
 <!-- footer-start -->
@@ -24,7 +24,7 @@ global $hola_options;
                                 <div class="footer-icon">
                                     <span class="icon-map-pin"></span>
                                 </div><!-- .footer-icon -->
-                                <p><?php echo esc_html( $hola_options['footer-address'] ); ?></p>
+                                <p><?php echo esc_html( $wpgeeky_options['footer-address'] ); ?></p>
                             </div><!-- .footer-widget .text-center -->
                         </div><!-- .col-lg-4 .col-md-4 .col-sm-4 -->
 
@@ -34,7 +34,7 @@ global $hola_options;
                                     <span class="icon-envelope"></span>
                                 </div><!-- .footer-icon -->
                                 <p>
-                                    <a href="mailto:<?php echo sanitize_email( $hola_options['footer-email'] ); ?>"><?php echo sanitize_email( $hola_options['footer-email'] ); ?></a>
+                                    <a href="mailto:<?php echo sanitize_email( $wpgeeky_options['footer-email'] ); ?>"><?php echo sanitize_email( $wpgeeky_options['footer-email'] ); ?></a>
                                 </p>
                             </div><!-- .footer-widget .text-center -->
                         </div><!-- .col-lg-4 .col-md-4 .col-sm-4 -->
@@ -44,7 +44,7 @@ global $hola_options;
                                 <div class="footer-icon">
                                     <span class="icon-phone"></span>
                                 </div><!-- .footer-icon -->
-                                <p><?php echo esc_html( $hola_options['footer-telephone'] ); ?></p>
+                                <p><?php echo esc_html( $wpgeeky_options['footer-telephone'] ); ?></p>
                             </div><!-- .footer-widget .text-center -->
                         </div><!-- .col-lg-4 .col-md-4 .col-sm-4 -->
 
@@ -56,24 +56,24 @@ global $hola_options;
                         <div class="footer-logo mb-30">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                rel="home"><img
-                                        src="<?php echo esc_url( $hola_options['footer-logo-image-dark']['url'] ); ?>"
+                                        src="<?php echo esc_url( $wpgeeky_options['footer-logo-image-dark']['url'] ); ?>"
                                         alt="<?php bloginfo( 'name' ); ?>"/></a>
                         </div><!-- .footer-logo .mb-30 -->
                         <div class="widget-social-icon">
-	                        <?php if ( $hola_options['footer-social-fb'] ) : ?>
-                                <a href="<?php echo esc_url( $hola_options['footer-social-fb'] ); ?>"><span class="ti-facebook"></span></a>
+	                        <?php if ( $wpgeeky_options['footer-social-fb'] ) : ?>
+                                <a href="<?php echo esc_url( $wpgeeky_options['footer-social-fb'] ); ?>"><span class="ti-facebook"></span></a>
 	                        <?php endif;
-	                        if ( $hola_options['footer-social-tw'] ) : ?>
-                                <a href="<?php echo esc_url( $hola_options['footer-social-tw'] ); ?>"><span class="ti-twitter"></span></a>
+	                        if ( $wpgeeky_options['footer-social-tw'] ) : ?>
+                                <a href="<?php echo esc_url( $wpgeeky_options['footer-social-tw'] ); ?>"><span class="ti-twitter"></span></a>
 	                        <?php endif;
-	                        if ( $hola_options['footer-social-gp'] ) : ?>
-                                <a href="<?php echo esc_url( $hola_options['footer-social-gp'] ); ?>"><span class="ti-google"></span></a>
+	                        if ( $wpgeeky_options['footer-social-gp'] ) : ?>
+                                <a href="<?php echo esc_url( $wpgeeky_options['footer-social-gp'] ); ?>"><span class="ti-google"></span></a>
 	                        <?php endif;
-	                        if ( $hola_options['footer-social-in'] ) : ?>
-                                <a href="<?php echo esc_url( $hola_options['footer-social-in'] ); ?>"><span class="ti-linkedin"></span></a>
+	                        if ( $wpgeeky_options['footer-social-in'] ) : ?>
+                                <a href="<?php echo esc_url( $wpgeeky_options['footer-social-in'] ); ?>"><span class="ti-linkedin"></span></a>
 	                        <?php endif;
-	                        if ( $hola_options['footer-social-db'] ) : ?>
-                                <a href="<?php echo esc_url( $hola_options['footer-social-db'] ); ?>"><span class="ti-dribbble"></span></a>
+	                        if ( $wpgeeky_options['footer-social-db'] ) : ?>
+                                <a href="<?php echo esc_url( $wpgeeky_options['footer-social-db'] ); ?>"><span class="ti-dribbble"></span></a>
 	                        <?php endif; ?>
                         </div><!-- .widget-social-icon -->
                         <div class="copyright">

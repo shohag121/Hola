@@ -1,5 +1,5 @@
 <?php
-function hola_ocdi_import_files() {
+function wpgeeky_ocdi_import_files() {
 	return array(
 		array(
 			'import_file_name'             => 'Home Style One',
@@ -10,11 +10,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-one.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style One"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style One"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/',
 		),
 		array(
@@ -26,11 +26,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-two.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Two"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Two"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-two/',
 		),
 		array(
@@ -42,11 +42,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-three.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Three"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Three"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-three/',
 		),
 		array(
@@ -58,11 +58,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-four.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Four"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Four"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-four/',
 		),
 		array(
@@ -74,11 +74,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-five.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Five"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Five"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-five/',
 		),
 		array(
@@ -90,11 +90,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-six.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Six"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Six"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-six/',
 		),
 		array(
@@ -106,11 +106,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-seven.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Seven"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Seven"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-seven/',
 		),
 		array(
@@ -122,11 +122,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-eight.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Eight"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Eight"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-eight/',
 		),
 		array(
@@ -138,11 +138,11 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-nine.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Nine"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Nine"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-nine/',
 		),
 		array(
@@ -154,19 +154,19 @@ function hola_ocdi_import_files() {
 			'local_import_redux'           => array(
 				array(
 					'file_path'   => trailingslashit( get_template_directory() ) . 'lib/ocdi/demo/redux_options.json',
-					'option_name' => 'hola_options',
+					'option_name' => 'wpgeeky_options',
 				),
 			),
 			'import_preview_image_url'     => trailingslashit( get_template_directory_uri() ) . 'lib/ocdi/preview/home-ten.jpg',
-			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Ten"', 'hola' ),
+			'import_notice'                => __( 'After you import this demo, set your home page template to "Home Style Ten"', 'wpgeeky' ),
 			'preview_url'                  => 'https://preview.wpgeeky.com/hola/home-ten/',
 		),
 	);
 }
-add_filter( 'pt-ocdi/import_files', 'hola_ocdi_import_files' );
+add_filter( 'pt-ocdi/import_files', 'wpgeeky_ocdi_import_files' );
 
 // setting up the demo
-function hola_ocdi_after_import( $selected_import ) {
+function wpgeeky_ocdi_after_import( $selected_import ) {
 	// Assign menus to their locations.
 	$main_menu = get_term_by( 'name', 'Menu 1', 'nav_menu' );
 	
@@ -267,7 +267,7 @@ function hola_ocdi_after_import( $selected_import ) {
 		update_option( 'page_for_posts', $blog_page_id->ID );
 	}
 }
-add_action( 'pt-ocdi/after_import', 'hola_ocdi_after_import' );
+add_action( 'pt-ocdi/after_import', 'wpgeeky_ocdi_after_import' );
 
 // remove theme branding
 add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );

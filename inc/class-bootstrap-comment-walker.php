@@ -74,7 +74,7 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
             <div class="comment-body">
                 <div class="media-body">
-                    <?php esc_html_e( 'Pingback:', 'hola' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( esc_html__( 'Edit','hola' ), '<span class="edit-link">', '</span>' ); ?>
+                    <?php esc_html_e( 'Pingback:', 'wpgeeky' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( esc_html__( 'Edit','wpgeeky' ), '<span class="edit-link">', '</span>' ); ?>
                 </div><!-- /.media-body -->
             </div><!-- /.comment-body -->
 <?php
@@ -150,7 +150,7 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
 
                     <footer class="comment-meta">
                         <div class="comment-author vcard">
-                            <?php printf(  '%s <span class="says sr-only">'. esc_html__('says:','hola').'</span>' , sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
+                            <?php printf(  '%s <span class="says sr-only">'. esc_html__('says:','wpgeeky').'</span>' , sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
                         </div><!-- /.comment-author -->
 
                         <div class="comment-metadata">
@@ -158,15 +158,15 @@ class WP_Bootstrap_Comments_Walker extends Walker_Comment {
                                 <time datetime="<?php comment_time( 'c' ); ?>">
                                     <?php
                                     /* translators: 1: comment date, 2: comment time */
-                                    printf( esc_html__( '%1$s at %2$s', 'hola' ), get_comment_date( '', $comment ), get_comment_time() );
+                                    printf( esc_html__( '%1$s at %2$s', 'wpgeeky' ), get_comment_date( '', $comment ), get_comment_time() );
                                     ?>
                                 </time>
                             </a>
-                            <?php edit_comment_link( esc_html__( 'Edit', 'hola' ), '<span class="edit-link">', '</span>' ); ?>
+                            <?php edit_comment_link( esc_html__( 'Edit', 'wpgeeky' ), '<span class="edit-link">', '</span>' ); ?>
                         </div><!-- /.comment-metadata -->
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
-                            <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'hola' ); ?></p>
+                            <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'wpgeeky' ); ?></p>
                         <?php endif; ?>
                     </footer><!-- /.comment-meta -->
 

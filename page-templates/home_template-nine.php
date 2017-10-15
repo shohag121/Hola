@@ -2,12 +2,12 @@
 /**
  * Template Name: Home Style 9
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 
 get_header( 'two' );
-global $hola_options;
+global $wpgeeky_options;
 ?>
     <!-- slider-section-start -->
     <section class="slider-area pt-80">
@@ -15,9 +15,9 @@ global $hola_options;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="slider-text text-center slider-text-7">
-                        <h1><?php echo esc_html( $hola_options['home-slider-h1'] ); ?></h1>
-                        <h2><?php echo esc_html( $hola_options['home-slider-h2'] ); ?></h2>
-                        <h3><?php echo esc_html( $hola_options['home-slider-p1'] ); ?></h3>
+                        <h1><?php echo esc_html( $wpgeeky_options['home-slider-h1'] ); ?></h1>
+                        <h2><?php echo esc_html( $wpgeeky_options['home-slider-h2'] ); ?></h2>
+                        <h3><?php echo esc_html( $wpgeeky_options['home-slider-p1'] ); ?></h3>
                     </div><!-- .slider-text .text-center .slider-text-7 -->
                 </div><!-- .col-lg-12 -->
             </div><!-- .row -->
@@ -50,7 +50,7 @@ global $hola_options;
 			<?php
 			// get 10 portfolios
 			$portfolios = new WP_Query( array(
-				'post_type'      => 'hola_portfolio',
+				'post_type'      => 'wpgeeky_portfolio',
 				'posts_per_page' => 10,
 			) );
 			if ( $portfolios->have_posts() ) : ?>
@@ -58,7 +58,7 @@ global $hola_options;
                     <div class="grid">
                         <!-- the loop -->
 						<?php while ( $portfolios->have_posts() ) : $portfolios->the_post();
-							$img_size = get_post_meta( get_the_ID(), '_hola_project_img_size', 1 ); ?>
+							$img_size = get_post_meta( get_the_ID(), '_wpgeeky_project_img_size', 1 ); ?>
                             <div class="col-md-4 col-sm-6 col-xs-12 grid-item <?php
 							$portfolio_names = get_the_terms( get_the_ID(), 'portfolio_category' );
 							foreach ( $portfolio_names as $portfolio_name ) {
@@ -112,10 +112,10 @@ global $hola_options;
                     </div><!-- .grid -->
                 </div><!-- .row -->
                 <div class="view-more text-center">
-                    <a href="<?php echo esc_url( get_post_type_archive_link( 'hola_portfolio' ) ); ?>">view more</a>
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'wpgeeky_portfolio' ) ); ?>">view more</a>
                 </div><!-- .view-more text-center -->
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .container -->
     </section><!-- .slider-area pt-80 -->

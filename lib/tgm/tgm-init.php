@@ -5,7 +5,7 @@
  */
 require_once get_template_directory() . '/lib/tgm/class-tgm-plugin-activation.php';
 
-function hola_options_register_required_plugins() {
+function wpgeeky_options_register_required_plugins() {
 	
 	$plugins = array(
 		array(
@@ -37,18 +37,18 @@ function hola_options_register_required_plugins() {
 			'force_deactivation' => true,
 		),
 		array(
-			'name'   => 'Hola Library',
-			'slug'   => 'hola-lib',
+			'name'   => 'WPGeeky Library',
+			'slug'   => 'wpgeeky-lib',
 			'required'           => true,
 			'force_activation'   => true,
 			'force_deactivation' => false,
-			'source' => 'https://github.com/bdCalling/Hola-Library/archive/master.zip',
+			'source' => 'https://github.com/bdCalling/WPGeeky-Library/archive/master.zip',
 		),
 		
 	);
 	
 	$config = array(
-		'domain'       => 'hola',
+		'domain'       => 'wpgeeky',
 		// Text domain - likely want to be the same as your theme.
 		'default_path' => '',
 		// Default absolute path to pre-packaged plugins
@@ -68,4 +68,4 @@ function hola_options_register_required_plugins() {
 	
 }
 
-add_action( 'tgmpa_register', 'hola_options_register_required_plugins' );
+add_action( 'tgmpa_register', 'wpgeeky_options_register_required_plugins' );

@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
-if ( ! function_exists( 'hola_setup' ) ) :
+if ( ! function_exists( 'wpgeeky_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'hola_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function hola_setup() {
+function wpgeeky_setup() {
 
 	/*
 	 * Add Theme Library files
@@ -26,9 +26,9 @@ function hola_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Hola, use a find and replace
-	 * to change 'hola' to the name of your theme in all the template files.
+	 * to change 'wpgeeky' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'hola', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wpgeeky', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -66,7 +66,7 @@ function hola_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'hola' ),
+		'menu-1' => esc_html__( 'Primary', 'wpgeeky' ),
 	) );
 
 	/*
@@ -82,7 +82,7 @@ function hola_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'hola_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'wpgeeky_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -103,7 +103,7 @@ function hola_setup() {
 	) );
 }
 endif;
-add_action( 'after_setup_theme', 'hola_setup' );
+add_action( 'after_setup_theme', 'wpgeeky_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -112,34 +112,34 @@ add_action( 'after_setup_theme', 'hola_setup' );
  *
  * @global int $content_width
  */
-function hola_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'hola_content_width', 1120 );
+function wpgeeky_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wpgeeky_content_width', 1120 );
 }
-add_action( 'after_setup_theme', 'hola_content_width', 0 );
+add_action( 'after_setup_theme', 'wpgeeky_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function hola_widgets_init() {
+function wpgeeky_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'hola' ),
+		'name'          => esc_html__( 'Sidebar', 'wpgeeky' ),
 		'id'            => 'sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'hola' ),
+		'description'   => esc_html__( 'Add widgets here.', 'wpgeeky' ),
 		'before_widget' => '<div id="%1$s" class="single-widget %2$s mb-60">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'hola_widgets_init' );
+add_action( 'widgets_init', 'wpgeeky_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function hola_scripts() {
-	global $hola_options;
+function wpgeeky_scripts() {
+	global $wpgeeky_options;
 	
 	//all styles
 	wp_enqueue_style( 'hola-fonts', '//fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Roboto:100,300,400,500,700,900', array()  );
@@ -154,8 +154,8 @@ function hola_scripts() {
 	wp_enqueue_style( 'hola-magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css', array()  );
 	wp_enqueue_style( 'hola-style', get_stylesheet_uri() );
 	// User's custom css
-	if ( isset( $hola_options['css_editor'] ) ) {
-		$custom_css = $hola_options['css_editor']."\r\n";
+	if ( isset( $wpgeeky_options['css_editor'] ) ) {
+		$custom_css = $wpgeeky_options['css_editor']."\r\n";
 		wp_add_inline_style('hola-style', $custom_css );
 	}
 	
@@ -178,14 +178,14 @@ function hola_scripts() {
 	}
 	
 	// User's custom js
-	if ( isset( $hola_options['js_editor'] ) ){
-		$custom_js = $hola_options['js_editor'];
+	if ( isset( $wpgeeky_options['js_editor'] ) ){
+		$custom_js = $wpgeeky_options['js_editor'];
 		wp_add_inline_script('hola-main-js', $custom_js );
 	}
 	
 	// enqueue google api for contact page
 	if ( is_page_template( 'page-templates/contact-one.php' || 'page-templates/contact-two.php' ) ) {
-		wp_enqueue_script( 'hola-google-map-js', 'https://maps.googleapis.com/maps/api/js?key=' . esc_attr( $hola_options['contact-key'] ), array(), '', true );
+		wp_enqueue_script( 'hola-google-map-js', 'https://maps.googleapis.com/maps/api/js?key=' . esc_attr( $wpgeeky_options['contact-key'] ), array(), '', true );
 	}
 	
 	// for contact-one template
@@ -196,7 +196,7 @@ function hola_scripts() {
             var mapOptions = {
                 zoom: 15,
                 scrollwheel: false,
-                center: new google.maps.LatLng(' . esc_html( $hola_options["contact-latitude"] ) . ', ' . esc_html( $hola_options["contact-longitude"] ) . '),
+                center: new google.maps.LatLng(' . esc_html( $wpgeeky_options["contact-latitude"] ) . ', ' . esc_html( $wpgeeky_options["contact-longitude"] ) . '),
                 styles: [{
                     "featureType": "all",
                     "elementType": "labels.text.fill",
@@ -277,7 +277,7 @@ function hola_scripts() {
             var mapOptions = {
                 zoom: 15,
                 scrollwheel: false,
-                center: new google.maps.LatLng(' . esc_html( $hola_options["contact-latitude"] ) . ', ' . esc_html( $hola_options["contact-longitude"] ) . '),
+                center: new google.maps.LatLng(' . esc_html( $wpgeeky_options["contact-latitude"] ) . ', ' . esc_html( $wpgeeky_options["contact-longitude"] ) . '),
                 styles: [{
                     "featureType": "water",
                     "elementType": "geometry",
@@ -357,22 +357,22 @@ function hola_scripts() {
 	
 	
 }
-add_action( 'wp_enqueue_scripts', 'hola_scripts' );
+add_action( 'wp_enqueue_scripts', 'wpgeeky_scripts' );
 
 
 /*
  * Tag cloud set default font size
  */
-function hola_set_tag_cloud_font_size($args) {
+function wpgeeky_set_tag_cloud_font_size($args) {
 	$args['smallest'] = 10; /* Set the smallest size to 10pt */
 	$args['largest'] = 20;  /* set the largest size to 20pt */
 	return $args;
 }
-add_filter('widget_tag_cloud_args','hola_set_tag_cloud_font_size');
+add_filter('widget_tag_cloud_args','wpgeeky_set_tag_cloud_font_size');
 
 
 //Contact Form 7 integration
-function hola_contact7_form_content( $template, $prop ) {
+function wpgeeky_contact7_form_content( $template, $prop ) {
 	if ( 'form' == $prop ) {
 		return implode( '',
 			array(
@@ -398,7 +398,7 @@ function hola_contact7_form_content( $template, $prop ) {
 		return $template;
 	}
 }
-add_filter( 'wpcf7_default_template', 'hola_contact7_form_content', 10, 2 );
+add_filter( 'wpcf7_default_template', 'wpgeeky_contact7_form_content', 10, 2 );
 // Default title override for contact form 7
 function mod_contact7_form_title( $template ) {
 	$template->set_title( 'Contact Pages Form' );
@@ -410,21 +410,21 @@ add_filter( 'wpcf7_contact_form_default_pack', 'mod_contact7_form_title' );
 /**
  * Editor Style added
  */
-function hola_theme_add_editor_styles() {
+function wpgeeky_theme_add_editor_styles() {
 	$font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Roboto:100,300,400,500,700,900' );
 	add_editor_style( $font_url );
 }
-add_action( 'after_setup_theme', 'hola_theme_add_editor_styles' );
+add_action( 'after_setup_theme', 'wpgeeky_theme_add_editor_styles' );
 
 
 
 
 // Replaces the excerpt "[...]" text
-function hola_excerpt_dot_fix($more) {
+function wpgeeky_excerpt_dot_fix($more) {
 	global $post;
 	return '';
 }
-add_filter('excerpt_more', 'hola_excerpt_dot_fix');
+add_filter('excerpt_more', 'wpgeeky_excerpt_dot_fix');
 
 
 /**
@@ -445,7 +445,7 @@ require get_template_directory() . '/inc/breadcrumbs.php';
 /**
  * Navigation walker
  */
-require get_template_directory() . '/inc/class-hola-nav-walker.php';
+require get_template_directory() . '/inc/class-wpgeeky-nav-walker.php';
 
 /**
  * Comment walker

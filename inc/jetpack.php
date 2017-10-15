@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function hola_jetpack_setup() {
+function wpgeeky_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', [
 		'container' => 'main',
-		'render'    => 'hola_infinite_scroll_render',
+		'render'    => 'wpgeeky_infinite_scroll_render',
 		'footer'    => 'page',
 	] );
 	
@@ -38,12 +38,12 @@ function hola_jetpack_setup() {
 	] );
 }
 
-add_action( 'after_setup_theme', 'hola_jetpack_setup' );
+add_action( 'after_setup_theme', 'wpgeeky_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function hola_infinite_scroll_render() {
+function wpgeeky_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

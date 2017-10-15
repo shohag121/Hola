@@ -12,13 +12,13 @@
 					} elseif ( is_search() ) {
 						printf(
 							'<h2>'
-							. esc_html__( 'Search Results for: %s', 'hola' )
+							. esc_html__( 'Search Results for: %s', 'wpgeeky' )
 							. '</h2>',
 							get_search_query()
 						);
 					}
-					if ( function_exists( 'hola_breadcrumbs' ) ) {
-						hola_breadcrumbs();
+					if ( function_exists( 'wpgeeky_breadcrumbs' ) ) {
+						wpgeeky_breadcrumbs();
 					}
 					?>
 

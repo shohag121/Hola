@@ -3,7 +3,7 @@
  * WordPress Breadcrumbs
  *
 */
-function hola_breadcrumbs() {
+function wpgeeky_breadcrumbs() {
 	
 	/* === OPTIONS === */
 	$text['home']     = 'Home'; // text for the 'Home' link
@@ -248,4 +248,4 @@ function hola_breadcrumbs() {
 		echo $wrap_after;
 		
 	}
-} // end of hola_breadcrumbs()
+} // end of wpgeeky_breadcrumbs()

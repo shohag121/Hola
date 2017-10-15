@@ -11,7 +11,7 @@ if ( ! class_exists( 'Redux' ) ) {
 }
 
 // This is your option name where all the Redux data is stored.
-$opt_name = "hola_options";
+$opt_name = "wpgeeky_options";
 
 /**
  * ---> SET ARGUMENTS
@@ -23,10 +23,10 @@ $opt_name = "hola_options";
 $theme = wp_get_theme(); // For use with some settings. Not necessary.
 
 $args = array(
-	'opt_name'              => 'hola_options',
+	'opt_name'              => 'wpgeeky_options',
 	'use_cdn'               => true,
 	'display_name'          => $theme->name,
-	'page_slug'             => 'hola_options',
+	'page_slug'             => 'wpgeeky_options',
 	'page_title'            => 'HolaWP',
 	'intro_text'            => 'Welcome to HolaWP - Minimal, Multipurpose Agency Portfolio WordPress Theme',
 	'footer_text'           => 'A Theme by WPGeeky',
@@ -93,23 +93,23 @@ Redux::setArgs( $opt_name, $args );
 $el_icon = 'http://rhythm.nikadevs.com/content/icons-et-line';
 $el_icon_url = '<a href="'. esc_url( $el_icon ) .'">Full list</a>.';
 Redux::setSection( $opt_name, array(
-	'title' => __( 'Default Settings', 'hola' ),
+	'title' => __( 'Default Settings', 'wpgeeky' ),
 	'id'    => 'default-settings',
-	'desc'  => __( 'Theme\'s default settings.', 'hola' ),
+	'desc'  => __( 'Theme\'s default settings.', 'wpgeeky' ),
 	'icon'  => 'el el-home',
 
 ) );
 Redux::setSection( $opt_name, array(
-	'title'      => __( 'Header', 'hola' ),
+	'title'      => __( 'Header', 'wpgeeky' ),
 	'id'         => 'header-settings',
-	'desc'       => __( 'Theme\'s header settings.', 'hola' ),
+	'desc'       => __( 'Theme\'s header settings.', 'wpgeeky' ),
 	'subsection' => true,
 	'fields'     => array(
 		array(
 			'id'       => 'blog-logo-style',
 			'type'     => 'button_set',
-			'title'    => __( 'Header Type', 'hola' ),
-			'subtitle' => __( 'Select Header Type', 'hola' ),
+			'title'    => __( 'Header Type', 'wpgeeky' ),
+			'subtitle' => __( 'Select Header Type', 'wpgeeky' ),
 			//Must provide key => value pairs for options
 			'options'  => array(
 				'headroom' => 'Appear on Scroll UP',
@@ -120,9 +120,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog-logo-select',
 			'type'     => 'button_set',
-			'title'    => __( 'Logo Type', 'hola' ),
-			'subtitle' => __( 'Select Logo Type', 'hola' ),
-			'desc'     => __( 'Select text for text logo or image for image logo.', 'hola' ),
+			'title'    => __( 'Logo Type', 'wpgeeky' ),
+			'subtitle' => __( 'Select Logo Type', 'wpgeeky' ),
+			'desc'     => __( 'Select text for text logo or image for image logo.', 'wpgeeky' ),
 			'options'  => array(
 				'text'  => 'Text',
 				'image' => 'Image',
@@ -132,8 +132,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog-logo-text',
 			'type'     => 'text',
-			'title'    => __( 'Logo Text', 'hola' ),
-			'desc'     => __( 'Please input logo text here.', 'hola' ),
+			'title'    => __( 'Logo Text', 'wpgeeky' ),
+			'desc'     => __( 'Please input logo text here.', 'wpgeeky' ),
 			'default'  => get_bloginfo( 'name' ),
 			'required' => array( 'blog-logo-select', 'equals', 'text' ),
 		),
@@ -141,9 +141,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'blog-logo-image',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Website Logo', 'hola' ),
+			'title'    => __( 'Website Logo', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for logo', 'hola' ),
+			'subtitle' => __( 'Upload any images for logo', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/logo.png',
 			),
@@ -153,9 +153,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'blog-logo-image-dark',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Website Logo on Dark Background', 'hola' ),
+			'title'    => __( 'Website Logo on Dark Background', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for logo on dark Background', 'hola' ),
+			'subtitle' => __( 'Upload any images for logo on dark Background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/logo-2.png',
 			),
@@ -165,18 +165,18 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'      => __( 'Footer', 'hola' ),
+	'title'      => __( 'Footer', 'wpgeeky' ),
 	'id'         => 'footer-settings',
-	'desc'       => __( 'Theme\'s footer settings.', 'hola' ),
+	'desc'       => __( 'Theme\'s footer settings.', 'wpgeeky' ),
 	'subsection' => true,
 	'fields'     => array(
 		array(
 			'id'       => 'footer-logo-image',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Footer Logo', 'hola' ),
+			'title'    => __( 'Footer Logo', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for footer logo', 'hola' ),
+			'subtitle' => __( 'Upload any images for footer logo', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/logo.png',
 			),
@@ -185,9 +185,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'footer-logo-image-dark',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Footer Logo on Dark Background', 'hola' ),
+			'title'    => __( 'Footer Logo on Dark Background', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for footer logo on dark background', 'hola' ),
+			'subtitle' => __( 'Upload any images for footer logo on dark background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/logo-2.png',
 			),
@@ -195,61 +195,61 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'footer-address',
 			'type'    => 'text',
-			'title'   => __( 'Address', 'hola' ),
-			'desc'    => __( 'Please input address here.', 'hola' ),
+			'title'   => __( 'Address', 'wpgeeky' ),
+			'desc'    => __( 'Please input address here.', 'wpgeeky' ),
 			'default' => '25/5 South Street,New York,USA',
 		),
 		array(
 			'id'      => 'footer-email',
 			'type'    => 'text',
-			'title'   => __( 'E-mail Address', 'hola' ),
-			'desc'    => __( 'Please input e-mail address here.', 'hola' ),
+			'title'   => __( 'E-mail Address', 'wpgeeky' ),
+			'desc'    => __( 'Please input e-mail address here.', 'wpgeeky' ),
 			'default' => 'info@hola.com',
 		),
 		
 		array(
 			'id'      => 'footer-telephone',
 			'type'    => 'text',
-			'title'   => __( 'Phone Number', 'hola' ),
-			'desc'    => __( 'Please input telephone number here.', 'hola' ),
+			'title'   => __( 'Phone Number', 'wpgeeky' ),
+			'desc'    => __( 'Please input telephone number here.', 'wpgeeky' ),
 			'default' => '+1-151-545-4596',
 		),
 		
 		array(
 			'id'      => 'footer-social-fb',
 			'type'    => 'text',
-			'title'   => __( 'Facebook Profile', 'hola' ),
-			'desc'    => __( 'Please input facebook profile url here.', 'hola' ),
+			'title'   => __( 'Facebook Profile', 'wpgeeky' ),
+			'desc'    => __( 'Please input facebook profile url here.', 'wpgeeky' ),
 			'default' => '',
 		),
 		array(
 			'id'      => 'footer-social-tw',
 			'type'    => 'text',
-			'title'   => __( 'Twitter Profile', 'hola' ),
-			'desc'    => __( 'Please input twitter profile url here.', 'hola' ),
+			'title'   => __( 'Twitter Profile', 'wpgeeky' ),
+			'desc'    => __( 'Please input twitter profile url here.', 'wpgeeky' ),
 			'default' => '',
 		),
 		
 		array(
 			'id'      => 'footer-social-gp',
 			'type'    => 'text',
-			'title'   => __( 'Google+ Profile', 'hola' ),
-			'desc'    => __( 'Please input google+ profile url here.', 'hola' ),
+			'title'   => __( 'Google+ Profile', 'wpgeeky' ),
+			'desc'    => __( 'Please input google+ profile url here.', 'wpgeeky' ),
 			'default' => '',
 		),
 		
 		array(
 			'id'      => 'footer-social-in',
 			'type'    => 'text',
-			'title'   => __( 'LinkedIn Profile', 'hola' ),
-			'desc'    => __( 'Please input linkedin profile url here.', 'hola' ),
+			'title'   => __( 'LinkedIn Profile', 'wpgeeky' ),
+			'desc'    => __( 'Please input linkedin profile url here.', 'wpgeeky' ),
 			'default' => '',
 		),
 		array(
 			'id'      => 'footer-social-db',
 			'type'    => 'text',
-			'title'   => __( 'Dribble Profile', 'hola' ),
-			'desc'    => __( 'Please input dribble profile url here.', 'hola' ),
+			'title'   => __( 'Dribble Profile', 'wpgeeky' ),
+			'desc'    => __( 'Please input dribble profile url here.', 'wpgeeky' ),
 			'default' => '',
 		),
 	
@@ -257,38 +257,38 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'      => __( 'Blog', 'hola' ),
+	'title'      => __( 'Blog', 'wpgeeky' ),
 	'id'         => 'blog-settings',
-	'desc'       => __( 'Theme\'s blog settings.', 'hola' ),
+	'desc'       => __( 'Theme\'s blog settings.', 'wpgeeky' ),
 	'subsection' => true,
 	'fields'     => array(
 		array(
 			'id'       => 'blog-settings-featured-image',
 			'type'     => 'switch',
-			'title'    => __( 'Display Featured Image', 'hola' ),
-			'subtitle' => __( 'Display featured images on blog posts or archive.', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Display Featured Image', 'wpgeeky' ),
+			'subtitle' => __( 'Display featured images on blog posts or archive.', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 		),
 		
 		array(
 			'id'       => 'blog-settings-meta',
 			'type'     => 'switch',
-			'title'    => __( 'Display Post Meta', 'hola' ),
-			'subtitle' => __( 'Display post meta info on blog posts/pages or archive.', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Display Post Meta', 'wpgeeky' ),
+			'subtitle' => __( 'Display post meta info on blog posts/pages or archive.', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 		),
 		
 		array(
 			'id'       => 'blog-settings-meta-author',
 			'type'     => 'switch',
-			'title'    => __( 'Display Post Author', 'hola' ),
-			'subtitle' => __( 'Display post author on blog posts/pages or archive.', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Display Post Author', 'wpgeeky' ),
+			'subtitle' => __( 'Display post author on blog posts/pages or archive.', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 			'required' => array( 'blog-settings-meta', 'equals', true ),
 		),
@@ -296,10 +296,10 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog-settings-meta-date',
 			'type'     => 'switch',
-			'title'    => __( 'Display Post Date', 'hola' ),
-			'subtitle' => __( 'Display post date on blog posts/pages or archive.', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Display Post Date', 'wpgeeky' ),
+			'subtitle' => __( 'Display post date on blog posts/pages or archive.', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 			'required' => array( 'blog-settings-meta', 'equals', true ),
 		),
@@ -307,10 +307,10 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog-settings-meta-cat',
 			'type'     => 'switch',
-			'title'    => __( 'Display Category', 'hola' ),
-			'subtitle' => __( 'Display post category blog posts/pages or archive.', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Display Category', 'wpgeeky' ),
+			'subtitle' => __( 'Display post category blog posts/pages or archive.', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 			'required' => array( 'blog-settings-meta', 'equals', true ),
 		),
@@ -318,10 +318,10 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog-settings-meta-comment',
 			'type'     => 'switch',
-			'title'    => __( 'Display Post Comment Count', 'hola' ),
-			'subtitle' => __( 'Display post comment count on blog posts/pages or archive.', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Display Post Comment Count', 'wpgeeky' ),
+			'subtitle' => __( 'Display post comment count on blog posts/pages or archive.', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 			'required' => array( 'blog-settings-meta', 'equals', true ),
 		),
@@ -329,18 +329,18 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'blog-settings-readmore',
 			'type'    => 'text',
-			'title'   => __( 'Read More Text', 'hola' ),
-			'desc'    => __( 'Please input readmore button text here.', 'hola' ),
+			'title'   => __( 'Read More Text', 'wpgeeky' ),
+			'desc'    => __( 'Please input readmore button text here.', 'wpgeeky' ),
 			'default' => 'Read More',
 		),
 		
 		array(
 			'id'       => 'blog-settings-post-nav',
 			'type'     => 'switch',
-			'title'    => __( 'Content Next/Previous Link', 'hola' ),
-			'subtitle' => __( 'Display next/previous post link on posts or pages', 'hola' ),
-			'on'       => __( 'Display', 'hola' ),
-			'off'      => __( 'Hide', 'hola' ),
+			'title'    => __( 'Content Next/Previous Link', 'wpgeeky' ),
+			'subtitle' => __( 'Display next/previous post link on posts or pages', 'wpgeeky' ),
+			'on'       => __( 'Display', 'wpgeeky' ),
+			'off'      => __( 'Hide', 'wpgeeky' ),
 			'default'  => true,
 			'required' => array( 'blog-settings-meta', 'equals', true ),
 		),
@@ -348,8 +348,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog-settings-sidebar',
 			'type'     => 'button_set',
-			'title'    => __( 'Sidebar Position', 'hola' ),
-			'subtitle' => __( 'Select sidebar position on blog posts/pages or archives.', 'hola' ),
+			'title'    => __( 'Sidebar Position', 'wpgeeky' ),
+			'subtitle' => __( 'Select sidebar position on blog posts/pages or archives.', 'wpgeeky' ),
 			'options'  => array(
 				'left'  => 'Left',
 				'right' => 'Right',
@@ -363,16 +363,16 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'      => __( 'Scripts/Styles', 'hola' ),
+	'title'      => __( 'Scripts/Styles', 'wpgeeky' ),
 	'id'         => 'custom-settings',
-	'desc'       => __( 'Theme\'s custom scripts and styles settings.', 'hola' ),
+	'desc'       => __( 'Theme\'s custom scripts and styles settings.', 'wpgeeky' ),
 	'subsection' => true,
 	'fields'     => array(
 		array(
 			'id'       => 'css_editor',
 			'type'     => 'ace_editor',
-			'title'    => __('CSS Code', 'hola'),
-			'subtitle' => __('Paste your CSS code here.', 'hola'),
+			'title'    => __('CSS Code', 'wpgeeky'),
+			'subtitle' => __('Paste your CSS code here.', 'wpgeeky'),
 			'mode'     => 'css',
 			'theme'    => 'monokai',
 			'desc'     => 'Your custom css here.',
@@ -381,8 +381,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'js_editor',
 			'type'     => 'ace_editor',
-			'title'    => __('JS Code', 'hola'),
-			'subtitle' => __('Paste your JS code here.', 'hola'),
+			'title'    => __('JS Code', 'wpgeeky'),
+			'subtitle' => __('Paste your JS code here.', 'wpgeeky'),
 			'mode'     => 'javascript',
 			'theme'    => 'chrome',
 			'desc'     => 'Your custom js here.',
@@ -393,38 +393,38 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Slider Section', 'hola' ),
-	'desc'   => __( 'Slider Section settings for home page', 'hola' ),
+	'title'  => __( 'Slider Section', 'wpgeeky' ),
+	'desc'   => __( 'Slider Section settings for home page', 'wpgeeky' ),
 	'id'     => 'home-slider',
 	'icon'   => 'el el-magic ',
 	'fields' => array(
 		array(
 			'id'      => 'home-slider-h1',
 			'type'    => 'text',
-			'title'   => __( 'First Heading', 'hola' ),
-			'desc'    => __( 'Please input first heading here.', 'hola' ),
+			'title'   => __( 'First Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input first heading here.', 'wpgeeky' ),
 			'default' => 'I AM',
 		),
 		array(
 			'id'       => 'home-slider-h2',
 			'type'     => 'text',
-			'title'    => __( 'Second Heading', 'hola' ),
-			'subtitle' => __( 'You or your company name.', 'hola' ),
-			'desc'     => __( 'Please input second heading here.', 'hola' ),
+			'title'    => __( 'Second Heading', 'wpgeeky' ),
+			'subtitle' => __( 'You or your company name.', 'wpgeeky' ),
+			'desc'     => __( 'Please input second heading here.', 'wpgeeky' ),
 			'default'  => 'DATIM WILLIAMS',
 		),
 		array(
 			'id'      => 'home-slider-p1',
 			'type'    => 'text',
-			'title'   => __( 'First visible text', 'hola' ),
-			'desc'    => __( 'Please input first visible text here.', 'hola' ),
+			'title'   => __( 'First visible text', 'wpgeeky' ),
+			'desc'    => __( 'Please input first visible text here.', 'wpgeeky' ),
 			'default' => 'A PROFESSIONAL DEVELOPER',
 		),
 		array(
 			'id'      => 'home-slider-p',
 			'type'    => 'multi_text',
-			'title'   => __( 'Scroll text', 'hola' ),
-			'desc'    => __( 'Please input scroll text here.', 'hola' ),
+			'title'   => __( 'Scroll text', 'wpgeeky' ),
+			'desc'    => __( 'Please input scroll text here.', 'wpgeeky' ),
 			'default' => array(
 				'mostly, i work with php,',
 				'wordpress and laravel',
@@ -435,9 +435,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'home-slider-bg',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Home Style 1 Slider Background Image', 'hola' ),
+			'title'    => __( 'Home Style 1 Slider Background Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for background', 'hola' ),
+			'subtitle' => __( 'Upload any images for background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/bg/slider-bg.jpg',
 			),
@@ -446,9 +446,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'home-slider-bg2',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Home Style 2 Slider Background Image', 'hola' ),
+			'title'    => __( 'Home Style 2 Slider Background Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for background', 'hola' ),
+			'subtitle' => __( 'Upload any images for background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/bg/slider-bg-2.jpg',
 			),
@@ -457,9 +457,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'home-slider-bg5',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Home Style 5 Slider Background Image', 'hola' ),
+			'title'    => __( 'Home Style 5 Slider Background Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for background', 'hola' ),
+			'subtitle' => __( 'Upload any images for background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/bg/home-5.jpg',
 			),
@@ -469,9 +469,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'home-slider-bg6',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Home Style 6 Slider Background Image', 'hola' ),
+			'title'    => __( 'Home Style 6 Slider Background Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for background', 'hola' ),
+			'subtitle' => __( 'Upload any images for background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/bg/home-6.jpg',
 			),
@@ -481,9 +481,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'home-slider-bg8',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Home Style 8 Slider Background Image', 'hola' ),
+			'title'    => __( 'Home Style 8 Slider Background Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for background', 'hola' ),
+			'subtitle' => __( 'Upload any images for background', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/bg/home-8.jpg',
 			),
@@ -494,57 +494,57 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Features', 'hola' ),
-	'desc'   => __( 'Settings for features section', 'hola' ),
+	'title'  => __( 'Features', 'wpgeeky' ),
+	'desc'   => __( 'Settings for features section', 'wpgeeky' ),
 	'id'     => 'features',
 	'icon'   => 'el el-bulb',
 	'fields' => array(
 		array(
 			'id'       => 'features-heading',
 			'type'     => 'text',
-			'title'    => __( 'Features Section Heading', 'hola' ),
-			'subtitle' => __( 'Title of the section', 'hola' ),
-			'desc'     => __( 'Please input the section title.', 'hola' ),
+			'title'    => __( 'Features Section Heading', 'wpgeeky' ),
+			'subtitle' => __( 'Title of the section', 'wpgeeky' ),
+			'desc'     => __( 'Please input the section title.', 'wpgeeky' ),
 			'default'  => 'Features',
 		),
 		array(
 			'id'       => 'features-description',
 			'type'     => 'textarea',
-			'title'    => __( 'About Features', 'hola' ),
-			'subtitle' => __( 'Descriptive text about features.', 'hola' ),
-			'desc'     => __( 'Please input description text.', 'hola' ),
+			'title'    => __( 'About Features', 'wpgeeky' ),
+			'subtitle' => __( 'Descriptive text about features.', 'wpgeeky' ),
+			'desc'     => __( 'Please input description text.', 'wpgeeky' ),
 			'default'  => 'Almost before we knew it we had left the ground.The face of the moon was in shadow. The spectacle before was indeed sublime. All their equipment and instruments are alive. Their equipment and instruments are alive. I watched the storm so beautiful yet terrific.Silver mist suffused the deck of the ship. It was going to be a lonely trip back. Silver mist suffused is the deck of the ship. The face of the moon was in shadow. Waves flung themselves at the blue evening. Red silhouetted the jagged edge of a wing.',
 		),
 		array(
 			'id'       => 'features-feature-1',
 			'type'     => 'text',
-			'title'    => __( 'Feature One Heading', 'hola' ),
-			'subtitle' => __( 'Feature name', 'hola' ),
-			'desc'     => __( 'Please input the feature name.', 'hola' ),
+			'title'    => __( 'Feature One Heading', 'wpgeeky' ),
+			'subtitle' => __( 'Feature name', 'wpgeeky' ),
+			'desc'     => __( 'Please input the feature name.', 'wpgeeky' ),
 			'default'  => 'FLEXIBLE REDY',
 		),
 		array(
 			'id'       => 'features-feature-1-description',
 			'type'     => 'textarea',
-			'title'    => __( 'About feature one.', 'hola' ),
-			'subtitle' => __( 'Descriptive text about feature one.', 'hola' ),
-			'desc'     => __( 'Please input feature one description text.', 'hola' ),
+			'title'    => __( 'About feature one.', 'wpgeeky' ),
+			'subtitle' => __( 'Descriptive text about feature one.', 'wpgeeky' ),
+			'desc'     => __( 'Please input feature one description text.', 'wpgeeky' ),
 			'default'  => 'The face of the moon was in shadow.Waves flung themselves at the blue evening. Red flair silhouetted the jagged edge of a wing.',
 		),
 		array(
 			'id'       => 'features-feature-2',
 			'type'     => 'text',
-			'title'    => __( 'Feature Two Heading', 'hola' ),
-			'subtitle' => __( 'Feature name', 'hola' ),
-			'desc'     => __( 'Please input the feature name.', 'hola' ),
+			'title'    => __( 'Feature Two Heading', 'wpgeeky' ),
+			'subtitle' => __( 'Feature name', 'wpgeeky' ),
+			'desc'     => __( 'Please input the feature name.', 'wpgeeky' ),
 			'default'  => 'UNLOCK FEATURES',
 		),
 		array(
 			'id'       => 'features-feature-2-description',
 			'type'     => 'textarea',
-			'title'    => __( 'About feature two.', 'hola' ),
-			'subtitle' => __( 'Descriptive text about feature two.', 'hola' ),
-			'desc'     => __( 'Please input feature two description text.', 'hola' ),
+			'title'    => __( 'About feature two.', 'wpgeeky' ),
+			'subtitle' => __( 'Descriptive text about feature two.', 'wpgeeky' ),
+			'desc'     => __( 'Please input feature two description text.', 'wpgeeky' ),
 			'default'  => 'The face of the moon was in shadow.Waves flung themselves at the blue evening. Red flair silhouetted the jagged edge of a wing.',
 		),
 	
@@ -554,38 +554,38 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Work Process', 'hola' ),
-	'desc'   => __( 'Settings for work process section.', 'hola' ),
+	'title'  => __( 'Work Process', 'wpgeeky' ),
+	'desc'   => __( 'Settings for work process section.', 'wpgeeky' ),
 	'id'     => 'work',
 	'icon'   => 'el el-list',
 	'fields' => array(
 		array(
 			'id'      => 'work-heading',
 			'type'    => 'text',
-			'title'   => __( 'Work Process Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the section title.', 'hola' ),
+			'title'   => __( 'Work Process Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section title.', 'wpgeeky' ),
 			'default' => 'WORK PROCESS',
 		),
 		array(
 			'id'      => 'work-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Work Process Section Description', 'hola' ),
-			'desc'    => __( 'Please input the section description.', 'hola' ),
+			'title'   => __( 'Work Process Section Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section description.', 'wpgeeky' ),
 			'default' => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship. The recorded scratched speaker.Almost before we knew it.',
 		),
 		array(
 			'id'      => 'work-process-1-title',
 			'type'    => 'text',
-			'title'   => __( 'Work Process One Heading', 'hola' ),
-			'desc'    => __( 'Please input the process title.', 'hola' ),
+			'title'   => __( 'Work Process One Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the process title.', 'wpgeeky' ),
 			'default' => '01 DESIGN',
 		),
 		
 		array(
 			'id'      => 'work-process-1-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Process Icon', 'hola' ),
-			'desc'    => __( 'Please select process icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Process Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please select process icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -693,16 +693,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'work-process-2-title',
 			'type'    => 'text',
-			'title'   => __( 'Work Process Two Heading', 'hola' ),
-			'desc'    => __( 'Please input the process title.', 'hola' ),
+			'title'   => __( 'Work Process Two Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the process title.', 'wpgeeky' ),
 			'default' => '02 DEVELOPMENT',
 		),
 		
 		array(
 			'id'      => 'work-process-2-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Process Icon', 'hola' ),
-			'desc'    => __( 'Please select process icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Process Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please select process icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -810,16 +810,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'work-process-3-title',
 			'type'    => 'text',
-			'title'   => __( 'Work Process Three Heading', 'hola' ),
-			'desc'    => __( 'Please input the process title.', 'hola' ),
+			'title'   => __( 'Work Process Three Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the process title.', 'wpgeeky' ),
 			'default' => '03 MARKETING',
 		),
 		
 		array(
 			'id'      => 'work-process-3-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Process Icon', 'hola' ),
-			'desc'    => __( 'Please select process icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Process Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please select process icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -930,23 +930,23 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'News', 'hola' ),
-	'desc'   => __( 'Settings for news section.', 'hola' ),
+	'title'  => __( 'News', 'wpgeeky' ),
+	'desc'   => __( 'Settings for news section.', 'wpgeeky' ),
 	'id'     => 'news',
 	'icon'   => 'el el-paper-clip-alt',
 	'fields' => array(
 		array(
 			'id'      => 'news-heading',
 			'type'    => 'text',
-			'title'   => __( 'News Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the section title.', 'hola' ),
+			'title'   => __( 'News Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section title.', 'wpgeeky' ),
 			'default' => 'LATEST NEWS',
 		),
 		array(
 			'id'      => 'news-description',
 			'type'    => 'textarea',
-			'title'   => __( 'News Section Description', 'hola' ),
-			'desc'    => __( 'Please input the section description.', 'hola' ),
+			'title'   => __( 'News Section Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section description.', 'wpgeeky' ),
 			'default' => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship.',
 		),
 		
@@ -954,10 +954,10 @@ Redux::setSection( $opt_name, array(
 			'id'          => 'news-category',
 			'type'        => 'select',
 			'multi'       => true,
-			'title'       => __( 'Select Categories', 'hola' ),
-			'subtitle'    => __( 'Select one or many category for display', 'hola' ),
-			'desc'        => __( 'You can select all the categories if you like.', 'hola' ),
-			'placeholder' => __( 'All', 'hola' ),
+			'title'       => __( 'Select Categories', 'wpgeeky' ),
+			'subtitle'    => __( 'Select one or many category for display', 'wpgeeky' ),
+			'desc'        => __( 'You can select all the categories if you like.', 'wpgeeky' ),
+			'placeholder' => __( 'All', 'wpgeeky' ),
 			'sortable'    => true,
 			//Must provide key => value pairs for radio options
 			'data'        => 'categories',
@@ -968,15 +968,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title' => __( 'About', 'hola' ),
+	'title' => __( 'About', 'wpgeeky' ),
 	'id'    => 'about',
-	'desc'  => __( 'About settings.', 'hola' ),
+	'desc'  => __( 'About settings.', 'wpgeeky' ),
 	'icon'  => 'el el-address-book-alt',
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'      => __( 'Individual Section', 'hola' ),
-	'desc'       => __( 'Individual information settings for about page', 'hola' ),
+	'title'      => __( 'Individual Section', 'wpgeeky' ),
+	'desc'       => __( 'Individual information settings for about page', 'wpgeeky' ),
 	'id'         => 'about-me',
 	'subsection' => true,
 	'fields'     => array(
@@ -984,9 +984,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'about-me-img',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Your Image', 'hola' ),
+			'title'    => __( 'Your Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for your portrait.', 'hola' ),
+			'subtitle' => __( 'Upload any images for your portrait.', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/about/1.jpg',
 			),
@@ -994,30 +994,30 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'about-me-heading',
 			'type'    => 'text',
-			'title'   => __( 'Your Name', 'hola' ),
-			'desc'    => __( 'Please input your name here.', 'hola' ),
+			'title'   => __( 'Your Name', 'wpgeeky' ),
+			'desc'    => __( 'Please input your name here.', 'wpgeeky' ),
 			'default' => 'DATIM WILLIAMS',
 		),
 		array(
 			'id'      => 'about-me-designation',
 			'type'    => 'text',
-			'title'   => __( 'Your Designation', 'hola' ),
-			'desc'    => __( 'Please input your designation here.', 'hola' ),
+			'title'   => __( 'Your Designation', 'wpgeeky' ),
+			'desc'    => __( 'Please input your designation here.', 'wpgeeky' ),
 			'default' => 'PROFESSIONAL WEB DEVELOPER',
 		),
 		array(
 			'id'      => 'about-me-p',
 			'type'    => 'textarea',
-			'title'   => __( 'Your Bio', 'hola' ),
-			'desc'    => __( 'Please input information about yourself.', 'hola' ),
+			'title'   => __( 'Your Bio', 'wpgeeky' ),
+			'desc'    => __( 'Please input information about yourself.', 'wpgeeky' ),
 			'default' => 'The spectacle before us was indeed sublime. All their equipment and instruments are alive. All their equipment and instruments are alive. I watched the storm, so beautiful yet terrific.Silver suffused the deck of the ship. The recorded voice scratched in the speaker.',
 		),
 		array(
 			'id'       => 'about-me-cv',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Your Resume', 'hola' ),
-			'subtitle' => __( 'Upload your resume for download.', 'hola' ),
+			'title'    => __( 'Your Resume', 'wpgeeky' ),
+			'subtitle' => __( 'Upload your resume for download.', 'wpgeeky' ),
 			'default'  => array(
 				'url' => '#',
 			),
@@ -1028,8 +1028,8 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'      => __( 'Agency Section', 'hola' ),
-	'desc'       => __( 'Agency information settings for about page', 'hola' ),
+	'title'      => __( 'Agency Section', 'wpgeeky' ),
+	'desc'       => __( 'Agency information settings for about page', 'wpgeeky' ),
 	'id'         => 'about-us',
 	'subsection' => true,
 	'fields'     => array(
@@ -1037,30 +1037,30 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'about-us-heading',
 			'type'    => 'text',
-			'title'   => __( 'Team Complementary Heading', 'hola' ),
-			'desc'    => __( 'Please input your text here. Use < strong > Word < /strong > to blacken the words.', 'hola' ),
+			'title'   => __( 'Team Complementary Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input your text here. Use < strong > Word < /strong > to blacken the words.', 'wpgeeky' ),
 			'default' => 'A <strong>team</strong> with a <strong>complimentary</strong> skillset.',
 		),
 		array(
 			'id'      => 'about-us-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Team Description', 'hola' ),
-			'desc'    => __( 'Please input team description here.', 'hola' ),
+			'title'   => __( 'Team Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input team description here.', 'wpgeeky' ),
 			'default' => 'Built on our Timber framework, this template comes loaded with prestyled modules and content blocks, in-hosue developed plugins such as sliders, parallax sections, counters and more. Discover the many facets of Hola and start creating!',
 		),
 		
 		array(
 			'id'      => 'about-us-block-heading',
 			'type'    => 'text',
-			'title'   => __( 'Team History Heading', 'hola' ),
-			'desc'    => __( 'Please input your text here.', 'hola' ),
-			'default' => 'HOLA Minimal Template Studio Since 1996',
+			'title'   => __( 'Team History Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input your text here.', 'wpgeeky' ),
+			'default' => 'WPGEEKY Minimal Template Studio Since 1996',
 		),
 		array(
 			'id'      => 'about-us-block-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Team History Description', 'hola' ),
-			'desc'    => __( 'Please input team background description here.', 'hola' ),
+			'title'   => __( 'Team History Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input team background description here.', 'wpgeeky' ),
 			'default' => 'Almost before we knew it we had left the ground.The face of the moon was in.The spectacle before us was indeed sublime.All their equipment and instruments are alive.All their equipment and instruments are alive.I watched the storm so beautiful yet terrific.Silver mist suffused the deck of the ship.The recorded voice scratched in the dummy now speaker.',
 		),
 		
@@ -1068,9 +1068,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'about-us-block-img',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Agency History Background Image', 'hola' ),
+			'title'    => __( 'Agency History Background Image', 'wpgeeky' ),
 			'preview'  => true,
-			'subtitle' => __( 'Upload any images for history area background.', 'hola' ),
+			'subtitle' => __( 'Upload any images for history area background.', 'wpgeeky' ),
 			'default'  => array(
 				'url' => get_template_directory_uri() . '/assets/img/bg/about-1.jpg',
 			),
@@ -1082,37 +1082,37 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Services', 'hola' ),
-	'desc'   => __( 'Settings for service section', 'hola' ),
+	'title'  => __( 'Services', 'wpgeeky' ),
+	'desc'   => __( 'Settings for service section', 'wpgeeky' ),
 	'id'     => 'service',
 	'icon'   => 'el el-website',
 	'fields' => array(
 		array(
 			'id'      => 'service-heading',
 			'type'    => 'text',
-			'title'   => __( 'Service Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the service section title.', 'hola' ),
+			'title'   => __( 'Service Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service section title.', 'wpgeeky' ),
 			'default' => 'MY SEVICES',
 		),
 		array(
 			'id'      => 'service-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service Section Description', 'hola' ),
-			'desc'    => __( 'Please input the service section description.', 'hola' ),
+			'title'   => __( 'Service Section Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service section description.', 'wpgeeky' ),
 			'default' => 'All their equipment and instruments are alive. I watched the storm so beautiful yet terrific.Silver mist suffused the deck of the ship. The recorded voice scratched speaker.',
 		),
 		array(
 			'id'      => 'service-one-title',
 			'type'    => 'text',
-			'title'   => __( 'Service One Title', 'hola' ),
-			'desc'    => __( 'Please input the service title.', 'hola' ),
+			'title'   => __( 'Service One Title', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service title.', 'wpgeeky' ),
 			'default' => 'UI/UX DESIGN',
 		),
 		array(
 			'id'      => 'service-one-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Service Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please selec service icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1220,23 +1220,23 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'service-one-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service One Description', 'hola' ),
-			'desc'    => __( 'Please input the service description.', 'hola' ),
+			'title'   => __( 'Service One Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service description.', 'wpgeeky' ),
 			'default' => 'Then came the night of the first falling star. She stared through the window at the stars. I watched the storm so beautiful yet terrific.',
 		),
 		
 		array(
 			'id'      => 'service-two-title',
 			'type'    => 'text',
-			'title'   => __( 'Service Two Title', 'hola' ),
-			'desc'    => __( 'Please input the service title.', 'hola' ),
+			'title'   => __( 'Service Two Title', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service title.', 'wpgeeky' ),
 			'default' => 'DEVELOPMENT',
 		),
 		array(
 			'id'      => 'service-two-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Service Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please selec service icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1344,23 +1344,23 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'service-two-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service Two Description', 'hola' ),
-			'desc'    => __( 'Please input the service description.', 'hola' ),
+			'title'   => __( 'Service Two Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service description.', 'wpgeeky' ),
 			'default' => 'Then came the night of the first falling star. She stared through the window at the stars. I watched the storm so beautiful yet terrific.',
 		),
 		
 		array(
 			'id'      => 'service-three-title',
 			'type'    => 'text',
-			'title'   => __( 'Service Three Title', 'hola' ),
-			'desc'    => __( 'Please input the service title.', 'hola' ),
+			'title'   => __( 'Service Three Title', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service title.', 'wpgeeky' ),
 			'default' => 'WEB DESIGN',
 		),
 		array(
 			'id'      => 'service-three-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Service Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please selec service icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1468,23 +1468,23 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'service-three-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service Three Description', 'hola' ),
-			'desc'    => __( 'Please input the service description.', 'hola' ),
+			'title'   => __( 'Service Three Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service description.', 'wpgeeky' ),
 			'default' => 'Then came the night of the first falling star. She stared through the window at the stars. I watched the storm so beautiful yet terrific.',
 		),
 		
 		array(
 			'id'      => 'service-four-title',
 			'type'    => 'text',
-			'title'   => __( 'Service Four Title', 'hola' ),
-			'desc'    => __( 'Please input the service title.', 'hola' ),
+			'title'   => __( 'Service Four Title', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service title.', 'wpgeeky' ),
 			'default' => 'PHOTOGRAPHY',
 		),
 		array(
 			'id'      => 'service-four-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Service Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please selec service icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1592,23 +1592,23 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'service-four-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service Four Description', 'hola' ),
-			'desc'    => __( 'Please input the service description.', 'hola' ),
+			'title'   => __( 'Service Four Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service description.', 'wpgeeky' ),
 			'default' => 'Then came the night of the first falling star. She stared through the window at the stars. I watched the storm so beautiful yet terrific.',
 		),
 		
 		array(
 			'id'      => 'service-five-title',
 			'type'    => 'text',
-			'title'   => __( 'Service Five Title', 'hola' ),
-			'desc'    => __( 'Please input the service title.', 'hola' ),
+			'title'   => __( 'Service Five Title', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service title.', 'wpgeeky' ),
 			'default' => 'BRANDING DESIGN',
 		),
 		array(
 			'id'      => 'service-five-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Service Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please selec service icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1716,23 +1716,23 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'service-five-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service Five Description', 'hola' ),
-			'desc'    => __( 'Please input the service description.', 'hola' ),
+			'title'   => __( 'Service Five Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service description.', 'wpgeeky' ),
 			'default' => 'Then came the night of the first falling star. She stared through the window at the stars. I watched the storm so beautiful yet terrific.',
 		),
 		
 		array(
 			'id'      => 'service-six-title',
 			'type'    => 'text',
-			'title'   => __( 'Service Six Title', 'hola' ),
-			'desc'    => __( 'Please input the service title.', 'hola' ),
+			'title'   => __( 'Service Six Title', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service title.', 'wpgeeky' ),
 			'default' => 'OUR SUPPORT',
 		),
 		array(
 			'id'      => 'service-six-icon',
 			'type'    => 'select',
-			'title'   => __( 'Select Service Icon', 'hola' ),
-			'desc'    => __( 'Please selec service icon from the list. ', 'hola' ) . $el_icon_url,
+			'title'   => __( 'Select Service Icon', 'wpgeeky' ),
+			'desc'    => __( 'Please selec service icon from the list. ', 'wpgeeky' ) . $el_icon_url,
 			// Must provide key => value pairs for select options
 			'options' => array(
 				'icon-mobile'           => '<span class="icon-mobile"></span> icon-mobile',
@@ -1840,8 +1840,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'service-six-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Service Six Description', 'hola' ),
-			'desc'    => __( 'Please input the service description.', 'hola' ),
+			'title'   => __( 'Service Six Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the service description.', 'wpgeeky' ),
 			'default' => 'Then came the night of the first falling star. She stared through the window at the stars. I watched the storm so beautiful yet terrific.',
 		),
 	
@@ -1850,81 +1850,81 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Skills', 'hola' ),
-	'desc'   => __( 'Settings for skills section', 'hola' ),
+	'title'  => __( 'Skills', 'wpgeeky' ),
+	'desc'   => __( 'Settings for skills section', 'wpgeeky' ),
 	'id'     => 'skills',
 	'icon'   => 'el el-tasks',
 	'fields' => array(
 		array(
 			'id'      => 'skills-heading',
 			'type'    => 'text',
-			'title'   => __( 'Skill Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the skill section title.', 'hola' ),
+			'title'   => __( 'Skill Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the skill section title.', 'wpgeeky' ),
 			'default' => 'My Skills',
 		),
 		array(
 			'id'       => 'skills-name-one',
 			'type'     => 'text',
-			'title'    => __( 'Skill One Name', 'hola' ),
-			'subtitle' => __( 'Name of the skill', 'hola' ),
-			'desc'     => __( 'Please input the skill name.', 'hola' ),
+			'title'    => __( 'Skill One Name', 'wpgeeky' ),
+			'subtitle' => __( 'Name of the skill', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill name.', 'wpgeeky' ),
 			'default'  => 'WordPress',
 		),
 		array(
 			'id'       => 'skills-percent-one',
 			'type'     => 'text',
-			'title'    => __( 'Skill One Value', 'hola' ),
-			'subtitle' => __( 'Value of the skill in percent', 'hola' ),
-			'desc'     => __( 'Please input the skill value in 100.', 'hola' ),
+			'title'    => __( 'Skill One Value', 'wpgeeky' ),
+			'subtitle' => __( 'Value of the skill in percent', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill value in 100.', 'wpgeeky' ),
 			'default'  => '93',
 		),
 		array(
 			'id'       => 'skills-name-two',
 			'type'     => 'text',
-			'title'    => __( 'Skill Two Name', 'hola' ),
-			'subtitle' => __( 'Name of the skill', 'hola' ),
-			'desc'     => __( 'Please input the skill name.', 'hola' ),
+			'title'    => __( 'Skill Two Name', 'wpgeeky' ),
+			'subtitle' => __( 'Name of the skill', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill name.', 'wpgeeky' ),
 			'default'  => 'JavaScript',
 		),
 		array(
 			'id'       => 'skills-percent-two',
 			'type'     => 'text',
-			'title'    => __( 'Skill Two Value', 'hola' ),
-			'subtitle' => __( 'Value of the skill in percent', 'hola' ),
-			'desc'     => __( 'Please input the skill value in 100.', 'hola' ),
+			'title'    => __( 'Skill Two Value', 'wpgeeky' ),
+			'subtitle' => __( 'Value of the skill in percent', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill value in 100.', 'wpgeeky' ),
 			'default'  => '85',
 		),
 		array(
 			'id'       => 'skills-name-three',
 			'type'     => 'text',
-			'title'    => __( 'Skill Three Name', 'hola' ),
-			'subtitle' => __( 'Name of the skill', 'hola' ),
-			'desc'     => __( 'Please input the skill name.', 'hola' ),
+			'title'    => __( 'Skill Three Name', 'wpgeeky' ),
+			'subtitle' => __( 'Name of the skill', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill name.', 'wpgeeky' ),
 			'default'  => 'CSS',
 		),
 		array(
 			'id'       => 'skills-percent-three',
 			'type'     => 'text',
-			'title'    => __( 'Skill Three Value', 'hola' ),
-			'subtitle' => __( 'Value of the skill in percent', 'hola' ),
-			'desc'     => __( 'Please input the skill value in 100.', 'hola' ),
+			'title'    => __( 'Skill Three Value', 'wpgeeky' ),
+			'subtitle' => __( 'Value of the skill in percent', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill value in 100.', 'wpgeeky' ),
 			'default'  => '97',
 		),
 		
 		array(
 			'id'       => 'skills-name-four',
 			'type'     => 'text',
-			'title'    => __( 'Skill Four Name', 'hola' ),
-			'subtitle' => __( 'Name of the skill', 'hola' ),
-			'desc'     => __( 'Please input the skill name.', 'hola' ),
+			'title'    => __( 'Skill Four Name', 'wpgeeky' ),
+			'subtitle' => __( 'Name of the skill', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill name.', 'wpgeeky' ),
 			'default'  => 'PHP',
 		),
 		array(
 			'id'       => 'skills-percent-four',
 			'type'     => 'text',
-			'title'    => __( 'Skill Four Value', 'hola' ),
-			'subtitle' => __( 'Value of the skill in percent', 'hola' ),
-			'desc'     => __( 'Please input the skill value in 100.', 'hola' ),
+			'title'    => __( 'Skill Four Value', 'wpgeeky' ),
+			'subtitle' => __( 'Value of the skill in percent', 'wpgeeky' ),
+			'desc'     => __( 'Please input the skill value in 100.', 'wpgeeky' ),
 			'default'  => '90',
 		),
 	
@@ -1933,8 +1933,8 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Progress Counter', 'hola' ),
-	'desc'   => __( 'Progress information settings and counter.', 'hola' ),
+	'title'  => __( 'Progress Counter', 'wpgeeky' ),
+	'desc'   => __( 'Progress information settings and counter.', 'wpgeeky' ),
 	'id'     => 'progress',
 	'icon'   => 'el el-adjust-alt',
 	'fields' => array(
@@ -1942,15 +1942,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'progress-one',
 			'type'    => 'text',
-			'title'   => __( 'First Progress', 'hola' ),
-			'desc'    => __( 'Please input your progress name here.', 'hola' ),
+			'title'   => __( 'First Progress', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress name here.', 'wpgeeky' ),
 			'default' => 'CUPS OF COFFEE',
 		),
 		array(
 			'id'      => 'progress-one-value',
 			'type'    => 'text',
-			'title'   => __( 'First Progress Value', 'hola' ),
-			'desc'    => __( 'Please input your progress value here.', 'hola' ),
+			'title'   => __( 'First Progress Value', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress value here.', 'wpgeeky' ),
 			'default' => '726',
 		),
 		
@@ -1958,45 +1958,45 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'      => 'progress-two',
 			'type'    => 'text',
-			'title'   => __( 'Second Progress', 'hola' ),
-			'desc'    => __( 'Please input your progress name here.', 'hola' ),
+			'title'   => __( 'Second Progress', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress name here.', 'wpgeeky' ),
 			'default' => 'TOTAL CLIENTS',
 		),
 		array(
 			'id'      => 'progress-two-value',
 			'type'    => 'text',
-			'title'   => __( 'Second Progress Value', 'hola' ),
-			'desc'    => __( 'Please input your progress value here.', 'hola' ),
+			'title'   => __( 'Second Progress Value', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress value here.', 'wpgeeky' ),
 			'default' => '2056',
 		),
 		
 		array(
 			'id'      => 'progress-three',
 			'type'    => 'text',
-			'title'   => __( 'Third Progress', 'hola' ),
-			'desc'    => __( 'Please input your progress name here.', 'hola' ),
+			'title'   => __( 'Third Progress', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress name here.', 'wpgeeky' ),
 			'default' => 'JOBS DONE',
 		),
 		array(
 			'id'      => 'progress-three-value',
 			'type'    => 'text',
-			'title'   => __( 'Third Progress Value', 'hola' ),
-			'desc'    => __( 'Please input your progress value here.', 'hola' ),
+			'title'   => __( 'Third Progress Value', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress value here.', 'wpgeeky' ),
 			'default' => '5075',
 		),
 		
 		array(
 			'id'      => 'progress-four',
 			'type'    => 'text',
-			'title'   => __( 'Fourth Progress', 'hola' ),
-			'desc'    => __( 'Please input your progress name here.', 'hola' ),
+			'title'   => __( 'Fourth Progress', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress name here.', 'wpgeeky' ),
 			'default' => 'FEED BACK',
 		),
 		array(
 			'id'      => 'progress-four-value',
 			'type'    => 'text',
-			'title'   => __( 'Fourth Progress Value', 'hola' ),
-			'desc'    => __( 'Please input your progress value here.', 'hola' ),
+			'title'   => __( 'Fourth Progress Value', 'wpgeeky' ),
+			'desc'    => __( 'Please input your progress value here.', 'wpgeeky' ),
 			'default' => '4086',
 		),
 	
@@ -2006,23 +2006,23 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Team', 'hola' ),
-	'desc'   => __( 'Settings for team section.', 'hola' ),
+	'title'  => __( 'Team', 'wpgeeky' ),
+	'desc'   => __( 'Settings for team section.', 'wpgeeky' ),
 	'id'     => 'team',
 	'icon'   => 'el el-group',
 	'fields' => array(
 		array(
 			'id'      => 'team-heading',
 			'type'    => 'text',
-			'title'   => __( 'Team Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the section title.', 'hola' ),
+			'title'   => __( 'Team Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section title.', 'wpgeeky' ),
 			'default' => 'MY TEAM',
 		),
 		array(
 			'id'      => 'team-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Team Section Description', 'hola' ),
-			'desc'    => __( 'Please input the section description.', 'hola' ),
+			'title'   => __( 'Team Section Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section description.', 'wpgeeky' ),
 			'default' => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship. The recorded voice scratched speaker.',
 		),
 	
@@ -2030,23 +2030,23 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Pricing Table', 'hola' ),
-	'desc'   => __( 'Settings for pricing table section.', 'hola' ),
+	'title'  => __( 'Pricing Table', 'wpgeeky' ),
+	'desc'   => __( 'Settings for pricing table section.', 'wpgeeky' ),
 	'id'     => 'pricing-table',
 	'icon'   => 'el el-list-alt',
 	'fields' => array(
 		array(
 			'id'      => 'pricing-heading',
 			'type'    => 'text',
-			'title'   => __( 'Pricing Table Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the section title.', 'hola' ),
+			'title'   => __( 'Pricing Table Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section title.', 'wpgeeky' ),
 			'default' => 'PRICING PLAN',
 		),
 		array(
 			'id'      => 'pricing-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Pricing Table Section Description', 'hola' ),
-			'desc'    => __( 'Please input the section description.', 'hola' ),
+			'title'   => __( 'Pricing Table Section Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section description.', 'wpgeeky' ),
 			'default' => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship. The recorded voice scratched speaker.',
 		),
 	
@@ -2055,23 +2055,23 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Clients', 'hola' ),
-	'desc'   => __( 'Settings for clients section.', 'hola' ),
+	'title'  => __( 'Clients', 'wpgeeky' ),
+	'desc'   => __( 'Settings for clients section.', 'wpgeeky' ),
 	'id'     => 'client',
 	'icon'   => 'el el-group-alt',
 	'fields' => array(
 		array(
 			'id'      => 'client-heading',
 			'type'    => 'text',
-			'title'   => __( 'Clients Section Heading', 'hola' ),
-			'desc'    => __( 'Please input the section title.', 'hola' ),
+			'title'   => __( 'Clients Section Heading', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section title.', 'wpgeeky' ),
 			'default' => 'MY CLIENTS',
 		),
 		array(
 			'id'      => 'client-description',
 			'type'    => 'textarea',
-			'title'   => __( 'Clients Section Description', 'hola' ),
-			'desc'    => __( 'Please input the section description.', 'hola' ),
+			'title'   => __( 'Clients Section Description', 'wpgeeky' ),
+			'desc'    => __( 'Please input the section description.', 'wpgeeky' ),
 			'default' => 'All their equipment and instruments are alive. I watched the beautiful yet terrific. Silver mist suffused the deck of the ship. The recorded voice scratched speaker.',
 		),
 	
@@ -2080,37 +2080,37 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-	'title'  => __( 'Contact', 'hola' ),
-	'desc'   => __( 'Settings for contact page.', 'hola' ),
+	'title'  => __( 'Contact', 'wpgeeky' ),
+	'desc'   => __( 'Settings for contact page.', 'wpgeeky' ),
 	'id'     => 'contact',
 	'icon'   => 'el el-comment-alt',
 	'fields' => array(
 		array(
 			'id'      => 'contact-key',
 			'type'    => 'text',
-			'title'   => __( 'Google Map API Key', 'hola' ),
-			'desc'    => __( 'Please input the map api key.', 'hola' ),
+			'title'   => __( 'Google Map API Key', 'wpgeeky' ),
+			'desc'    => __( 'Please input the map api key.', 'wpgeeky' ),
 			'default' => 'AIzaSyD1cZtqidvg0m-f8Hd3S6RHx1mY-omuLS4',
 		),
 		array(
 			'id'      => 'contact-latitude',
 			'type'    => 'text',
-			'title'   => __( 'Latitude', 'hola' ),
-			'desc'    => __( 'Please input the latitude of your address.', 'hola' ),
+			'title'   => __( 'Latitude', 'wpgeeky' ),
+			'desc'    => __( 'Please input the latitude of your address.', 'wpgeeky' ),
 			'default' => '40.712764',
 		),
 		array(
 			'id'      => 'contact-longitude',
 			'type'    => 'text',
-			'title'   => __( 'Longitude ', 'hola' ),
-			'desc'    => __( 'Please input the longitude of your address.', 'hola' ),
+			'title'   => __( 'Longitude ', 'wpgeeky' ),
+			'desc'    => __( 'Please input the longitude of your address.', 'wpgeeky' ),
 			'default' => '-74.005667',
 		),
 		array(
 			'id'      => 'contact-form',
 			'type'    => 'text',
-			'title'   => __( 'Contact Form Shortcode', 'hola' ),
-			'desc'    => __( 'Please input the shoetcode for contact form on contact page.', 'hola' ),
+			'title'   => __( 'Contact Form Shortcode', 'wpgeeky' ),
+			'desc'    => __( 'Please input the shoetcode for contact form on contact page.', 'wpgeeky' ),
 			'default' => '[contact-form-7 title="Contact Pages Form"]',
 		),
 	
@@ -2123,7 +2123,7 @@ Redux::setSection( $opt_name, array(
  */
 
 // remove demo link url from redux plugin
-function hola_remove_demo_mode_link() {
+function wpgeeky_remove_demo_mode_link() {
 	if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
 		remove_filter( 'plugin_row_meta', array(
 			ReduxFrameworkPlugin::get_instance(),
@@ -2138,4 +2138,4 @@ function hola_remove_demo_mode_link() {
 	}
 }
 
-add_action( 'init', 'hola_remove_demo_mode_link' );
+add_action( 'init', 'wpgeeky_remove_demo_mode_link' );

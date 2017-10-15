@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 ?>
@@ -18,7 +18,7 @@
 					printf(
 						wp_kses(
 						/* translators: 1: link to WP admin new post page. */
-							__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'hola' ),
+							__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wpgeeky' ),
 							array(
 								'a' => array(
 									'href' => array(),
@@ -29,11 +29,11 @@
 					);
 					?></p>
 			<?php elseif ( is_search() ) : ?>
-                <h3><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'hola' ); ?></h3>
+                <h3><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wpgeeky' ); ?></h3>
 				<?php
 				get_search_form();
 			else : ?>
-                <h3><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'hola' ); ?></h3>
+                <h3><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wpgeeky' ); ?></h3>
 				<?php
 				get_search_form();
 			endif; ?>

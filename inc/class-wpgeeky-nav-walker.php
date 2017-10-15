@@ -4,13 +4,13 @@
  * Package: Hola
  */
 /* Check if Class Exists. */
-if ( ! class_exists( 'Hola_Nav_Walker' ) ) {
+if ( ! class_exists( 'Wpgeeky_Nav_Walker' ) ) {
 	/**
-	 * Hola_Nav_Walker class.
+	 * Wpgeeky_Nav_Walker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class Hola_Nav_Walker extends Walker_Nav_Menu {
+	class Wpgeeky_Nav_Walker extends Walker_Nav_Menu {
 		
 		/**
 		 * Start Level.

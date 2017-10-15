@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 ?>
@@ -26,8 +26,8 @@
 				'link_after'       => '',
 				'next_or_number'   => 'next',
 				'separator'        => ' ',
-				'nextpagelink'     => esc_html__( 'Continue Reading', 'hola' ),
-				'previouspagelink' => esc_html__( 'Previous Content', 'hola' ),
+				'nextpagelink'     => esc_html__( 'Continue Reading', 'wpgeeky' ),
+				'previouspagelink' => esc_html__( 'Previous Content', 'wpgeeky' ),
 				'pagelink'         => '%',
 				'echo'             => 1
 			);

@@ -2,10 +2,10 @@
 /**
  * Template Part Team
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
-global $hola_options;
+global $wpgeeky_options;
 ?>
 <!-- team-section-start -->
 <section class="team-area ptb-120">
@@ -13,8 +13,8 @@ global $hola_options;
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title text-center">
-                    <h2><?php echo esc_html( $hola_options['team-heading'] ); ?></h2>
-                    <p><?php echo esc_html( $hola_options['team-description'] ); ?></p>
+                    <h2><?php echo esc_html( $wpgeeky_options['team-heading'] ); ?></h2>
+                    <p><?php echo esc_html( $wpgeeky_options['team-description'] ); ?></p>
                 </div><!-- .section-title .text-center -->
             </div><!-- .col-lg-12 -->
         </div><!-- .row  -->
@@ -22,7 +22,7 @@ global $hola_options;
 			<?php
 			// the query
 			$the_query = new WP_Query( array(
-				'post_type'      => 'hola_team',
+				'post_type'      => 'wpgeeky_team',
 				'posts_per_page' => 4,
 				'order'          => 'ASC',
             ) );
@@ -34,14 +34,14 @@ global $hola_options;
                             <div class="team-img">
 								<?php the_post_thumbnail( 'member-img' ); ?>
                                 <div class="team-icon">
-                                    <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_hola_team_twitter', 1 ) ); ?>"><i class="fa fa-twitter"></i></a>
-                                    <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_hola_team_facebook', 1 ) ); ?>"><i class="fa fa-facebook"></i></a>
-                                    <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_hola_team_linkedin', 1 ) ); ?>"><i class="fa fa-linkedin"></i></a>
+                                    <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_wpgeeky_team_twitter', 1 ) ); ?>"><i class="fa fa-twitter"></i></a>
+                                    <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_wpgeeky_team_facebook', 1 ) ); ?>"><i class="fa fa-facebook"></i></a>
+                                    <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_wpgeeky_team_linkedin', 1 ) ); ?>"><i class="fa fa-linkedin"></i></a>
                                 </div><!-- .team-icon  -->
                             </div><!-- .team-img  -->
                             <div class="team-info text-center">
                                 <h3><?php the_title(); ?></h3>
-                                <span><?php echo esc_html( get_post_meta( get_the_ID(), '_hola_team_designation', 1 ) ); ?></span>
+                                <span><?php echo esc_html( get_post_meta( get_the_ID(), '_wpgeeky_team_designation', 1 ) ); ?></span>
                             </div><!-- .team-info text-center  -->
                         </div><!-- .single-team  -->
                     </div><!-- .col-lg-3 .col-md-3 .col-sm-4 .col-xs-12  -->
@@ -49,7 +49,7 @@ global $hola_options;
                 <!-- end of the loop -->
 				<?php wp_reset_postdata(); ?>
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no member found.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no member found.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .row  -->
     </div><!-- .container  -->

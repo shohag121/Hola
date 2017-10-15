@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 ?>
@@ -21,9 +21,9 @@
 	<?php endif; ?>
     <div class="blog-info">
         <div class="blog-meta">
-            <span><?php echo esc_html__('By ', 'hola');the_author_posts_link(); ?>
-                , <?php echo esc_html__('On ','hola') . get_the_date(); ?>
-                , <?php comments_popup_link( esc_html__( 'No comments yet', 'hola' ), esc_html__( '1 Comment', 'hola' ), esc_html__( '% Comments', 'hola' ), '', esc_html__( 'Comments are off for this post', 'hola' ) ); ?></span>
+            <span><?php echo esc_html__('By ', 'wpgeeky');the_author_posts_link(); ?>
+                , <?php echo esc_html__('On ','wpgeeky') . get_the_date(); ?>
+                , <?php comments_popup_link( esc_html__( 'No comments yet', 'wpgeeky' ), esc_html__( '1 Comment', 'wpgeeky' ), esc_html__( '% Comments', 'wpgeeky' ), '', esc_html__( 'Comments are off for this post', 'wpgeeky' ) ); ?></span>
         </div><!-- .blog-meta -->
         <div class="blog-text <?php echo is_single() ? 'blog-details-post' : ''; ?> ">
             <h3>

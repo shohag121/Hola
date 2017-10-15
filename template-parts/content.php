@@ -4,13 +4,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package HolaWP
+ * @package WPGeeky
  */
-global $hola_options;
+global $wpgeeky_options;
 ?>
 
 <div <?php post_class( 'single-blog mb-60' ); ?> id="post-<?php the_ID(); ?>">
-	<?php if ( $hola_options['blog-settings-featured-image'] ):
+	<?php if ( $wpgeeky_options['blog-settings-featured-image'] ):
 		if ( has_post_thumbnail() ): ?>
             <div class="blog-img">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-img' ); ?></a>
@@ -24,33 +24,33 @@ global $hola_options;
 		<?php endif;
 	endif; ?>
     <div class="blog-info">
-		<?php if ( $hola_options['blog-settings-meta'] ): ?>
+		<?php if ( $wpgeeky_options['blog-settings-meta'] ): ?>
             <div class="blog-meta">
                 <span><?php
 	                // Post Author
-	                if ( $hola_options['blog-settings-meta-author'] ) {
-		                echo esc_html__( 'By ', 'hola' );
+	                if ( $wpgeeky_options['blog-settings-meta-author'] ) {
+		                echo esc_html__( 'By ', 'wpgeeky' );
 		                the_author_posts_link();
 		                echo esc_html( '&nbsp;&nbsp;&nbsp;&nbsp;' );
 	                }
 	                // Post Date
-	                if ( $hola_options['blog-settings-meta-date'] ) {
-		                echo esc_html__( 'On ' , 'hola') . get_the_date() . esc_html( '&nbsp;&nbsp;&nbsp;&nbsp;' );;
+	                if ( $wpgeeky_options['blog-settings-meta-date'] ) {
+		                echo esc_html__( 'On ' , 'wpgeeky') . get_the_date() . esc_html( '&nbsp;&nbsp;&nbsp;&nbsp;' );;
 	                }
 	                // Post Category
-	                if ( $hola_options['blog-settings-meta-cat'] ) {
-		                echo esc_html__( 'In ', 'hola' );
+	                if ( $wpgeeky_options['blog-settings-meta-cat'] ) {
+		                echo esc_html__( 'In ', 'wpgeeky' );
 		                the_category( ', ' );
 		                echo esc_html( '&nbsp;&nbsp;&nbsp;&nbsp;' );
 	                }
 	                //Comment Count
-	                if ( $hola_options['blog-settings-meta-comment'] ) {
+	                if ( $wpgeeky_options['blog-settings-meta-comment'] ) {
 		                comments_popup_link(
-			                esc_html__( 'No comments yet', 'hola' ),
-			                esc_html__( '1 Comment', 'hola' ),
-			                esc_html__( '% Comments', 'hola' ),
+			                esc_html__( 'No comments yet', 'wpgeeky' ),
+			                esc_html__( '1 Comment', 'wpgeeky' ),
+			                esc_html__( '% Comments', 'wpgeeky' ),
 			                '',
-			                esc_html__( 'Comments are off for this post', 'hola' )
+			                esc_html__( 'Comments are off for this post', 'wpgeeky' )
 		                );
 	                }
 	                ?></span>
@@ -67,8 +67,8 @@ global $hola_options;
 					'link_after'       => '',
 					'next_or_number'   => 'next',
 					'separator'        => ' ',
-					'nextpagelink'     => esc_html__( 'Continue Reading', 'hola' ),
-					'previouspagelink' => esc_html__( 'Previous Content', 'hola' ),
+					'nextpagelink'     => esc_html__( 'Continue Reading', 'wpgeeky' ),
+					'previouspagelink' => esc_html__( 'Previous Content', 'wpgeeky' ),
 					'pagelink'         => '%',
 					'echo'             => 1
 				);
@@ -80,7 +80,7 @@ global $hola_options;
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h3>
 				<?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="readmore"><?php echo esc_html( $hola_options['blog-settings-readmore'] ); ?></a>
+                <a href="<?php the_permalink(); ?>" class="readmore"><?php echo esc_html( $wpgeeky_options['blog-settings-readmore'] ); ?></a>
 			<?php endif; ?>
         </div><!-- .blog-text -->
     </div><!-- .blog-info -->

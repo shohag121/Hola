@@ -2,19 +2,19 @@
 /**
  * Template Part Testimonials
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 ?>
 <!-- testimonial-section-start -->
 <section class="testimonial-area ptb-120 gray-bg">
     <div class="container">
         <div class="row">
-            <h3 class="sr-only"><?php echo esc_html__('Testimonial Area', 'hola')?></h3>
+            <h3 class="sr-only"><?php echo esc_html__('Testimonial Area', 'wpgeeky')?></h3>
 			<?php
 			// the query
 			$the_query = new WP_Query( [
-				'post_type'      => 'hola_testimonial',
+				'post_type'      => 'wpgeeky_testimonial',
 				'posts_per_page' => - 1,
 				'order'          => 'ASC',
 			] );
@@ -38,7 +38,7 @@
 					wp_reset_postdata(); ?>
                 </div><!-- .testimonial-active owl-carousel -->
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no testimonial yet.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no testimonial yet.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .row -->
     </div><!-- .container -->

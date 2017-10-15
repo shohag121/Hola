@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/404.png"
                                  alt="404 Error"/>
                         </div><!-- .not-found-img -->
-                        <h2><?php esc_html_e( 'Ooopps.! The Page You Were Looking For, Couldn\'t Be Found.', 'hola' ); ?></h2>
+                        <h2><?php esc_html_e( 'Ooopps.! The Page You Were Looking For, Couldn\'t Be Found.', 'wpgeeky' ); ?></h2>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                            rel="home" class="not-found-btn">back to home</a>
                     </div><!-- .not-found-content .text-center -->

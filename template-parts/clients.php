@@ -2,10 +2,10 @@
 /**
  * Template Part Clients
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
-global $hola_options;
+global $wpgeeky_options;
 ?>
 <!-- clients-section-area-start -->
 <section class="clients-section-area pb-120">
@@ -13,8 +13,8 @@ global $hola_options;
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title text-center">
-                    <h2><?php echo esc_html( $hola_options['client-heading'] ); ?></h2>
-                    <p><?php echo esc_html( $hola_options['client-description'] ); ?></p>
+                    <h2><?php echo esc_html( $wpgeeky_options['client-heading'] ); ?></h2>
+                    <p><?php echo esc_html( $wpgeeky_options['client-description'] ); ?></p>
                 </div><!-- .section-title .text-center -->
             </div><!-- .col-lg-12 -->
         </div><!-- .row -->
@@ -22,7 +22,7 @@ global $hola_options;
 			<?php
 			// the query
 			$the_query = new WP_Query( array(
-				'post_type'      => 'hola_clients',
+				'post_type'      => 'wpgeeky_clients',
 				'posts_per_page' => 8,
 				'order'          => 'ASC',
 			) );
@@ -35,14 +35,14 @@ global $hola_options;
                         <div class="row">
                     <?php endif; ?>
                     <div class="col-lg-3 col-md-3 col-sm-4  client-item">
-                        <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_hola_client_url', 1 ) ); ?>"><?php the_post_thumbnail( 'client-img' ); ?></a>
+                        <a href="<?php echo esc_url( get_post_meta( get_the_ID(), '_wpgeeky_client_url', 1 ) ); ?>"><?php the_post_thumbnail( 'client-img' ); ?></a>
                     </div><!-- .col-lg-3 .col-md-3 .col-sm-4  .client-item -->
                     
                 <?php endwhile; ?>
             <!-- end of the loop -->
 			<?php wp_reset_postdata(); ?>
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no clients found.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no clients found.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .row -->
     </div><!-- .container -->

@@ -7,9 +7,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package HolaWP
+ * @package WPGeeky
  */
-global $hola_options;
+global $wpgeeky_options;
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -25,21 +25,21 @@ global $hola_options;
 <body <?php body_class(); ?>>
 <!-- header-start -->
 <header>
-    <div class="header-area header-area-4 header-area-8 <?php echo esc_attr( $hola_options['blog-logo-style'] ); ?>">
+    <div class="header-area header-area-4 header-area-8 <?php echo esc_attr( $wpgeeky_options['blog-logo-style'] ); ?>">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="logo">
 					    <?php
-					    if ( $hola_options['blog-logo-select'] == 'text' ) : ?>
+					    if ( $wpgeeky_options['blog-logo-select'] == 'text' ) : ?>
                             <h1 class="site-title"><a
                                         href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                                        rel="home"><?php echo esc_html( $hola_options['blog-logo-text'] ); ?></a>
+                                        rel="home"><?php echo esc_html( $wpgeeky_options['blog-logo-text'] ); ?></a>
                             </h1><!-- .site-title -->
 					    <?php else : ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                                rel="home"><img
-                                        src="<?php echo esc_url( $hola_options['blog-logo-image']['url'] ); ?>"
+                                        src="<?php echo esc_url( $wpgeeky_options['blog-logo-image']['url'] ); ?>"
                                         alt="<?php bloginfo( 'name' ); ?>"/></a>
 						    <?php
 					    endif;
@@ -51,7 +51,7 @@ global $hola_options;
 					    <?php
 					    wp_nav_menu( array(
 						    'theme_location' => 'menu-1',
-						    'walker'         => new Hola_Nav_Walker(),
+						    'walker'         => new Wpgeeky_Nav_Walker(),
 						    'container'      => 'nav',
 					    ) );
 					    ?>
@@ -62,7 +62,7 @@ global $hola_options;
         </div><!-- .container -->
     </div><!-- .header-area -->
 </header>
-<?php if ( $hola_options['blog-logo-style'] == 'headroom' ) : ?>
+<?php if ( $wpgeeky_options['blog-logo-style'] == 'headroom' ) : ?>
     <div class="header-space"></div>
 <?php endif; ?>
 <!-- header-end -->

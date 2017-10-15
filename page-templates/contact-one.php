@@ -2,11 +2,11 @@
 /**
  * Template Name: Contact One
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 
-global $hola_options;
+global $wpgeeky_options;
 get_header();
 get_template_part( 'template-parts/breadcrumbs' );
 ?>
@@ -28,12 +28,12 @@ get_template_part( 'template-parts/breadcrumbs' );
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact-title text-center">
-                        <h2><?php echo esc_html__('GET IN TOUCH!', 'hola'); ?></h2>
+                        <h2><?php echo esc_html__('GET IN TOUCH!', 'wpgeeky'); ?></h2>
                     </div><!-- .contact-title .text-center -->
                 </div><!-- .col-lg-12 -->
             </div><!-- .row -->
             <div class="contact-from">
-				<?php echo do_shortcode( $hola_options['contact-form'] ); ?>
+				<?php echo do_shortcode( $wpgeeky_options['contact-form'] ); ?>
             </div><!-- .contact-from -->
         </div><!-- .container -->
     </section><!-- .contact-area .ptb-120 -->

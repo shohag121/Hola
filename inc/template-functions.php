@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package HolaWP
+ * @package WPGeeky
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @return array
  */
-function hola_body_classes( $classes ) {
+function wpgeeky_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -21,26 +21,26 @@ function hola_body_classes( $classes ) {
 	return $classes;
 }
 
-add_filter( 'body_class', 'hola_body_classes' );
+add_filter( 'body_class', 'wpgeeky_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable
  * articles.
  */
-function hola_pingback_header() {
+function wpgeeky_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
 
-add_action( 'wp_head', 'hola_pingback_header' );
+add_action( 'wp_head', 'wpgeeky_pingback_header' );
 
 
 /**
  * Custom Search box
  */
 
-function hola_search_form( $form ) {
+function wpgeeky_search_form( $form ) {
 	
 	ob_start()
 	?>
@@ -58,13 +58,13 @@ function hola_search_form( $form ) {
 	return ob_get_clean();
 }
 
-add_filter( 'get_search_form', 'hola_search_form', 100 );
+add_filter( 'get_search_form', 'wpgeeky_search_form', 100 );
 
 
 /**
  * Olite Numeric Post Navigation
  */
-function hola_numeric_posts_nav() {
+function wpgeeky_numeric_posts_nav() {
 	
 	if ( is_singular() ) {
 		return;

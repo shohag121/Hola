@@ -4,9 +4,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package HolaWP
+ * @package WPGeeky
  */
-global $hola_options;
+global $wpgeeky_options;
 get_header();
 get_template_part( 'template-parts/breadcrumbs' ); ?>
 
@@ -16,7 +16,7 @@ get_template_part( 'template-parts/breadcrumbs' ); ?>
 			<?php
 			if ( have_posts() ) : ?>
                 <div class="row">
-                    <div class="<?php echo esc_attr( ( $hola_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $hola_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8' ) ); ?>">
+                    <div class="<?php echo esc_attr( ( $wpgeeky_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $wpgeeky_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8' ) ); ?>">
                         <div class="row">
 							<?php
 							/* Start the Loop */
@@ -40,7 +40,7 @@ get_template_part( 'template-parts/breadcrumbs' ); ?>
                 </div><!-- .row -->
 				<?php
                 // pagination
-				hola_numeric_posts_nav();
+				wpgeeky_numeric_posts_nav();
 			else :
 				get_template_part( 'template-parts/content', 'none' );
 			endif; ?>

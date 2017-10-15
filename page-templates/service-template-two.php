@@ -2,11 +2,11 @@
 /**
  * Template Name: Service Two
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 get_header();
-global $hola_options;
+global $wpgeeky_options;
 ?>
     <!-- breadcrumbs-section-start -->
 <?php get_template_part( 'template-parts/breadcrumbs' ); ?>
@@ -36,8 +36,8 @@ global $hola_options;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title padd-l">
-                        <h2><?php echo esc_html( $hola_options['service-heading'] ); ?></h2>
-                        <p><?php echo esc_html( $hola_options['service-description'] ); ?></p>
+                        <h2><?php echo esc_html( $wpgeeky_options['service-heading'] ); ?></h2>
+                        <p><?php echo esc_html( $wpgeeky_options['service-description'] ); ?></p>
                     </div><!-- .section-title .padd-l -->
                 </div><!-- .col-lg-12 -->
             </div><!-- .row -->

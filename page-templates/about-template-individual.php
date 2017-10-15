@@ -2,11 +2,11 @@
 /**
  * Template Name: About Individual
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 get_header();
-global $hola_options;
+global $wpgeeky_options;
 ?>
 
     <!-- breadcrumbs-section-start -->
@@ -20,20 +20,20 @@ global $hola_options;
                 
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="about-me-img">
-						<?php if ( $my_image = $hola_options['about-me-img'] ): ?>
+						<?php if ( $my_image = $wpgeeky_options['about-me-img'] ): ?>
                             <img src="<?php echo esc_url( $my_image['url'] ); ?>"
-                                 alt="<?php echo esc_attr( $hola_options['about-me-heading'] ); ?>"/>
+                                 alt="<?php echo esc_attr( $wpgeeky_options['about-me-heading'] ); ?>"/>
 						<?php endif; ?>
                     </div><!-- .about-me-img -->
                 </div><!-- .col-lg-4 col-md-4 col-sm-6 -->
                 
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="about-me-info">
-                        <h2><?php echo esc_html( $hola_options['about-me-heading'] ); ?></h2>
-                        <span><?php echo esc_html( $hola_options['about-me-designation'] ); ?></span>
-                        <p><?php echo esc_html( $hola_options['about-me-p'] ); ?></p>
-						<?php if ( $hola_options['about-me-cv']['url'] ) : ?>
-                            <a href="<?php echo esc_url( $hola_options['about-me-cv']['url'] ); ?>"
+                        <h2><?php echo esc_html( $wpgeeky_options['about-me-heading'] ); ?></h2>
+                        <span><?php echo esc_html( $wpgeeky_options['about-me-designation'] ); ?></span>
+                        <p><?php echo esc_html( $wpgeeky_options['about-me-p'] ); ?></p>
+						<?php if ( $wpgeeky_options['about-me-cv']['url'] ) : ?>
+                            <a href="<?php echo esc_url( $wpgeeky_options['about-me-cv']['url'] ); ?>"
                                class="aboutme-btn">DOWNLOAD RESUME</a>
 						<?php endif; ?>
                     </div><!-- .about-me-info -->

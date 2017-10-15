@@ -1,20 +1,20 @@
 <?php
-add_action( 'cmb2_admin_init', 'hola_posrfolio_metaboxes' );
+add_action( 'cmb2_admin_init', 'wpgeeky_posrfolio_metaboxes' );
 /**
  * Define the metabox and field configurations.
  */
-function hola_posrfolio_metaboxes() {
+function wpgeeky_posrfolio_metaboxes() {
 	
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_hola_';
+	$prefix = '_wpgeeky_';
 	
 	/**
 	 * Initiate the metabox
 	 */
 	$portfolio = new_cmb2_box( array(
 		'id'            => 'portfolio_meta',
-		'title'         => __( 'Project Information', 'hola' ),
-		'object_types'  => array( 'hola_portfolio', ), // Post type
+		'title'         => __( 'Project Information', 'wpgeeky' ),
+		'object_types'  => array( 'wpgeeky_portfolio', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
@@ -24,36 +24,36 @@ function hola_posrfolio_metaboxes() {
 	
 	// Portfolio Image size
 	$portfolio->add_field( array(
-		'name'       => __( 'Project Image Size', 'hola' ),
-		'desc'       => __( 'Project client name here.', 'hola' ),
+		'name'       => __( 'Project Image Size', 'wpgeeky' ),
+		'desc'       => __( 'Project client name here.', 'wpgeeky' ),
 		'id'         => $prefix . 'project_img_size',
 		'type'             => 'select',
 		'show_option_none' => true,
 		'options'          => array(
-			'w'       => __( 'Double Width', 'hola' ),
-			'h'       => __( 'Double Height', 'hola' ),
-			'wh'      => __( 'Double Height Width', 'hola' ),
+			'w'       => __( 'Double Width', 'wpgeeky' ),
+			'h'       => __( 'Double Height', 'wpgeeky' ),
+			'wh'      => __( 'Double Height Width', 'wpgeeky' ),
 		),
 	) );
 	
 	// Project Client Name
 	$portfolio->add_field( array(
-		'name'       => __( 'Client Name', 'hola' ),
-		'desc'       => __( 'Project client name here.', 'hola' ),
+		'name'       => __( 'Client Name', 'wpgeeky' ),
+		'desc'       => __( 'Project client name here.', 'wpgeeky' ),
 		'id'         => $prefix . 'project_client',
 		'type'       => 'text',
 	) );
 	// Project End Date
 	$portfolio->add_field( array(
-		'name'       => __( 'Completed On', 'hola' ),
-		'desc'       => __( 'Project End Date.', 'hola' ),
+		'name'       => __( 'Completed On', 'wpgeeky' ),
+		'desc'       => __( 'Project End Date.', 'wpgeeky' ),
 		'id'         => $prefix . 'project_date',
 		'type'       => 'text_date',
 	) );
 	// Project Required Skills
 	$portfolio->add_field( array(
-		'name'       => __( 'Skills', 'hola' ),
-		'desc'       => __( 'Project Required Skills.', 'hola' ),
+		'name'       => __( 'Skills', 'wpgeeky' ),
+		'desc'       => __( 'Project Required Skills.', 'wpgeeky' ),
 		'id'         => $prefix . 'project_skills',
 		'type'       => 'text',
 		'repeatable' => true,
@@ -64,16 +64,16 @@ function hola_posrfolio_metaboxes() {
 	
 	// URL text field
 	$portfolio->add_field( array(
-		'name' => __( 'Project URL', 'hola' ),
-		'desc' => __( 'Project Demo URL Here.', 'hola' ),
+		'name' => __( 'Project URL', 'wpgeeky' ),
+		'desc' => __( 'Project Demo URL Here.', 'wpgeeky' ),
 		'id'   => $prefix . 'project_url',
 		'type' => 'text_url',
 	) );
 	
 	// URL text field
 	$portfolio->add_field( array(
-		'name' => __( 'Project Images', 'hola' ),
-		'desc' => __( 'Project Preview Imges Here.', 'hola' ),
+		'name' => __( 'Project Images', 'wpgeeky' ),
+		'desc' => __( 'Project Preview Imges Here.', 'wpgeeky' ),
 		'id'   => $prefix . 'project_images',
 		'type' => 'file_list',
 		 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
@@ -86,8 +86,8 @@ function hola_posrfolio_metaboxes() {
 	
 	// URL text field
 	$portfolio->add_field( array(
-		'name' => __( 'Project Video', 'hola' ),
-		'desc' => __( 'Project Preview Video Here.', 'hola' ),
+		'name' => __( 'Project Video', 'wpgeeky' ),
+		'desc' => __( 'Project Preview Video Here.', 'wpgeeky' ),
 		'id'   => $prefix . 'project_video',
 		'type' => 'oembed',
 		
@@ -100,8 +100,8 @@ function hola_posrfolio_metaboxes() {
 	 */
 	$team = new_cmb2_box( array(
 		'id'            => 'team_meta',
-		'title'         => __( 'Member Information', 'hola' ),
-		'object_types'  => array( 'hola_team', ), // Post type
+		'title'         => __( 'Member Information', 'wpgeeky' ),
+		'object_types'  => array( 'wpgeeky_team', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
@@ -111,31 +111,31 @@ function hola_posrfolio_metaboxes() {
 	
 	// Member designation
 	$team->add_field( array(
-		'name'       => __( 'Designation', 'hola' ),
-		'desc'       => __( 'Member designation.', 'hola' ),
+		'name'       => __( 'Designation', 'wpgeeky' ),
+		'desc'       => __( 'Member designation.', 'wpgeeky' ),
 		'id'         => $prefix . 'team_designation',
 		'type'       => 'text',
 	) );
 	
 	// Member's twitter URL
 	$team->add_field( array(
-		'name'       => __( 'Twitter URL', 'hola' ),
-		'desc'       => __( 'Profile URL.', 'hola' ),
+		'name'       => __( 'Twitter URL', 'wpgeeky' ),
+		'desc'       => __( 'Profile URL.', 'wpgeeky' ),
 		'id'         => $prefix . 'team_twitter',
 		'type'       => 'text_url',
 	) );
 	
 	// Member's facebook URL
 	$team->add_field( array(
-		'name'       => __( 'Facebook URL', 'hola' ),
-		'desc'       => __( 'Profile URL.', 'hola' ),
+		'name'       => __( 'Facebook URL', 'wpgeeky' ),
+		'desc'       => __( 'Profile URL.', 'wpgeeky' ),
 		'id'         => $prefix . 'team_facebook',
 		'type'       => 'text_url',
 	) );
 	// Member's facebook URL
 	$team->add_field( array(
-		'name'       => __( 'LinkedIn URL', 'hola' ),
-		'desc'       => __( 'Profile URL.', 'hola' ),
+		'name'       => __( 'LinkedIn URL', 'wpgeeky' ),
+		'desc'       => __( 'Profile URL.', 'wpgeeky' ),
 		'id'         => $prefix . 'team_linkedin',
 		'type'       => 'text_url',
 	) );
@@ -148,8 +148,8 @@ function hola_posrfolio_metaboxes() {
 	 */
 	$team = new_cmb2_box( array(
 		'id'            => 'clients_meta',
-		'title'         => __( 'Client Information', 'hola' ),
-		'object_types'  => array( 'hola_clients', ), // Post type
+		'title'         => __( 'Client Information', 'wpgeeky' ),
+		'object_types'  => array( 'wpgeeky_clients', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
@@ -159,8 +159,8 @@ function hola_posrfolio_metaboxes() {
 	
 	// Member designation
 	$team->add_field( array(
-		'name'       => __( 'Client URL', 'hola' ),
-		'desc'       => __( 'Client\'s Website URL.', 'hola' ),
+		'name'       => __( 'Client URL', 'wpgeeky' ),
+		'desc'       => __( 'Client\'s Website URL.', 'wpgeeky' ),
 		'id'         => $prefix . 'client_url',
 		'type'       => 'text',
 	) );
@@ -174,8 +174,8 @@ function hola_posrfolio_metaboxes() {
 	 */
 	$pricing = new_cmb2_box( array(
 		'id'            => 'pricing_meta',
-		'title'         => __( 'Table Information', 'hola' ),
-		'object_types'  => array( 'hola_pricing', ), // Post type
+		'title'         => __( 'Table Information', 'wpgeeky' ),
+		'object_types'  => array( 'wpgeeky_pricing', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true,
@@ -183,16 +183,16 @@ function hola_posrfolio_metaboxes() {
 	
 	// Member designation
 	$pricing->add_field( array(
-		'name'       => __( 'Price', 'hola' ),
-		'desc'       => __( 'Price per terms.', 'hola' ),
+		'name'       => __( 'Price', 'wpgeeky' ),
+		'desc'       => __( 'Price per terms.', 'wpgeeky' ),
 		'id'         => $prefix . 'pricing_price',
 		'type'       => 'text',
 	) );
 	
 	// Featured  Box
 	$pricing->add_field( array(
-		'name'       => __( 'Featured', 'hola' ),
-		'desc'       => __( 'Featured table.', 'hola' ),
+		'name'       => __( 'Featured', 'wpgeeky' ),
+		'desc'       => __( 'Featured table.', 'wpgeeky' ),
 		'id'         => $prefix . 'pricing_selected',
 		'type'       => 'checkbox',
 	) );
@@ -201,12 +201,12 @@ function hola_posrfolio_metaboxes() {
 	$group_field_id = $pricing->add_field( array(
 		'id'          => $prefix . 'pricing_group',
 		'type'        => 'group',
-		'description' => __( 'Features for pricing table.', 'hola' ),
+		'description' => __( 'Features for pricing table.', 'wpgeeky' ),
 	
 		'options'     => array(
-			'group_title'   => __( 'Feature {#}', 'hola' ), // since version 1.1.4, {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Feature', 'hola' ),
-			'remove_button' => __( 'Remove Feature', 'hola' ),
+			'group_title'   => __( 'Feature {#}', 'wpgeeky' ), // since version 1.1.4, {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Feature', 'wpgeeky' ),
+			'remove_button' => __( 'Remove Feature', 'wpgeeky' ),
 			'sortable'      => true,
 		),
 	) );
@@ -226,16 +226,16 @@ function hola_posrfolio_metaboxes() {
 	
 	// Button Text
 	$pricing->add_field( array(
-		'name'       => __( 'Button Text', 'hola' ),
-		'desc'       => __( 'Text for buy or subscribe .', 'hola' ),
+		'name'       => __( 'Button Text', 'wpgeeky' ),
+		'desc'       => __( 'Text for buy or subscribe .', 'wpgeeky' ),
 		'id'         => $prefix . 'pricing_text',
 		'type'       => 'text',
 	) );
 	
 	// Button URL
 	$pricing->add_field( array(
-		'name'       => __( 'Button URL', 'hola' ),
-		'desc'       => __( 'URL for buy or subscribe .', 'hola' ),
+		'name'       => __( 'Button URL', 'wpgeeky' ),
+		'desc'       => __( 'URL for buy or subscribe .', 'wpgeeky' ),
 		'id'         => $prefix . 'pricing_url',
 		'type'       => 'text_url',
 	) );

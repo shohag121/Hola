@@ -2,23 +2,23 @@
 /**
  * Template Name: Home Style 6
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 
 get_header( 'four' );
-global $hola_options;
+global $wpgeeky_options;
 ?>
 
     <!-- slider-section-start -->
     <section class="slider-area slider-area-4 bg-white-opacity ptb-200"
-             style="background: rgba(0, 0, 0, 0) url(<?php echo esc_url( $hola_options['home-slider-bg6']['url'] ); ?>) repeat scroll center center / cover;">
+             style="background: rgba(0, 0, 0, 0) url(<?php echo esc_url( $wpgeeky_options['home-slider-bg6']['url'] ); ?>) repeat scroll center center / cover;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="slider-text slider-text-6 text-center">
-                        <h1><?php echo esc_html( $hola_options['home-slider-h1'] ); ?></h1>
-                        <h2><?php echo esc_html( $hola_options['home-slider-h2'] ); ?></h2>
+                        <h1><?php echo esc_html( $wpgeeky_options['home-slider-h1'] ); ?></h1>
+                        <h2><?php echo esc_html( $wpgeeky_options['home-slider-h2'] ); ?></h2>
                     </div><!-- .slider-text .slider-text-6 .text-center -->
                 </div><!-- .col-lg-12 -->
             </div><!-- .row -->
@@ -51,7 +51,7 @@ global $hola_options;
 			<?php
 			// get 10 portfolios
 			$portfolios = new WP_Query( array(
-				'post_type'      => 'hola_portfolio',
+				'post_type'      => 'wpgeeky_portfolio',
 				'posts_per_page' => 10,
 			) );
 			if ( $portfolios->have_posts() ) : ?>
@@ -59,7 +59,7 @@ global $hola_options;
                     <div class="grid">
                         <!-- the loop -->
 						<?php while ( $portfolios->have_posts() ) : $portfolios->the_post();
-							$img_size = get_post_meta( get_the_ID(), '_hola_project_img_size', 1 );
+							$img_size = get_post_meta( get_the_ID(), '_wpgeeky_project_img_size', 1 );
 							//Defining the class with image size
 							if ( $img_size == 'w' ) {
 								$class = "6";
@@ -122,10 +122,10 @@ global $hola_options;
                     </div><!-- .grid -->
                 </div><!-- .row -->
                 <div class="view-more text-center">
-                    <a href="<?php echo esc_url( get_post_type_archive_link( 'hola_portfolio' ) ); ?>">view more</a>
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'wpgeeky_portfolio' ) ); ?>">view more</a>
                 </div><!-- .view-more .text-center -->
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .container -->
     </section><!-- .portfolio-area .portfolio-area-2 .ptb-120 -->

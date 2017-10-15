@@ -2,25 +2,25 @@
 /**
  * Template Name: Home Style 1
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 get_header();
-global $hola_options;
+global $wpgeeky_options;
 ?>
     <!-- slider-section-start -->
     <section class="slider-area slider-bg ptb-200"
-             style="background-image: url(<?php echo esc_url( $hola_options['home-slider-bg']['url'] ); ?>);">
+             style="background-image: url(<?php echo esc_url( $wpgeeky_options['home-slider-bg']['url'] ); ?>);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="slider-text">
-                        <h1><?php echo esc_html( $hola_options['home-slider-h1'] ); ?></h1>
-                        <h2><?php echo esc_html( $hola_options['home-slider-h2'] ); ?></h2>
+                        <h1><?php echo esc_html( $wpgeeky_options['home-slider-h1'] ); ?></h1>
+                        <h2><?php echo esc_html( $wpgeeky_options['home-slider-h2'] ); ?></h2>
                         <h3 class="cd-headline clip is-full-width">
                             <span class="cd-words-wrapper text-black">
-                                <b class="is-visible"><?php echo esc_html( $hola_options['home-slider-p1'] ); ?></b>
-                                <?php foreach ( $hola_options['home-slider-p'] as $paragraph ): ?>
+                                <b class="is-visible"><?php echo esc_html( $wpgeeky_options['home-slider-p1'] ); ?></b>
+                                <?php foreach ( $wpgeeky_options['home-slider-p'] as $paragraph ): ?>
                                     <b><?php echo esc_html( $paragraph); ?></b>
                                 <?php endforeach; ?>
                             </span><!-- .cd-words-wrapper .text-black -->
@@ -54,8 +54,8 @@ global $hola_options;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title padd-l">
-                        <h2><?php echo esc_html( $hola_options['service-heading'] ); ?></h2>
-                        <p><?php echo esc_html( $hola_options['service-description'] ); ?></p>
+                        <h2><?php echo esc_html( $wpgeeky_options['service-heading'] ); ?></h2>
+                        <p><?php echo esc_html( $wpgeeky_options['service-description'] ); ?></p>
                     </div><!-- .section-title .padd-l -->
                 </div><!-- .col-lg-12 -->
             </div><!-- .row -->
@@ -93,7 +93,7 @@ global $hola_options;
 			<?php
 			// get 10 portfolios
 			$portfolios = new WP_Query( array(
-                'post_type'      => 'hola_portfolio',
+                'post_type'      => 'wpgeeky_portfolio',
                 'posts_per_page' => 10,
             ) );
 			if ( $portfolios->have_posts() ) : ?>
@@ -145,10 +145,10 @@ global $hola_options;
                     </div><!-- .grid -->
                 </div><!-- .row  -->
                 <div class="view-more text-center">
-                    <a href="<?php echo esc_url( get_post_type_archive_link( 'hola_portfolio' ) ); ?>">view more</a>
+                    <a href="<?php echo esc_url( get_post_type_archive_link( 'wpgeeky_portfolio' ) ); ?>">view more</a>
                 </div><!-- .view-more .text-center  -->
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no portfolio yet.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .container  -->
     </section><!-- .portfolio-area .ptb-120 -->

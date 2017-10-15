@@ -2,8 +2,8 @@
 /**
  * Template Name: Team
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
 get_header();
 

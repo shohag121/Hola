@@ -4,9 +4,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package HolaWP
+ * @package WPGeeky
  */
-global $hola_options;
+global $wpgeeky_options;
 get_header(); ?>
 
 <?php get_template_part( 'template-parts/breadcrumbs' ); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
     <section class="blog-area blog-page ptb-120">
         <div class="container">
             <div class="row">
-                <div class="<?php echo esc_attr( ( $hola_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $hola_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8') ); ?>">
+                <div class="<?php echo esc_attr( ( $wpgeeky_options['blog-settings-sidebar'] == 'none' ) ? 'col-xs-12' : ( ( $wpgeeky_options['blog-settings-sidebar'] == 'left' ) ? 'col-sm-8 col-md-8 col-md-push-4' : 'col-md-8 col-sm-8') ); ?>">
                     <div class="row">
 						<?php
 						
@@ -31,7 +31,7 @@ get_header(); ?>
 								 */
 								get_template_part( 'template-parts/content', get_post_format() );
 								//if single post navigation is on
-								if ( $hola_options['blog-settings-post-nav'] ) {
+								if ( $wpgeeky_options['blog-settings-post-nav'] ) {
 									the_post_navigation();
 								}
 								// If comments are open or we have at least one comment, load up the comment template.

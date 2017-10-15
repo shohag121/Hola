@@ -2,10 +2,10 @@
 /**
  * Template Part News
  *
- * @package HolaWP
- * @since HolaWP 1.0
+ * @package WPGeeky
+ * @since WPGeeky 1.0
  */
-global $hola_options;
+global $wpgeeky_options;
 ?>
 <!-- news-section-start -->
 <section class="blog-area ptb-120">
@@ -13,8 +13,8 @@ global $hola_options;
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title text-center">
-                    <h2><?php echo esc_html( $hola_options['news-heading'] ); ?></h2>
-                    <p><?php echo esc_html( $hola_options['news-description'] ); ?></p>
+                    <h2><?php echo esc_html( $wpgeeky_options['news-heading'] ); ?></h2>
+                    <p><?php echo esc_html( $wpgeeky_options['news-description'] ); ?></p>
                 </div><!-- .section-title .text-center -->
             </div><!-- .col-lg-12 -->
         </div><!-- .row -->
@@ -23,7 +23,7 @@ global $hola_options;
             // Get category IDs and format them
 			$cat      = '';
 			$news_cat = '';
-			$news_cat = $hola_options['news-category'];
+			$news_cat = $wpgeeky_options['news-category'];
 			
 			if ( $news_cat ) {
 				foreach ( $news_cat as $single_cat ) {
@@ -74,7 +74,7 @@ global $hola_options;
                 <!-- end of the loop -->
 				<?php wp_reset_postdata(); ?>
 			<?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'hola' ); ?></p>
+                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'wpgeeky' ); ?></p>
 			<?php endif; ?>
         </div><!-- .row -->
     </div><!-- .container -->
